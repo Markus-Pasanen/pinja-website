@@ -7,11 +7,20 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      main: "#b5a69b",
+      hover: "#cfc6be",
+      background: "#e9e4e0",
+      active: "#927569",
+      inactive: "#752b2b",
+      text: "#342f2c",
+    },
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "header-image1": "url('./assets/image.jpg')",
+      },
+      height: {
+        screen: "100dvh",
       },
     },
   },

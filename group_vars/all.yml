@@ -1,0 +1,9 @@
+# Next.js app
+domain: "yourdomain.com"
+email: "youremail@example.com"
+
+# Docker configuration
+nextjs_app_name: "nextjs-app"
+docker_image_name: "nextjs-app-image"
+docker_container_port: 3000
+host_port: 3000
