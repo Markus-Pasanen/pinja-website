@@ -1,0 +1,12 @@
+version: '3'
+services:
+  nextjs:
+    image: "{{ docker_image_name }}"
+    build: .
+    ports:
+      - "{{ host_port }}:{{ docker_container_port }}"
+    volumes:
+      - .:/app
+    environment:
+      NODE_ENV: production
+    restart: always
