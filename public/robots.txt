@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://jalkaterapiapinja.fi
+
+# Sitemaps
+Sitemap: https://jalkaterapiapinja.fi/sitemap.xml

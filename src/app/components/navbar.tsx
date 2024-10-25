@@ -22,30 +22,42 @@ const Navbar = () => {
     rect && !(rect.bottom < 0 || rect.top - viewHeight >= 0) && setActive(id);
   }
 
+  const onClick = () => {
+    document.getElementById("0")?.scrollIntoView()
+};
+
   return (
     <div className="w-full h-full flex flex-row items-justify text-center justify-between py-2 px-2 xl:px-8 shadow-xl bg-background">
-      <img src="logo.png" alt="Logo" className="y-auto h-14"/>
+      <button onClick={onClick}><img src="logo.png" alt="Logo" className="y-auto h-14 hover:scale-125 ease-out duration-300"/></button>
       <div className="flex flex-row justify-end gap-2 w-1/2 invisible xl:visible">
         <Button
           name="Esittely"
           reference="1"
           active={active == "1" ? true : false}
+          color="bg-main"
         />
         <Button
           name="Palvelut"
           reference="2"
           active={active == "2" ? true : false}
+          color="bg-main"
+        />
+        <Button
+          name="Ajankohtaista"
+          reference="3"
+          active={active == "3" ? true : false}
+          color="bg-main"
         />
         <Button
           name="Yhteystiedot"
           reference="4"
           active={active == "4" ? true : false}
+          color="bg-main"
         />
         <Button
           name="Varaa aika"
-          secondary={true}
           reference="4"
-          active={active == "4" ? true : false}
+          color="bg-callToAction"
         />
       </div>
       {showMenu && (
@@ -56,6 +68,7 @@ const Navbar = () => {
             active={active == "1" ? true : false}
             state={showMenu}
             setState={setShowmenu}
+            color="bg-main"
           />
           <Button
             name="Palvelut"
@@ -63,6 +76,15 @@ const Navbar = () => {
             active={active == "2" ? true : false}
             state={showMenu}
             setState={setShowmenu}
+            color="bg-main"
+          />
+          <Button
+            name="Ajankohtaista"
+            reference="3"
+            active={active == "3" ? true : false}
+            state={showMenu}
+            setState={setShowmenu}
+            color="bg-main"
           />
           <Button
             name="Yhteystiedot"
@@ -70,14 +92,14 @@ const Navbar = () => {
             active={active == "4" ? true : false}
             state={showMenu}
             setState={setShowmenu}
+            color="bg-main"
           />
           <Button
             name="Varaa aika"
-            secondary={true}
             reference="4"
-            active={active == "4" ? true : false}
             state={showMenu}
             setState={setShowmenu}
+            color="bg-callToAction"
           />
           <div className="mt-auto mb-14">
             <Footer/>
