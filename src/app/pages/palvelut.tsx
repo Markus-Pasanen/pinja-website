@@ -4,7 +4,7 @@ const palvelut = ({ id }: any) => {
   return (
     <div
       id={id}
-      className="w-screen min-h-screen flex justify-center items-center p-10 py-24 md:py-0"
+      className="w-screen min-h-lvh flex justify-center items-center px-10 scroll-mt-28"
     >
       <div className=" w-full max-w-4xl flex flex-col gap-8">
         <h1 className="text-5xl text-center">Palvelut & Hinnasto</h1>
@@ -13,30 +13,33 @@ const palvelut = ({ id }: any) => {
             backgroundImg="jalka-4.jpg"
             mainImg="jalka-4.jpg"
             title="Kliininen jalkahoito"
-            text="Kliininen jalkahoito on terveydenhoitoa, jossa hoidetaan jalkojen iho- ja kynsiongelmia sekä ehkäistään jalkavaivoja. Se on erityisen tärkeää riskiryhmille, kuten diabeetikoille, ja sen tavoitteena on ylläpitää jalkojen terveyttä."
-            pricing="90min / 75€"
+            text="Kliininen jalkahoito on terveydenhoitoa, jossa hoidetaan jalkojen iho- ja kynsiongelmia sekä ehkäistään jalkavaivoja. Ihon rasvaushieronta ja lampaanvillat varpaiden väliin. Se on erityisen tärkeää riskiryhmille, kuten diabeetikoille, ja sen tavoitteena on ylläpitää jalkojen terveyttä."
+            pricing="75"
+            time="90 min"
           />
           <Card
             backgroundImg="jalka-7.jpg"
             mainImg="jalka-7.jpg"
             title="Kynsien lyhennys"
             text="Kynsien lyhennys on toimenpide, jossa kynnet leikataan sopivaan pituuteen ja muotoon. Se auttaa ylläpitämään kynsien terveyttä ja ehkäisee esimerkiksi sisäänkasvaneita kynsiä."
-            pricing="30min / 45€"
+            pricing="45"
+            time="30 min"
           />
           <Card
             backgroundImg="jalka-2.jpg"
             mainImg="jalka-2.jpg"
             title="Kynnenoikaisu"
             text="Podofix-menetelmä, joka soveltuu lähes kaikkien epämuodostuneille kynsille, kuten sisäänkasvaneille kynsille sekä taipuneiden kynsien hoitoon. Podofix-hoito uusitaan 2vk-2kk välein, kunnes haluttu tulos on saavutettu."
-            pricing="45€ hoidon yhteydessä"
-            pricing2="55€ erikseen"
+            time="30-60 min"
+            pricing="45 / 55*"
           />
           <Card
             backgroundImg="jalka-5.jpg"
             mainImg="jalka-5.jpg"
             title="Silikoniortoosit"
-            text="Silikoniortoosit ovat yksilöllisesti muotoiltuja silikonista valmistettuja tukia, joita käytetään jalkaterän virheasentojen korjaamiseen tai vaimentamaan painetta. Ne helpottavat kipua ja parantavat jalkojen asentoa, auttaen esimerkiksi vaivaisenluun tai vasaravarpaiden hoidossa.  Yksilöllisesti valmistettavilla tuotteilla on 3kk takuu, jonka aikana muokkauksia voidaan tehdä veloituksetta. Yksilöllisesti valmistettavilla tuotteilla ei ole vaihto- eikä palautusoikeitta."
-            pricing="25€ / silikoni"
+            text="Silikoniortoosit ovat yksilöllisesti muotoiltuja silikonista valmistettuja tukia, joita käytetään jalkaterän virheasentojen korjaamiseen tai vaimentamaan painetta. Ne helpottavat kipua ja parantavat jalkojen asentoa, auttaen esimerkiksi vaivaisenluun tai vasaravarpaiden hoidossa.  Yksilöllisesti valmistettavilla tuotteilla on 3kk takuu, jonka aikana muokkauksia voidaan tehdä veloituksetta. Yksilöllisesti valmistettavilla tuotteilla ei ole vaihto- eikä palautusoikeutta."
+            pricing="25"
+            pricingTitle="Silikoni"
           />
         </div>
         <div className="text-sm mb-6">
@@ -52,6 +55,7 @@ const palvelut = ({ id }: any) => {
             valmistettavilla tuotteilla ei ole vaihto- eikä palautusoikeutta.
           </p>
           <p className="mt-2">Pidätämme oikeuden hinnanmuutoksiin.</p>
+          <p className="mt-2">* Hinta erikseen ilman muuta hoitoa</p>
         </div>
       </div>
     </div>

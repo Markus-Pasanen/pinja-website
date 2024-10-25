@@ -10,7 +10,7 @@ const Ajanvaraus = () => {
   const onDateClick = (value: string) => setDate(value);
 
   return (
-    <div className="flex w-full h-full flex-col mx-auto max-w-4xl gap-6">
+    <div className="flex w-full h-full flex-col mx-auto max-w-4xl gap-6 px-10">
       <h1 className="text-5xl text-center p-10">Ajanvaraus</h1>
       <div className="col-span-2">
           <label className="block text-text text-sm font-bold mb-2">

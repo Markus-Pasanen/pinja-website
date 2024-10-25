@@ -5,14 +5,14 @@ const yhteystiedot = ({ id }: any) => {
   return (
     <div
       id={id}
-      className="w-screen min-h-screen flex justify-center items-center text p-10"
+      className="w-screen min-h-lvh flex justify-center items-center text px-10"
     >
       <div className="w-full max-w-4xl flex flex-col gap-8">
         <h1 className="text-5xl text-center">Ota yhteyttä</h1>
         <h1 className="text-2xl text-center font-semibold">
           <a
             href="tel:0451032606"
-            className="flex items-center justify-center gap-4"
+            className="flex items-center justify-center gap-4 hover:scale-105 ease-out duration-300"
           >
             <FaPhone />
             0451032606
@@ -21,7 +21,7 @@ const yhteystiedot = ({ id }: any) => {
         <h1 className="text-2xl text-center font-semibold">
           <a
             href="mailto: jalkaterapia.pinja@gmail.com"
-            className="flex items-center justify-center gap-4"
+            className="flex items-center justify-center gap-4 hover:scale-105 ease-out duration-300"
           >
             <MdEmail />
             jalkaterapia.pinja@gmail.com

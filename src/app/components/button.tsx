@@ -4,17 +4,16 @@ import { Dispatch, SetStateAction } from "react";
 
 interface propTypes {
     name: string,
-    secondary?: boolean,
     reference: string,
-    active?: boolean,
     state?: boolean,
     setState?: Dispatch<SetStateAction<boolean>>;
+    active?: boolean;
+    color: string;
 }
 
 const button = (props: propTypes) => {
 
-    let activeStyle = props.active ? "bg-active text-background" : ""
-    let secondary = props.secondary ? "bg-active hover:bg-hover text-background" : "hover:bg-hover"
+    let activeStyle = props.active ? "hue-rotate-180" : ""
 
     const onClick = () => {
         document.getElementById(props.reference)?.scrollIntoView({
@@ -24,7 +23,7 @@ const button = (props: propTypes) => {
     };
 
     return (
-        <button onClick={onClick} className={`rounded-lg py-2 px-8 truncate min-w-fit ${secondary} ${activeStyle}`}>{props.name}</button>
+        <button onClick={onClick} className={`rounded-lg py-2 px-8 truncate min-w-fit ${props.color} ${activeStyle} hover:scale-105 ease-out duration-300`}>{props.name}</button>
     );
 }
 

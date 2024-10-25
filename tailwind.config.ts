@@ -14,6 +14,7 @@ const config: Config = {
       active: "#927569",
       inactive: "#752b2b",
       text: "#342f2c",
+      callToAction: "#ab9594"
     },
     extend: {
       backgroundImage: {
