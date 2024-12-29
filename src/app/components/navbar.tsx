@@ -58,10 +58,12 @@ const Navbar = () => {
           name="Varaa aika"
           reference="4"
           color="bg-callToAction"
+          highlight={true}
         />
       </div>
       {showMenu && (
-        <div className="flex flex-col gap-6 w-full h-[calc(100dvh)] absolute bg-background px-4 py-10 top-16 right-0 visible xl:hidden">
+        <div className="flex flex-col gap-6 w-full h-[calc(100dvh)] absolute px-4 py-10 top-16 right-0 visible xl:hidden bg-background">
+          <div className="flex flex-col h-full justify-center gap-8 text-xl">
           <Button
             name="Esittely"
             reference="1"
@@ -101,6 +103,7 @@ const Navbar = () => {
             setState={setShowmenu}
             color="bg-callToAction"
           />
+          </div>
           <div className="mt-auto mb-14">
             <Footer/>
           </div>

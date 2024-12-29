@@ -7,7 +7,7 @@ const esittely = ({ id }: any) => {
       <div className="w-full max-w-4xl flex flex-col gap-8 py-12 md:py-0">
         <h1 className="text-5xl text-center">Esittely</h1>
         <div className="text-lg">
-          Olen jalkaterapeuttiopiskelija ja opiskelen Savonlinnan
+          Olen kolmannen vuoden jalkaterapeuttiopiskelija ja opiskelen Savonlinnan
           ammattikorkeakoulussa (XAMK). Olen toiminut useita vuosia
           lähihoitajana, ja kiinnostukseni jalkojen hyvinvointiin ja terveyden
           edistämiseen johdatti minut jatko-opintoihin. Jalkaterapeutti on
