@@ -8,12 +8,13 @@ interface propTypes {
     state?: boolean,
     setState?: Dispatch<SetStateAction<boolean>>;
     active?: boolean;
-    color: string;
+    color?: string;
+    highlight?: boolean;
 }
 
 const button = (props: propTypes) => {
 
-    let activeStyle = props.active ? "hue-rotate-180" : ""
+    let activeStyle = props.active ? "hue-rotate-180 underline scale-105 font-bold" : ""
 
     const onClick = () => {
         document.getElementById(props.reference)?.scrollIntoView({
@@ -23,7 +24,7 @@ const button = (props: propTypes) => {
     };
 
     return (
-        <button onClick={onClick} className={`rounded-lg py-2 px-8 truncate min-w-fit ${props.color} ${activeStyle} hover:scale-105 ease-out duration-300`}>{props.name}</button>
+        <button onClick={onClick} className={`rounded-lg py-2 px-8 truncate min-w-fit ${activeStyle} ${props.highlight ? "bg-callToAction font-semibold" : ""} hover:scale-110 ease-out duration-300`}>{props.name}</button>
     );
 }
 

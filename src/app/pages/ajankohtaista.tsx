@@ -10,11 +10,18 @@ const ajankohtaista = ({ id }: any) => {
         <h1 className="text-5xl text-center">Ajankohtaista</h1>
         <div className="flex flex-col gap-4 md:gap-10 justify-center -z-1">
           <Card_ajankohtaista
-            pvm="25.10.2024"
+            pvm="29.12.2024"
             backgroundImg="apteekki.jpg"
-            title="Olen tavattavissa Kommilan Apteekissa!"
+            title="Olen tavattavissa 13.1. Kommilan apteekilla!"
           >
-          {elementContent}
+            {elementContent}
+          </Card_ajankohtaista>
+          <Card_ajankohtaista
+            pvm="29.12.2024"
+            backgroundImg="raha.jpg"
+            title="Muutoksia hinnastoon 1.1.2025."
+          >
+            {elementContent2}
           </Card_ajankohtaista>
         </div>
       </div>
@@ -25,7 +32,7 @@ const ajankohtaista = ({ id }: any) => {
 const elementContent: React.ReactElement = (
   <>
     <p>
-      Hei! Löydät minut <strong>maanantaina 4.11. klo 8.30–16</strong> Kommilan
+      Hei! Löydät minut <strong>maanantaina 13.1. klo 9 – 16</strong> Kommilan
       apteekilta. Päivän aikana pääset tutustumaan jalkaterapian
       mahdollisuuksiin ja saamaan asiantuntevaa neuvontaa alaraajaongelmissa.
     </p>
@@ -36,7 +43,7 @@ const elementContent: React.ReactElement = (
 
     <p>Varaamalla kliinisen jalkahoidon apteekille saat hoidon:</p>
     <p className="text-xl">
-      <strong>68 € / 90 min</strong> (norm. 75 €)
+      <strong>71 € / 90 min</strong> (norm. 78 €)
     </p>
     <p>
       Hoidot tehdään apteekin hoitohuoneessa. Ajan voit varata puhelimitse
@@ -46,6 +53,16 @@ const elementContent: React.ReactElement = (
       <strong>0451032606</strong>
     </p>
     <p>Tervetuloa tapaamaan ja keskustelemaan kanssani Kommilan apteekkiin!</p>
+  </>
+);
+
+const elementContent2: React.ReactElement = (
+  <>
+    <p>
+      Tarkistamme ja teemme hinnastoomme muutoksia 1.1.2025 alkaen. Muutoksilla haluamme
+      varmistaa hinnaston ajantasaisuuden nousseiden kulujen myötä.
+    </p>
+    <p>Päivitetyt hinnat löydät hinnasto-välilehdeltä.</p>
   </>
 );
 

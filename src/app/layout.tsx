@@ -19,6 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full scroll-smooth">
+      <meta name="google-site-verification" content="eKt69DMazR5m-ysWDWcwd6r8nPtUHZfvSMYuI2sC62s" />
       <body className={inter.className}>{children}</body>
     </html>
   );

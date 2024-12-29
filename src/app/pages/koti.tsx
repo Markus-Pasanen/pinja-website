@@ -8,7 +8,7 @@ const koti = ({ id }: any) => {
     >
       <h1 className="text-5xl text-nowrap">Pinja Pasanen</h1>
       <h2 className="text-xl pb-10">Jalkaterapeuttiopiskelija</h2>
-      <Button reference="4" name="Varaa aika" color="bg-callToAction" />
+      <Button reference="4" name="Varaa aika" highlight={true} />
     </div>
   );
 };
