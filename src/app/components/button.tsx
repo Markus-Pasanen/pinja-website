@@ -24,7 +24,7 @@ const button = (props: propTypes) => {
     };
 
     return (
-        <button onClick={onClick} className={`rounded-lg py-2 px-8 truncate min-w-fit ${activeStyle} ${props.highlight ? "bg-callToAction" : ""} hover:scale-110 ease-out duration-300`}>{props.name}</button>
+        <button onClick={onClick} className={`rounded-lg py-2 px-8 truncate min-w-fit ${activeStyle} ${props.highlight ? "bg-callToAction font-semibold" : ""} hover:scale-110 ease-out duration-300`}>{props.name}</button>
     );
 }
 
