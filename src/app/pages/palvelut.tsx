@@ -14,7 +14,7 @@ const palvelut = ({ id }: any) => {
             mainImg="jalka-4.jpg"
             title="Kliininen jalkahoito"
             text="Kliininen jalkahoito on terveydenhoitoa, jossa hoidetaan jalkojen iho- ja kynsiongelmia sekä ehkäistään jalkavaivoja. Ihon rasvaushieronta ja lampaanvillat varpaiden väliin. Se on erityisen tärkeää riskiryhmille, kuten diabeetikoille, ja sen tavoitteena on ylläpitää jalkojen terveyttä."
-            pricing="75"
+            pricing="78"
             time="90 min"
           />
           <Card
@@ -22,7 +22,7 @@ const palvelut = ({ id }: any) => {
             mainImg="jalka-7.jpg"
             title="Kynsien lyhennys"
             text="Kynsien lyhennys on toimenpide, jossa kynnet leikataan sopivaan pituuteen ja muotoon. Se auttaa ylläpitämään kynsien terveyttä ja ehkäisee esimerkiksi sisäänkasvaneita kynsiä."
-            pricing="45"
+            pricing="46"
             time="30 min"
           />
           <Card
@@ -31,14 +31,14 @@ const palvelut = ({ id }: any) => {
             title="Kynnenoikaisu"
             text="Podofix-menetelmä, joka soveltuu lähes kaikkien epämuodostuneille kynsille, kuten sisäänkasvaneille kynsille sekä taipuneiden kynsien hoitoon. Podofix-hoito uusitaan 2vk-2kk välein, kunnes haluttu tulos on saavutettu."
             time="30-60 min"
-            pricing="45 / 55*"
+            pricing="48 / 58* + käytetty aika"
           />
           <Card
             backgroundImg="jalka-5.jpg"
             mainImg="jalka-5.jpg"
             title="Silikoniortoosit"
             text="Silikoniortoosit ovat yksilöllisesti muotoiltuja silikonista valmistettuja tukia, joita käytetään jalkaterän virheasentojen korjaamiseen tai vaimentamaan painetta. Ne helpottavat kipua ja parantavat jalkojen asentoa, auttaen esimerkiksi vaivaisenluun tai vasaravarpaiden hoidossa.  Yksilöllisesti valmistettavilla tuotteilla on 3kk takuu, jonka aikana muokkauksia voidaan tehdä veloituksetta. Yksilöllisesti valmistettavilla tuotteilla ei ole vaihto- eikä palautusoikeutta."
-            pricing="25"
+            pricing="26"
             pricingTitle="Silikoni"
           />
         </div>

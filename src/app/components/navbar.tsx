@@ -27,9 +27,9 @@ const Navbar = () => {
 };
 
   return (
-    <div className="w-full h-full flex flex-row items-justify text-center justify-between py-2 px-2 xl:px-8 shadow-xl bg-background">
+    <div className="w-full h-full flex flex-row items-justify text-center justify-between py-2 px-2 lg:px-8 shadow-xl bg-background">
       <button onClick={onClick}><img src="logo.png" alt="Logo" className="y-auto h-14 hover:scale-125 ease-out duration-300"/></button>
-      <div className="flex flex-row justify-end gap-2 w-1/2 invisible xl:visible">
+      <div className="flex flex-row justify-end gap-2 w-1/2 invisible lg:visible">
         <Button
           name="Esittely"
           reference="1"
@@ -62,7 +62,7 @@ const Navbar = () => {
         />
       </div>
       {showMenu && (
-        <div className="flex flex-col gap-6 w-full h-[calc(100dvh)] absolute px-4 py-10 top-16 right-0 visible xl:hidden bg-background">
+        <div className="flex flex-col gap-6 w-full h-[calc(100dvh)] absolute px-4 py-10 top-16 right-0 visible lg:hidden bg-background">
           <div className="flex flex-col h-full justify-center gap-8 text-xl">
           <Button
             name="Esittely"
@@ -110,7 +110,7 @@ const Navbar = () => {
         </div>
       )}
       <button
-        className="visible xl:hidden"
+        className="visible lg:hidden"
         onClick={() => setShowmenu(!showMenu)}
       >
         <Burger isOpen={showMenu} />
