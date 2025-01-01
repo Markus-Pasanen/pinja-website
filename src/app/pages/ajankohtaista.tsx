@@ -62,7 +62,7 @@ const elementContent2: React.ReactElement = (
       Tarkistamme ja teemme hinnastoomme muutoksia 1.1.2025 alkaen. Muutoksilla haluamme
       varmistaa hinnaston ajantasaisuuden nousseiden kulujen myötä.
     </p>
-    <p>Päivitetyt hinnat löydät hinnasto-välilehdeltä.</p>
+    <p>Päivitetyt hinnat löydät palvelut-välilehdeltä.</p>
   </>
 );
 
