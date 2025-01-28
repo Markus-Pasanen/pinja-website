@@ -10,9 +10,9 @@ const ajankohtaista = ({ id }: any) => {
         <h1 className="text-5xl text-center">Ajankohtaista</h1>
         <div className="flex flex-col gap-4 md:gap-10 justify-center -z-1">
           <Card_ajankohtaista
-            pvm="29.12.2024"
+            pvm="03.02.2025"
             backgroundImg="apteekki.jpg"
-            title="Olen tavattavissa 13.1. Kommilan apteekilla!"
+            title="Anna jalkojesi hyvinvoinnille ansaitsemaansa huomiota!"
           >
             {elementContent}
           </Card_ajankohtaista>
@@ -32,35 +32,47 @@ const ajankohtaista = ({ id }: any) => {
 const elementContent: React.ReactElement = (
   <>
     <p>
-      Hei! Löydät minut <strong>maanantaina 13.1. klo 9 – 16</strong> Kommilan
-      apteekilta. Päivän aikana pääset tutustumaan jalkaterapian
-      mahdollisuuksiin ja saamaan asiantuntevaa neuvontaa alaraajaongelmissa.
+      Tervetuloa jalkaterapeuttiopiskelijan jalkahoitoon apteekille{" "}
+      <strong>maanantaina 3.2. klo 9-16!</strong> Hyödynnä tämä erinomainen
+      mahdollisuus keskustella jalkaterapian mahdollisuuksista ja löytää juuri
+      sinulle sopiva hoitokeino.
     </p>
+    <p className="text-xl">Miksi valita jalkaterapeutti?</p>
     <p>
-      Tämä on erinomainen tilaisuus päästä kysymään jalkaterveyteen liittyvistä
-      asioista sekä varaamaan aika henkilökohtaiseen jalkaterapiaan.
+      Jalkaterapeutti arvioi ja hoitaa jalkojen vaivoja yksilöllisesti, auttaen
+      parantamaan liikkuvuutta ja elämänlaatua.
     </p>
 
-    <p>Varaamalla kliinisen jalkahoidon apteekille saat hoidon:</p>
-    <p className="text-xl">
-      <strong>71 € / 90 min</strong> (norm. 78 €)
-    </p>
+    <p className="text-xl">Talven jälkeinen huolenpito jalkoihin</p>
     <p>
-      Hoidot tehdään apteekin hoitohuoneessa. Ajan voit varata puhelimitse
-      numerosta:
+      Kaipaavatko jalkasi talven jäljiltä huolenpitoa ja hoitoa? Nyt on
+      täydellinen hetki tarttua tilaisuuteen ja varata aika jalkahoitoon
+      apteekille!
     </p>
+
+    <p className="text-xl">Erikoistarjous</p>
+    <p>
+      Varaa jalkahoitoaika <strong>75 € (norm. 78 €)</strong> ja nauti ammattitaitoisesta
+      hoidosta. Tarjolla myös Podofix-kynnenoikaisuhoito sekä yksilölliset
+      silikoniortoosit.
+    </p>
+
+    <p className="text-xl">Varaa aikasi nyt</p>
+    <p>
+      Ajanvaraus on helppoa! Soita numeroon <strong>045 103 2606</strong> ja varaa aika.
+    </p>
+
     <p className="text-xl">
-      <strong>0451032606</strong>
+      Tervetuloa hoitamaan jalkojasi ja parantamaan elämänlaatua!
     </p>
-    <p>Tervetuloa tapaamaan ja keskustelemaan kanssani Kommilan apteekkiin!</p>
   </>
 );
 
 const elementContent2: React.ReactElement = (
   <>
     <p>
-      Tarkistamme ja teemme hinnastoomme muutoksia 1.1.2025 alkaen. Muutoksilla haluamme
-      varmistaa hinnaston ajantasaisuuden nousseiden kulujen myötä.
+      Tarkistamme ja teemme hinnastoomme muutoksia 1.1.2025 alkaen. Muutoksilla
+      haluamme varmistaa hinnaston ajantasaisuuden nousseiden kulujen myötä.
     </p>
     <p>Päivitetyt hinnat löydät palvelut-välilehdeltä.</p>
   </>
