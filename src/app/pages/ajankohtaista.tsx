@@ -10,12 +10,13 @@ const ajankohtaista = ({ id }: any) => {
         <h1 className="text-5xl text-center">Ajankohtaista</h1>
         <div className="flex flex-col gap-4 md:gap-10 justify-center -z-1">
           <Card_ajankohtaista
-            pvm="03.02.2025"
+            pvm="24.02.2025"
             backgroundImg="apteekki.jpg"
-            title="Anna jalkojesi hyvinvoinnille ansaitsemaansa huomiota!"
+            title="Olen Kommilan apteekilla maanantaina 3.3. ja 7.4. klo 9–16!"
           >
             {elementContent}
           </Card_ajankohtaista>
+
           <Card_ajankohtaista
             pvm="29.12.2024"
             backgroundImg="raha.jpg"
@@ -33,7 +34,7 @@ const elementContent: React.ReactElement = (
   <>
     <p>
       Tervetuloa jalkaterapeuttiopiskelijan jalkahoitoon apteekille{" "}
-      <strong>maanantaina 3.2. klo 9-16!</strong> Hyödynnä tämä erinomainen
+      <strong>maanantaina 3.3. ja 7.4. klo 9–16.</strong> Hyödynnä tämä erinomainen
       mahdollisuus keskustella jalkaterapian mahdollisuuksista ja löytää juuri
       sinulle sopiva hoitokeino.
     </p>
