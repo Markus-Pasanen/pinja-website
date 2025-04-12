@@ -74,7 +74,7 @@ export default function ServicesPage() {
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-48 object-cover  mb-6 sepia-[.25] brightness-75"
+                  className="w-full h-48 object-cover  mb-6 brightness-75"
                 />
                 <div className="p-4">
                   <h3 className="text-xl font-semibold mb-2">

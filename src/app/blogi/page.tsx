@@ -74,7 +74,7 @@ export default function BlogPage() {
               <img
                 src={post.thumbnail}
                 alt={post.title}
-                className="w-full h-48 object-cover sepia-[.25] brightness-75"
+                className="w-full h-48 object-cover brightness-75"
               />
               <div className="p-4">
                 <h3 className="text-xl font-semibold mb-2">

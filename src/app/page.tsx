@@ -70,15 +70,14 @@ export default function Page() {
     <main className="flex flex-col items-center justify-center min-h-screen bg-background text-foreground gap-8">
        {/* Hero Section */}
        <section
-        className="relative w-full h-[50vh] flex items-center justify-center text-center text-white bg-landing"
+        className="relative w-full h-[50vh] flex items-center justify-center text-center text-white "
         style={{
+          backgroundImage: `url('jalka-3.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-
-        <div className="absolute inset-0 bg-background opacity-10"></div>
-        <div className="absolute inset-0"></div>
+        <div className="absolute inset-0 backdrop-blur-sm brightness-75"></div>
         <div className="relative z-10 px-4 rounded-lg">
           <h1 className="text-4xl font-bold mb-8">
           Pinja Pasanen
@@ -86,7 +85,7 @@ export default function Page() {
           <p className="text-lg mb-8">
           Jalkaterapeuttiopiskelija, joka on erikoistunut jalkojen terveyteen ja hyvinvointiin nykyaikaisilla hoitomenetelmillä.
           </p>
-          <button className="bg-primary text-white px-8 py-4 rounded-lg hover:bg-hover transition duration-300 font-semibold">
+          <button className="bg-primary text-card px-24 py-4 rounded-lg hover:bg-hover transition duration-300 font-semibold">
             <Link href="/yhteystiedot">Varaa aika</Link>
           </button>
         </div>
@@ -132,8 +131,9 @@ export default function Page() {
                   <img
                     src={article.thumbnail}
                     alt={article.title}
-                    className="w-full h-48 object-cover sepia-[.25] brightness-75"
+                    className="w-full h-48 object-cover brightness-75"
                   />
+                  
                   <div className="p-4">
                     <h3 className="text-xl font-semibold mb-2">
                       {article.title}

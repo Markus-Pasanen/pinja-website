@@ -15,7 +15,7 @@ export default function AboutPage() {
           <div>
             <img
               src="https://picsum.photos/400/500" // Placeholder image
-              alt="Tohtori Matti Meikäläinen"
+              alt="Pinja Pasanen"
               className="w-full h-auto rounded-lg shadow-md"
             />
           </div>

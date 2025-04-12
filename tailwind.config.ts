@@ -88,7 +88,7 @@ export default {
   			'accordion-up': 'accordion-up 0.2s ease-out'
   		},
 		  backgroundImage: {
-			landing: 'linear-gradient(rgba(233, 229, 225, 0), rgba(233, 229, 225, 1)), url(/jalka-4.jpg)',
+			landing: 'linear-gradient(rgba(233, 229, 225, 0.5), rgba(233, 229, 225, 0.5)), url(/jalka-3.jpg)',
 		  },
   	}
   },
