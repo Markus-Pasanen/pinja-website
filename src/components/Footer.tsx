@@ -1,0 +1,69 @@
+import { Facebook, Instagram } from "lucide-react";
+
+const Footer = () => {
+  return (
+    <div className="w-full h-full flex flex-col items-center justify-center text-center gap-6 py-6">
+      <div className="relative flex items-center w-full">
+        <div className="flex-grow border-t border-primary"></div>
+        <span className="flex flex-row mx-4 gap-4 font-semibold">
+          <a
+            href="#"
+            className="text-primary hover:text-accent transition-colors duration-200 p-3 rounded-full bg-secondary"
+            aria-label="Facebook"
+          >
+            <Facebook className="h-6 w-6" />
+          </a>
+          <a
+            href="#"
+            className="text-primary hover:text-accent transition-colors duration-200 p-3 rounded-full bg-secondary"
+            aria-label="Instagram"
+          >
+            <Instagram className="h-6 w-6" />
+          </a>
+        </span>
+        <div className="flex-grow border-t border-primary"></div>
+      </div>
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center w-full">
+          {/* Contact Information */}
+          <div>
+            <h3 className="font-semibold text-lg mb-4">Yritys</h3>
+            <p className="text-muted-foreground">TMI Jalkaterapia Pinja</p>
+            <p className="text-muted-foreground">
+              Savontie 30 a 5
+            </p>
+            <p className="text-muted-foreground">
+              78300 Varkaus
+            </p>
+            <p className="text-muted-foreground">
+            Y-tunnus: 1234567-8
+            </p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-lg mb-4">Varaa aika</h3>
+            <p className="text-muted-foreground">(+048) 4510-32606</p>
+            <p className="text-muted-foreground">
+              jalkaterapia.pinja@gmail.com
+            </p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-lg mb-4">Sivusto</h3>
+            <p className="text-muted-foreground">Tietosuojaseloste</p>
+            <p className="text-muted-foreground">
+              Toimitusehdot
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-12 text-center">
+          <p className="text-muted-foreground">
+            Copyright {new Date().getFullYear()} @ Pinja Pasanen
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Footer;
+

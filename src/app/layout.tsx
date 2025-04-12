@@ -1,14 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto } from 'next/font/google';
 import "./globals.css";
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: "Jalkaterapeuttiopiskelija Pinja Pasanen",
   description: "Lämpimästi tervetuloa vastaanotolleni!",
   keywords: ["Jalkaterapeuttiopiskelija", "Pinja Pasanen", "jalkaterapia"],
-  authors: [{ name: "Pinja Pasanen"}],
+  authors: [{ name: "Pinja Pasanen" }],
   robots: { index: true, follow: true },
 };
 
@@ -18,9 +24,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full scroll-smooth">
-      <meta name="google-site-verification" content="eKt69DMazR5m-ysWDWcwd6r8nPtUHZfvSMYuI2sC62s" />
-      <body className={inter.className}>{children}</body>
+    <html lang="fi" className={roboto.className}>
+      <meta name="google-site-verification" content="eKt69DMazR5m-ysWDWcwd6r8nPtUHZfvSMYuI2sC62s" />
+      <body className="antialiased min-h-screen bg-background text-text flex flex-col justify-between">
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

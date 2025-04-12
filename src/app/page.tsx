@@ -1,22 +1,160 @@
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
+import { Footprints, Scissors, Bandage, Accessibility, Candy, Hand, Calendar } from "lucide-react";
+import Link from 'next/link';
 
-import Koti from "./pages/koti";
-import Esittely from "./pages/esittely";
-import Palvelut from "./pages/palvelut";
-import Ajankohtaista from "./pages/ajankohtaista";
-import Yhteystiedot from "./pages/yhteystiedot";
+const services = [
+  {
+    title: "Kliininen jalkahoito",
+    description:
+      "Kliininen jalkahoito on erikoistunut hoitomuoto, joka keskittyy jalkojen terveyteen.",
+    icon: Footprints,
+    link: "/services#yleinen-jalkahoito",
+  },
+  {
+    title: "Kynsienlyhennys",
+    description:
+      "Kynsienlyhennys on tärkeä osa jalkaterveyden ylläpitoa, erityisesti niille, joilla on paksuuntuneita tai sisäänkasvaneita kynsiä.",
+    icon: Scissors,
+    link: "/services#diabeettinen-jalkahoito",
+  },
+  {
+    title: "Podofix",
+    description:
+      "Podofix on innovatiivinen hoitomenetelmä, joka auttaa korjaamaan sisäänkasvaneita kynsiä.",
+    icon: Bandage,
+    link: "/services#yksilolliset-pohjalliset",
+  },
+  {
+    title: "Silikoniortoosit",
+    description:
+      "Silikoniortoosit ovat mukautuvia ja mukautuvia apuvälineitä, jotka tarjoavat tukea ja suojaa jaloille.",
+    icon: Accessibility,
+    link: "/services#kivunhoito",
+  },
+  {
+    title: "Sokerointi",
+    description:
+      "Sokerointi on tehokas ja luonnollinen tapa poistaa karvoja jaloista ja varpaista.",
+    icon: Candy,
+    link: "/services#kynsienhoito",
+  },
+  {
+    title: "Jalkahieronta",
+    description:
+      "Jalkahieronta on rentouttava ja terapeuttinen hoitomuoto, joka parantaa verenkiertoa ja vähentää jalkojen rasitusta.",
+    icon: Hand,
+    link: "/services#jalkahieronta",
+  },
+];
 
-export default function Home() {
+const news = [
+  {
+    title: "Olen tavattavissa Kommilan apteekilla",
+    excerpt:
+      "Tervetuloa tapaamaan minua Kommilan apteekilla Maanantaina 03.03. ja Torstaina 07.03. klo 9-16.",
+    thumbnail: "apteekki.jpg",
+    link: "/blog/uusi-tutkimus-jalkakipu",
+    date: "03.03.2025",
+  },
+  {
+    title: "Muutoksia hinnastoon 1.1.2025 alkaen",
+    excerpt:
+      "Tarkistamme hinnastomme ja teemme muutoksia, jotta voimme tarjota asiakkaillemme parasta mahdollista palvelua.",
+    thumbnail: "raha.jpg",
+    link: "/blog/edistysaskeleet-diabeettinen-jalkahoito",
+    date: "01.01.2025",
+  },
+];
+
+export default function Page() {
   return (
-    <main className="flex flex-col text-text gap-96">
-      <div className="fixed w-screen z-50"><Navbar/></div>
-      <Koti id="0"/>
-      <Esittely id="1"/>
-      <Palvelut id="2"/>
-      <Ajankohtaista id="3"/>
-      <Yhteystiedot id="4"/>
-      <Footer/>
+    <main className="flex flex-col items-center justify-center min-h-screen bg-background text-foreground gap-8">
+       {/* Hero Section */}
+       <section
+        className="relative w-full h-[50vh] flex items-center justify-center text-center text-white bg-landing"
+        style={{
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+
+        <div className="absolute inset-0 bg-background opacity-10"></div>
+        <div className="absolute inset-0"></div>
+        <div className="relative z-10 px-4 rounded-lg">
+          <h1 className="text-4xl font-bold mb-8">
+          Pinja Pasanen
+          </h1>
+          <p className="text-lg mb-8">
+          Jalkaterapeuttiopiskelija, joka on erikoistunut jalkojen terveyteen ja hyvinvointiin nykyaikaisilla hoitomenetelmillä.
+          </p>
+          <button className="bg-primary text-white px-8 py-4 rounded-lg hover:bg-hover transition duration-300 font-semibold">
+            <Link href="/yhteystiedot">Varaa aika</Link>
+          </button>
+        </div>
+      </section>
+      <div className="container mx-auto px-4 py-24">
+        <section>
+          <h2 className="text-3xl font-semibold mb-4 text-center">
+            Palveluni
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <Link
+                key={index}
+                href={service.link}
+                className="p-6 rounded-lg shadow-md bg-card hover:shadow-lg transition-shadow duration-300 flex flex-col items-center"
+              >
+                <service.icon className="h-12 w-12 text-primary mb-4" />
+                <h3 className="text-xl font-semibold mb-2 text-center">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground text-center">
+                  {service.description}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <section className="pt-24">
+          <h2 className="text-3xl font-semibold mb-4 text-center">
+            Uutiset
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {news.map((article, index) => (
+              <div
+                key={index}
+                className="rounded-lg shadow-md bg-card overflow-hidden relative flex flex-col justify-between"
+              >
+                <div className="shadow-lg absolute left-0 top-0 rounded-br-lg py-2 px-4 bg-primary text-card z-10 font-semibold">
+                {article.date}
+                </div>
+                <div>
+                  <img
+                    src={article.thumbnail}
+                    alt={article.title}
+                    className="w-full h-48 object-cover sepia-[.25] brightness-75"
+                  />
+                  <div className="p-4">
+                    <h3 className="text-xl font-semibold mb-2">
+                      {article.title}
+                    </h3>
+                    <p className="text-muted-foreground">
+                      {article.excerpt}
+                    </p>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <button className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-hover transition duration-300 w-full font-semibold">
+                    <a href={article.link} className="w-full text-center">
+                      Lue Lisää
+                    </a>
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
     </main>
   );
 }
