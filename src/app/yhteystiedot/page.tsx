@@ -10,7 +10,7 @@ export default function ContactPage() {
       <section className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-4">Ota Yhteyttä</h1>
         <p className="text-lg text-muted-foreground">
-          Voit varata ajan tai kysyä lisätietoja palveluistani. Täytä alla oleva lomake tai ota yhteyttä suoraan puhelimitse tai sähköpostitse.
+          Voit varata ajan hoitoon tai kysyä lisätietoja palveluistani. Täytä alla oleva lomake tai ota yhteyttä suoraan puhelimitse tai sähköpostitse.
         </p>
       </section>
 
@@ -20,12 +20,12 @@ export default function ContactPage() {
           <h2 className="text-xl font-semibold mb-6">
             Lähetä minulle viesti
           </h2>
-          <form className="flex flex-col gap-4">
+          <form className="flex flex-col gap-2">
             <Input type="text" placeholder="Nimesi" />
             <Input type="email" placeholder="Sähköpostiosoitteesi" />
             <Input type="tel" placeholder="Puhelinnumerosi" />
             <Textarea placeholder="Viestisi" />
-            <button className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-hover transition duration-300 w-full">
+            <button className="bg-primary text-white px-4 py-2 mt-6 rounded-lg hover:bg-hover transition duration-300 w-full">
               <a href="" className="w-full text-center">
                 Lähetä viesti
               </a>
@@ -34,9 +34,8 @@ export default function ContactPage() {
         </div>
 
         {/* Contact Information */}
-        <div className="p-6 rounded-lg shadow-md bg-card flex flex-col gap-16">
-
-          <div>
+        <div className="flex flex-col gap-8">
+          <div className="p-6 rounded-lg shadow-md bg-card flex flex-col h-full">
             <h2 className="text-xl font-semibold mb-6">
               Yhteystiedot
             </h2>
@@ -53,7 +52,7 @@ export default function ContactPage() {
               </a>
             </p>
           </div>
-          <div>
+          <div className="p-6 rounded-lg shadow-md bg-card flex flex-col">
             <h2 className="text-xl font-semibold mb-6">
               Hoitoajat
             </h2>

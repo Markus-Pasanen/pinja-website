@@ -55,9 +55,9 @@ export default function BlogPage() {
   return (
     <main className="container mx-auto py-16 px-4">
       <section className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4">Blogi</h1>
+        <h1 className="text-4xl font-bold mb-4">Ajankohtaista</h1>
         <p className="text-lg text-muted-foreground">
-          Pysy ajan tasalla uusimmista artikkeleistani jalkojen terveydestä ja hoidosta.
+          Pysy ajan tasalla uusimmista tapahtumista ja uutisista.
         </p>
       </section>
 

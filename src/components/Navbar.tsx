@@ -39,7 +39,7 @@ const Navbar = () => {
             Palvelut
           </Link>
           <Link href="/blogi" className={cn("hover:text-accent", pathname === "/blogi" ? "font-semibold" : "")}>
-            Blogi
+            Ajankohtaista
           </Link>
           <Link href="/esittely" className={cn("hover:text-accent", pathname === "/esittely" ? "font-semibold" : "")}>
             Minusta

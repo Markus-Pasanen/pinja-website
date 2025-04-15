@@ -30,12 +30,6 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Yritys</h3>
             <p className="text-muted-foreground">TMI Jalkaterapia Pinja</p>
             <p className="text-muted-foreground">
-              Savontie 30 a 5
-            </p>
-            <p className="text-muted-foreground">
-              78300 Varkaus
-            </p>
-            <p className="text-muted-foreground">
             Y-tunnus: 1234567-8
             </p>
           </div>
@@ -51,6 +45,9 @@ const Footer = () => {
             <p className="text-muted-foreground">Tietosuojaseloste</p>
             <p className="text-muted-foreground">
               Toimitusehdot
+            </p>
+            <p className="text-muted-foreground">
+              Maksutavat
             </p>
           </div>
         </div>
