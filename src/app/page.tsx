@@ -7,42 +7,36 @@ const services = [
     description:
       "Kliininen jalkahoito on erikoistunut hoitomuoto, joka keskittyy jalkojen terveyteen.",
     icon: Footprints,
-    link: "/services#yleinen-jalkahoito",
   },
   {
     title: "Kynsienlyhennys",
     description:
       "Kynsienlyhennys on tärkeä osa jalkaterveyden ylläpitoa, erityisesti niille, joilla on paksuuntuneita tai sisäänkasvaneita kynsiä.",
     icon: Scissors,
-    link: "/services#diabeettinen-jalkahoito",
   },
   {
     title: "Podofix",
     description:
       "Podofix on innovatiivinen hoitomenetelmä, joka auttaa korjaamaan sisäänkasvaneita kynsiä.",
     icon: Bandage,
-    link: "/services#yksilolliset-pohjalliset",
   },
   {
     title: "Silikoniortoosit",
     description:
       "Silikoniortoosit ovat mukautuvia ja mukautuvia apuvälineitä, jotka tarjoavat tukea ja suojaa jaloille.",
     icon: Accessibility,
-    link: "/services#kivunhoito",
   },
   {
     title: "Sokerointi",
     description:
       "Sokerointi on tehokas ja luonnollinen tapa poistaa karvoja jaloista ja varpaista.",
     icon: Candy,
-    link: "/services#kynsienhoito",
   },
   {
     title: "Jalkahieronta",
     description:
       "Jalkahieronta on rentouttava ja terapeuttinen hoitomuoto, joka parantaa verenkiertoa ja vähentää jalkojen rasitusta.",
     icon: Hand,
-    link: "/services#jalkahieronta",
   },
 ];
 
@@ -68,8 +62,8 @@ const news = [
 export default function Page() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen bg-background text-foreground gap-8">
-       {/* Hero Section */}
-       <section
+      {/* Hero Section */}
+      <section
         className="relative w-full h-[50vh] flex items-center justify-center text-center text-white "
         style={{
           backgroundImage: `url('jalka-3.jpg')`,
@@ -80,14 +74,14 @@ export default function Page() {
         <div className="absolute inset-0 backdrop-blur-sm brightness-75"></div>
         <div className="relative z-10 px-4 rounded-lg">
           <h1 className="text-4xl font-bold mb-8">
-          Pinja Pasanen
+            Pinja Pasanen
           </h1>
           <p className="text-lg mb-8">
-          Jalkaterapeuttiopiskelija, joka on erikoistunut jalkojen terveyteen ja hyvinvointiin nykyaikaisilla hoitomenetelmillä.
+            Jalkaterapeuttiopiskelija, joka on erikoistunut jalkojen terveyteen ja hyvinvointiin nykyaikaisilla hoitomenetelmillä.
           </p>
-          <button className="bg-primary text-card px-24 py-4 rounded-lg hover:bg-hover transition duration-300 font-semibold">
-            <Link href="/yhteystiedot">Varaa aika</Link>
-          </button>
+          <Link href="/yhteystiedot" className="bg-primary text-card px-24 py-4 rounded-lg hover:ring-4 ring-secondary transition duration-300  font-semibold">
+              Varaa aika
+          </Link>
         </div>
       </section>
       <div className="container mx-auto px-4 py-24">
@@ -99,8 +93,8 @@ export default function Page() {
             {services.map((service, index) => (
               <Link
                 key={index}
-                href={service.link}
-                className="p-6 rounded-lg shadow-md bg-card hover:shadow-lg transition-shadow duration-300 flex flex-col items-center"
+                href="/palvelut"
+                className="p-6 rounded-lg shadow-md bg-card hover:shadow-xl hover:brightness-90 transition duration-300 flex flex-col items-center"
               >
                 <service.icon className="h-12 w-12 text-primary mb-4" />
                 <h3 className="text-xl font-semibold mb-2 text-center">
@@ -116,7 +110,7 @@ export default function Page() {
 
         <section className="pt-24">
           <h2 className="text-3xl font-semibold mb-4 text-center">
-            Uutiset
+            Ajankohtaista
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {news.map((article, index) => (
@@ -125,7 +119,7 @@ export default function Page() {
                 className="rounded-lg shadow-md bg-card overflow-hidden relative flex flex-col justify-between"
               >
                 <div className="shadow-lg absolute left-0 top-0 rounded-br-lg py-2 px-4 bg-primary text-card z-10 font-semibold">
-                {article.date}
+                  {article.date}
                 </div>
                 <div>
                   <img
@@ -133,7 +127,7 @@ export default function Page() {
                     alt={article.title}
                     className="w-full h-48 object-cover brightness-75"
                   />
-                  
+
                   <div className="p-4">
                     <h3 className="text-xl font-semibold mb-2">
                       {article.title}
@@ -142,13 +136,6 @@ export default function Page() {
                       {article.excerpt}
                     </p>
                   </div>
-                </div>
-                <div className="p-4">
-                  <button className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-hover transition duration-300 w-full font-semibold">
-                    <a href={article.link} className="w-full text-center">
-                      Lue Lisää
-                    </a>
-                  </button>
                 </div>
               </div>
             ))}

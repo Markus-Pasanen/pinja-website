@@ -1,4 +1,5 @@
 import { Facebook, Instagram } from "lucide-react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -42,7 +43,7 @@ const Footer = () => {
           </div>
           <div>
             <h3 className="font-semibold text-lg mb-4">Sivusto</h3>
-            <p className="text-muted-foreground">Tietosuojaseloste</p>
+            <Link href="/tietosuojaseloste"><p className="text-muted-foreground">Tietosuojaseloste</p></Link>
             <p className="text-muted-foreground">
               Toimitusehdot
             </p>

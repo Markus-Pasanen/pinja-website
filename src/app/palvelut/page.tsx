@@ -1,7 +1,7 @@
 "use client";
 
 import { Icons } from "@/components/icons";
-import { LucideIcon, Clock, Currency, EuroIcon } from "lucide-react";
+import { LucideIcon, Clock, Wallet, EuroIcon } from "lucide-react";
 
 const services = [
   {
@@ -10,7 +10,7 @@ const services = [
     description:
       "Kliininen jalkahoito on terveydenhoitoa, jossa hoidetaan jalkojen iho- ja kynsiongelmia sekä ehkäistään jalkavaivoja. Ihon rasvaushieronta ja lampaanvillat varpaiden väliin. Se on erityisen tärkeää riskiryhmille, kuten diabeetikoille, ja sen tavoitteena on ylläpitää jalkojen terveyttä.",
     image: "jalka-1.jpg",
-    link: "/services/kliininen-jalkahoito",
+    link: "/palvelut/kliininen-jalkahoito",
     price: "78 €",
     duration: "90 minuuttia",
   },
@@ -20,7 +20,7 @@ const services = [
     description:
       "Kynsien lyhennys on toimenpide, jossa kynnet leikataan sopivaan pituuteen ja muotoon. Se auttaa ylläpitämään kynsien terveyttä ja ehkäisee esimerkiksi sisäänkasvaneita kynsiä.",
     image: "jalka-7.jpg",
-    link: "/services/kynsien-lyhennys",
+    link: "/palvelut/kynsien-lyhennys",
     price: "46 €",
     duration: "30 minuuttia",
   },
@@ -30,7 +30,7 @@ const services = [
     description:
       "Podofix-menetelmä, joka soveltuu lähes kaikkien epämuodostuneille kynsille, kuten sisäänkasvaneille kynsille sekä taipuneiden kynsien hoitoon. Podofix-hoito uusitaan 2vk-2kk välein, kunnes haluttu tulos on saavutettu.",
     image: "jalka-2.jpg",
-    link: "/services/kynsien-lyhennys",
+    link: "/palvelut/kynsien-lyhennys",
     price: "48 / 58* + käytetty aika",
     duration: "30-60 minuuttia",
   },
@@ -40,7 +40,7 @@ const services = [
     description:
       "Silikoniortoosit ovat yksilöllisesti muotoiltuja silikonista valmistettuja tukia, joita käytetään jalkaterän virheasentojen korjaamiseen tai vaimentamaan painetta. Ne helpottavat kipua ja parantavat jalkojen asentoa, auttaen esimerkiksi vaivaisenluun tai vasaravarpaiden hoidossa.",
     image: "jalka-5.jpg",
-    link: "/services/kynsien-lyhennys",
+    link: "/palvelut/kynsien-lyhennys",
     price: "26 € per silikoni",
     duration: "30 minuuttia",
   },
@@ -88,23 +88,18 @@ export default function ServicesPage() {
             </div>
             <div className="p-6">
               <div className="flex items-center mb-2">
-                <EuroIcon className="h-4 w-4 mr-2 text-muted-foreground" />
+                <Wallet className="h-4 w-4 mr-2 text-muted-foreground" />
                 <p className="text-sm text-muted-foreground">
                   Hinta: {service.price}
                 </p>
               </div>
 
-              <div className="flex items-center mb-4">
+              <div className="flex items-center">
                 <Clock className="h-4 w-4 mr-2 text-muted-foreground" />
                 <p className="text-sm text-muted-foreground">
                   Ajanvaraus: {service.duration}
                 </p>
               </div>
-              <button className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-hover transition duration-300 w-full font-semibold">
-                <a href={service.link} className="w-full text-center">
-                  Lue Lisää
-                </a>
-              </button>
             </div>
           </section>
         ))}
