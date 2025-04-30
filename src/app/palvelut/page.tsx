@@ -1,7 +1,5 @@
 "use client";
-
-import { Icons } from "@/components/icons";
-import { LucideIcon, Clock, Wallet, EuroIcon } from "lucide-react";
+import { Clock, Wallet } from "lucide-react";
 
 const services = [
   {
@@ -9,40 +7,110 @@ const services = [
     title: "Kliininen jalkahoito",
     description:
       "Kliininen jalkahoito on terveydenhoitoa, jossa hoidetaan jalkojen iho- ja kynsiongelmia sekä ehkäistään jalkavaivoja. Ihon rasvaushieronta ja lampaanvillat varpaiden väliin. Se on erityisen tärkeää riskiryhmille, kuten diabeetikoille, ja sen tavoitteena on ylläpitää jalkojen terveyttä.",
-    image: "jalka-1.jpg",
-    link: "/palvelut/kliininen-jalkahoito",
+    image: "pinja_2025-52.jpg",
+    link: "kliininen-jalkahoito",
     price: "78 €",
     duration: "90 minuuttia",
+    type: "terapia",
+  },
+  {
+    id: "",
+    title: "Diabeetikon jalkojen perustutkimus- ja hoito",
+    description:
+      "Silikoniortoosit ovat yksilöllisesti muotoiltuja silikonista valmistettuja tukia, joita käytetään jalkaterän virheasentojen korjaamiseen tai vaimentamaan painetta. Ne helpottavat kipua ja parantavat jalkojen asentoa, auttaen esimerkiksi vaivaisenluun tai vasaravarpaiden hoidossa.",
+    image: "pinja_2025-33.jpg",
+    link: "/palvelut/kynsien-lyhennys",
+    price: "26 € per silikoni",
+    duration: "30 minuuttia",
+    type: "terapia",
   },
   {
     id: "Kynsien lyhennys",
     title: "Kynsien lyhennys",
     description:
       "Kynsien lyhennys on toimenpide, jossa kynnet leikataan sopivaan pituuteen ja muotoon. Se auttaa ylläpitämään kynsien terveyttä ja ehkäisee esimerkiksi sisäänkasvaneita kynsiä.",
-    image: "jalka-7.jpg",
+    image: "pinja_2025-45.jpg",
     link: "/palvelut/kynsien-lyhennys",
     price: "46 €",
     duration: "30 minuuttia",
+    type: "terapia",
   },
   {
     id: "Kynnenoikaisu",
     title: "Kynnenoikaisu",
     description:
       "Podofix-menetelmä, joka soveltuu lähes kaikkien epämuodostuneille kynsille, kuten sisäänkasvaneille kynsille sekä taipuneiden kynsien hoitoon. Podofix-hoito uusitaan 2vk-2kk välein, kunnes haluttu tulos on saavutettu.",
-    image: "jalka-2.jpg",
+    image: "pinja_2025-76.jpg",
     link: "/palvelut/kynsien-lyhennys",
-    price: "48 / 58* + käytetty aika",
-    duration: "30-60 minuuttia",
+    price: "58 € + käytetty aika",
+    duration: "45 minuuttia",
+    type: "terapia",
   },
   {
-    id: "Silikoniortoosit",
-    title: "Silikoniortoosit",
+    id: "Silikoniortoosi",
+    title: "Silikoniortoosi",
     description:
       "Silikoniortoosit ovat yksilöllisesti muotoiltuja silikonista valmistettuja tukia, joita käytetään jalkaterän virheasentojen korjaamiseen tai vaimentamaan painetta. Ne helpottavat kipua ja parantavat jalkojen asentoa, auttaen esimerkiksi vaivaisenluun tai vasaravarpaiden hoidossa.",
-    image: "jalka-5.jpg",
+    image: "pinja_2025-5.jpg",
     link: "/palvelut/kynsien-lyhennys",
-    price: "26 € per silikoni",
+    price: "28 € per silikoni",
     duration: "30 minuuttia",
+    type: "terapia",
+  },
+  {
+    id: "Alaraajahieronta",
+    title: "Alaraajahieronta (harjoittelija)",
+    description:
+      "Alaraajahieronta keskittyy reisien, säärien, nilkkojen ja jalkaterien alueelle. Hieronnassa käsitellään lihaksia ja pehmytkudoksia kokonaisvaltaisesti. Hoito lievittää lihaskireyksiä ja kiputiloja, erityisesti pohkeissa ja reisissä. Hieronta rentouttaa lihaksia, parantaa verenkiertoa ja tehostaa aineenvaihduntaa alaraajoissa. Se edistää palautumista rasituksesta ja tukee fyysisen hyvinvoinnin ylläpitämistä.",
+    image: "pinja_2025-14.jpg",
+    link: "/palvelut/kynsien-lyhennys",
+    price: "48 €",
+    duration: "90 minuuttia",
+    type: "hieronta",
+  },
+  {
+    id: "Säärien sokerointi",
+    title: "Säärien sokerointi",
+    description:
+      "Silikoniortoosit ovat yksilöllisesti muotoiltuja silikonista valmistettuja tukia, joita käytetään jalkaterän virheasentojen korjaamiseen tai vaimentamaan painetta. Ne helpottavat kipua ja parantavat jalkojen asentoa, auttaen esimerkiksi vaivaisenluun tai vasaravarpaiden hoidossa.",
+    image: "pinja_2025-20.jpg",
+    link: "/palvelut/kynsien-lyhennys",
+    price: "32 €",
+    duration: "60 minuuttia",
+    type: "sokerointi",
+  },
+  {
+    id: "Kainaloiden sokerointi",
+    title: "Kainaloiden sokerointi",
+    description:
+      "Silikoniortoosit ovat yksilöllisesti muotoiltuja silikonista valmistettuja tukia, joita käytetään jalkaterän virheasentojen korjaamiseen tai vaimentamaan painetta. Ne helpottavat kipua ja parantavat jalkojen asentoa, auttaen esimerkiksi vaivaisenluun tai vasaravarpaiden hoidossa.",
+    image: "pinja_2025-20.jpg",
+    link: "/palvelut/kynsien-lyhennys",
+    price: "16 €",
+    duration: "45 minuuttia",
+    type: "sokerointi",
+  },
+  {
+    id: "Reisien sokerointi",
+    title: "Reisien sokerointi",
+    description:
+      "Silikoniortoosit ovat yksilöllisesti muotoiltuja silikonista valmistettuja tukia, joita käytetään jalkaterän virheasentojen korjaamiseen tai vaimentamaan painetta. Ne helpottavat kipua ja parantavat jalkojen asentoa, auttaen esimerkiksi vaivaisenluun tai vasaravarpaiden hoidossa.",
+    image: "pinja_2025-20.jpg",
+    link: "/palvelut/kynsien-lyhennys",
+    price: "36 €",
+    duration: "60 minuuttia",
+    type: "sokerointi",
+  },
+  {
+    id: "Lahjakortti",
+    title: "Lahjakortti",
+    description:
+      "Osta lahjakortti miellyttääksesi itseäsi tai läheistäsi.",
+    image: "pinja_2025-20.jpg",
+    link: "/palvelut/kynsien-lyhennys",
+    price: "20 - 1000 €",
+    duration: "palvelusta riippuen",
+    type: "sokerointi",
   },
 ];
 
@@ -54,6 +122,7 @@ interface Service {
   link: string;
   price: string;
   duration: string;
+  type: string;
 }
 
 export default function ServicesPage() {
@@ -74,9 +143,9 @@ export default function ServicesPage() {
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-48 object-cover  mb-6 brightness-75"
+                  className="w-full h-48 mb-6 brightness-75 object-cover object-[50%_35%]"
                 />
-                <div className="p-4">
+                <div className="p-4 text-ellipsis overflow-hidden">
                   <h3 className="text-xl font-semibold mb-2">
                     {service.title}
                   </h3>

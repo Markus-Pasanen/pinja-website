@@ -2,96 +2,82 @@ import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <main className="container mx-auto py-16 px-4">
+    <main className="container mx-auto py-16 px-4 text-muted-foreground">
       <section className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4">Minusta</h1>
-        <p className="text-lg text-muted-foreground">
+        <h1 className="text-4xl font-bold mb-4 text-black">Minusta</h1>
+        <p className="text-lg">
           Opi lisää taustastani ja asiantuntemuksestani.
         </p>
       </section>
-      <section className="mb-16">
+      <section className="">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Professional Headshot */}
           <div>
             <img
-              src="https://picsum.photos/400/500" // Placeholder image
+              src="pinja_2025-84.jpg"
               alt="Pinja Pasanen"
-              className="w-full h-auto rounded-lg shadow-md"
+              className="h-full rounded-lg shadow-md object-cover"
             />
           </div>
+          <div className="flex flex-col justify-between gap-8">
 
-          {/* Introduction */}
-          <div>
-            <h2 className="text-3xl font-semibold mb-4">
-              Pinja Pasanen
-            </h2>
-            <p className="text-muted-foreground mb-6">
-              Olen kolmannen vuoden jalkaterapeuttiopiskelija Kaakkois-Suomen ammattikorkeakoulussa (XAMK) Savonlinnassa.
-              Taustaltani olen lähihoitaja, ja vuosien työskentely hoitoalalla sytytti intohimoni jalkojen hyvinvointiin ja terveyden edistämiseen.
-              Tämä innostus johdatti minut jalkaterapian korkeakouluopintoihin.
-              Jalkaterapeutti on terveydenhuollon ammattilainen, joka on suorittanut 3,5-vuotisen korkeakoulututkinnon.
-              Erikoisosaamiseni keskittyy alaraajojen terveyteen ja hyvinvointiin.
-            </p>
-            <h3 className="text-2xl font-semibold mb-2">Missio</h3>
-            <p className="text-muted-foreground mb-6">
-              Jalkaterapeuttina tarjoan kokonaisvaltaista hoitoa, joka erottuu tavallisesta jalkojen hoidosta koulutukseni syvyyden ja monipuolisuuden ansiosta.
-              Osaamiseni kattaa iho- ja kynsiongelmien hoidon sekä yksilölliset apuvälineet, kuten silikoniortoosit ja tukipohjalliset.
-              Tavoitteenani on edistää ja ylläpitää jalkojesi terveyttä ennaltaehkäisevästi sekä ratkaista mahdolliset ongelmat tehokkaasti.
-              Jokainen asiakas on ainutlaatuinen, joten räätälöin hoidot juuri sinun tarpeidesi mukaisiksi.
-            </p>
+            <div className="bg-card p-6 rounded-lg shadow-sm h-full">
+              <h3 className="text-2xl font-semibold mb-2 text-black">
+                Pinja Pasanen
+              </h3>
+              <p className="pb-4">
+                Olen kolmannen vuoden jalkaterapeuttiopiskelija Kaakkois-Suomen ammattikorkeakoulussa (XAMK) Savonlinnassa.
+                Taustaltani olen lähihoitaja, ja vuosien työskentely hoitoalalla sytytti intohimoni jalkojen hyvinvointiin ja terveyden edistämiseen.</p>
+              <p>
+                Tämä innostus johdatti minut jalkaterapian korkeakouluopintoihin.
+                Jalkaterapeutti on terveydenhuollon ammattilainen, joka on suorittanut 3,5-vuotisen korkeakoulututkinnon.
+                Erikoisosaamiseni keskittyy alaraajojen terveyteen ja hyvinvointiin.
+              </p>
+            </div>
+
+            <div className="bg-card p-6 rounded-lg shadow-sm h-full">
+              <h3 className="text-2xl font-semibold mb-2 text-black">Missio</h3>
+              <p className="pb-4">
+                Jalkaterapeuttina tarjoan kokonaisvaltaista hoitoa, joka erottuu tavallisesta jalkojen hoidosta koulutukseni syvyyden ja monipuolisuuden ansiosta.
+                Osaamiseni kattaa iho- ja kynsiongelmien hoidon sekä yksilölliset apuvälineet, kuten silikoniortoosit ja tukipohjalliset.
+              </p>
+              <p>
+                Tavoitteenani on edistää ja ylläpitää jalkojesi terveyttä ennaltaehkäisevästi sekä ratkaista mahdolliset ongelmat tehokkaasti.
+                Jokainen asiakas on ainutlaatuinen, joten räätälöin hoidot juuri sinun tarpeidesi mukaisiksi.
+              </p>
+            </div>
+
+
+
+
+            <div className="p-4 rounded-lg shadow-md bg-card h-full">
+              <h3 className="text-2xl font-semibold mb-2 text-black">Koulutus</h3>
+              <p className="text-muted-foreground">
+                <strong>Jalkaterapeutti (AMK)</strong>
+                <br />
+                Kaakkois-Suomen ammattikorkeakoulu - 2025
+              </p>
+              <p className="text-muted-foreground">
+                <strong>Lähihoitaja</strong>
+                <br />
+                Savon ammatti- ja aikuisopisto - 2020
+              </p>
+            </div>
+
+
+            {/* Certifications */}
+            <div className="p-4 rounded-lg shadow-md bg-card h-full">
+              <h3 className="text-2xl font-semibold mb-2 text-black">Sertifikaatit</h3>
+              <p className="text-muted-foreground">
+                <strong>Fast&Furious sugaring (level 1)</strong>
+                <br />
+                MAKEA pro - 2025
+              </p>
+            </div>
             <button className="bg-primary text-white px-8 py-4 rounded-lg hover:bg-hover transition duration-300">
               <Link href="/yhteystiedot">Varaa aika</Link>
             </button>
           </div>
-        </div>
-      </section>
-      {/* CV Section */}
-      <section>
-        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8">
-          {/* Education */}
-          <div className="p-4 rounded-lg shadow-md bg-card">
-            <h3 className="text-xl font-semibold mb-2">Koulutus</h3>
-            <p className="text-muted-foreground">
-              <strong>Jalkaterapeutti (AMK)</strong>
-              <br />
-              XAMK - 2025
-            </p>
-            <p className="text-muted-foreground">
-              <strong>Lähihoitaja (Vanhustenhoito)</strong>
-              <br />
-              Savonia - 2015
-            </p>
-          </div>
 
-          {/* Experience */}
-          <div className="p-4 rounded-lg shadow-md bg-card">
-            <h3 className="text-xl font-semibold mb-2">Kokemus</h3>
-            <p className="text-muted-foreground">
-              <strong>Jalkaterapeutti ja Omistaja</strong>
-              <br />
-              Toiminimi - Nykyinen
-            </p>
-            <p className="text-muted-foreground">
-              <strong>Kotihoito</strong>
-              <br />
-              Kotipalvelu verenpisara - Nykyinen
-            </p>
-            <p className="text-muted-foreground">
-              <strong>Kotihoito</strong>
-              <br />
-              Varkauden kaupunki - Nykyinen
-            </p>
-          </div>
-
-          {/* Certifications */}
-          <div className="p-4 rounded-lg shadow-md bg-card">
-            <h3 className="text-xl font-semibold mb-2">Sertifikaatit</h3>
-            <p className="text-muted-foreground">
-              <strong>Fast&Furious sugaring (level 1)</strong>
-              <br />
-              MAKEA pro - 2025
-            </p>
-          </div>
         </div>
       </section>
     </main>

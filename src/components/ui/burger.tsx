@@ -3,7 +3,6 @@ interface propTypes {
 }
 
 const burger = (props: propTypes) => {
-
     return (
             <div className="relative group">
                 <div className="relative flex overflow-hidden items-center justify-center rounded-xl w-[50px] h-[50px] transform transition-all ring-0 duration-200">
@@ -25,5 +24,4 @@ const burger = (props: propTypes) => {
             </div>
     )
 }
-
 export default burger;

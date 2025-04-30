@@ -1,42 +1,24 @@
-import { Footprints, Scissors, Bandage, Accessibility, Candy, Hand, Calendar } from "lucide-react";
+import { Footprints, Candy, Hand} from "lucide-react";
 import Link from 'next/link';
 
 const services = [
   {
-    title: "Kliininen jalkahoito",
+    title: "Jalkaterapia",
     description:
-      "Kliininen jalkahoito on erikoistunut hoitomuoto, joka keskittyy jalkojen terveyteen.",
+      "Ennaltaehkäisee ja hoitaa alaraajojen vaivoja, kipu tiloja, asentovirheitä ja iho- ja kynsimuutoksia.",
     icon: Footprints,
   },
   {
-    title: "Kynsienlyhennys",
+    title: "Hieronta",
     description:
-      "Kynsienlyhennys on tärkeä osa jalkaterveyden ylläpitoa, erityisesti niille, joilla on paksuuntuneita tai sisäänkasvaneita kynsiä.",
-    icon: Scissors,
-  },
-  {
-    title: "Podofix",
-    description:
-      "Podofix on innovatiivinen hoitomenetelmä, joka auttaa korjaamaan sisäänkasvaneita kynsiä.",
-    icon: Bandage,
-  },
-  {
-    title: "Silikoniortoosit",
-    description:
-      "Silikoniortoosit ovat mukautuvia ja mukautuvia apuvälineitä, jotka tarjoavat tukea ja suojaa jaloille.",
-    icon: Accessibility,
+      "Rentouttaa kehoa ja mieltä. Lievittää lihaskireyksiä ja kiputiloja sekä edistää palautumista.",
+    icon: Hand,
   },
   {
     title: "Sokerointi",
     description:
-      "Sokerointi on tehokas ja luonnollinen tapa poistaa karvoja jaloista ja varpaista.",
+      "Hellävarainen ja tehokas karvanpoistomenetelmä, joka poistaa karvat tehokkaasti ja kuorii ihoa luonnollisesti.",
     icon: Candy,
-  },
-  {
-    title: "Jalkahieronta",
-    description:
-      "Jalkahieronta on rentouttava ja terapeuttinen hoitomuoto, joka parantaa verenkiertoa ja vähentää jalkojen rasitusta.",
-    icon: Hand,
   },
 ];
 
@@ -62,26 +44,26 @@ const news = [
 export default function Page() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen bg-background text-foreground gap-8">
-      {/* Hero Section */}
+      {/* Hero Section backdrop-blur-sm brightness-75 */}
       <section
-        className="relative w-full h-[50vh] flex items-center justify-center text-center text-white "
+        className="relative w-full h-[50vh] flex items-center justify-center text-center text-card"
         style={{
-          backgroundImage: `url('jalka-3.jpg')`,
+          backgroundImage: `url('hero_background.jpg')`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: '50% 20%',
         }}
       >
-        <div className="absolute inset-0 backdrop-blur-sm brightness-75"></div>
+        <div className="absolute inset-0 brightness-75 backdrop-blur-sm "></div>
         <div className="relative z-10 px-4 rounded-lg">
-          <h1 className="text-4xl font-bold mb-8">
+          <h1 className="text-5xl font-bold mb-4">
             Pinja Pasanen
           </h1>
-          <p className="text-lg mb-8">
+          <p className="text-lg mb-16">
             Jalkaterapeuttiopiskelija, joka on erikoistunut jalkojen terveyteen ja hyvinvointiin nykyaikaisilla hoitomenetelmillä.
           </p>
-          <Link href="/yhteystiedot" className="bg-primary text-card px-24 py-4 rounded-lg hover:ring-4 ring-secondary transition duration-300  font-semibold">
+            <Link href="/yhteystiedot" className="bg-primary text-card px-24 py-4 rounded-lg hover:ring-4 ring-secondary transition duration-300  font-semibold">
               Varaa aika
-          </Link>
+            </Link>
         </div>
       </section>
       <div className="container mx-auto px-4 py-24">
@@ -128,8 +110,8 @@ export default function Page() {
                     className="w-full h-48 object-cover brightness-75"
                   />
 
-                  <div className="p-4">
-                    <h3 className="text-xl font-semibold mb-2">
+                  <div className="p-4 h-48 flex flex-col gap-2">
+                    <h3 className="text-xl font-semibold">
                       {article.title}
                     </h3>
                     <p className="text-muted-foreground">

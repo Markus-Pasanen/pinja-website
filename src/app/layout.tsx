@@ -13,7 +13,7 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "Jalkaterapeuttiopiskelija Pinja Pasanen",
   description: "Lämpimästi tervetuloa vastaanotolleni!",
-  keywords: ["Jalkaterapeuttiopiskelija", "Pinja Pasanen", "jalkaterapia"],
+  keywords: ["Jalkaterapeuttiopiskelija", "Pinja Pasanen", "jalkaterapia", "jalkaterapeutti", "jalkahoito","varkaus",],
   authors: [{ name: "Pinja Pasanen" }],
   robots: { index: true, follow: true },
 };

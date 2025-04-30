@@ -29,26 +29,26 @@ const Footer = () => {
           {/* Contact Information */}
           <div>
             <h3 className="font-semibold text-lg mb-4">Yritys</h3>
-            <p className="text-muted-foreground">TMI Jalkaterapia Pinja</p>
+            <p className="text-muted-foreground">Jalkaterapia Pinja</p>
             <p className="text-muted-foreground">
-            Y-tunnus: 1234567-8
+            Y-tunnus: 3453859-7
             </p>
           </div>
           <div>
             <h3 className="font-semibold text-lg mb-4">Varaa aika</h3>
-            <p className="text-muted-foreground">(+048) 4510-32606</p>
+            <p className="text-muted-foreground">(+358) 45-103 2606</p>
             <p className="text-muted-foreground">
               jalkaterapia.pinja@gmail.com
             </p>
           </div>
           <div>
             <h3 className="font-semibold text-lg mb-4">Sivusto</h3>
-            <Link href="/tietosuojaseloste"><p className="text-muted-foreground">Tietosuojaseloste</p></Link>
+            <Link href="/tietosuojaseloste" className="text-muted-foreground">Tietosuojaseloste</Link>
             <p className="text-muted-foreground">
-              Toimitusehdot
+              <Link href="/toimitusehdot" className="text-muted-foreground">Toimitusehdot</Link>
             </p>
             <p className="text-muted-foreground">
-              Maksutavat
+              <Link href="/maksutavat" className="text-muted-foreground">Maksutavat</Link>
             </p>
           </div>
         </div>
