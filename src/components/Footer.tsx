@@ -43,7 +43,6 @@ const Footer = () => {
           </div>
           <div>
             <h3 className="font-semibold text-lg mb-4">Sivusto</h3>
-            <Link href="/tietosuojaseloste" className="text-muted-foreground">Tietosuojaseloste</Link>
             <p className="text-muted-foreground">
               <Link href="/toimitusehdot" className="text-muted-foreground">Toimitusehdot</Link>
             </p>

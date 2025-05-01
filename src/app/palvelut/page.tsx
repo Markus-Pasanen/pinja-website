@@ -1,4 +1,3 @@
-"use client";
 import { Clock, Wallet } from "lucide-react";
 
 const services = [
@@ -106,7 +105,7 @@ const services = [
     title: "Lahjakortti",
     description:
       "Osta lahjakortti miellyttääksesi itseäsi tai läheistäsi.",
-    image: "pinja_2025-20.jpg",
+    image: "lahjakortti.jpg",
     link: "/palvelut/kynsien-lyhennys",
     price: "20 - 1000 €",
     duration: "palvelusta riippuen",

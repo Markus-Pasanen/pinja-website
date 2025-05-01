@@ -24,20 +24,20 @@ const services = [
 
 const news = [
   {
-    title: "Olen tavattavissa Kommilan apteekilla",
+    title: "Lahjakortti nyt saatavilla",
     excerpt:
-      "Tervetuloa tapaamaan minua Kommilan apteekilla Maanantaina 03.03. ja Torstaina 07.03. klo 9-16.",
-    thumbnail: "apteekki.jpg",
+      "Voit nyt ostaa lahjakortin palveluihini. Lahjakortti on loistava lahjaidea itselle tai läheiselle.",
+    thumbnail: "lahjakortti.jpg",
     link: "/blog/uusi-tutkimus-jalkakipu",
-    date: "03.03.2025",
+    date: "01.05.2025",
   },
   {
-    title: "Muutoksia hinnastoon 1.1.2025 alkaen",
+    title: "Uusi ulkoasu nettisivuille",
     excerpt:
-      "Tarkistamme hinnastomme ja teemme muutoksia, jotta voimme tarjota asiakkaillemme parasta mahdollista palvelua.",
-    thumbnail: "raha.jpg",
+      "Nettisivuille on tullut uusi ilme ja ulkoasu. Toivottavasti pidät siitä!",
+    thumbnail: "pinja_2025-10.jpg",
     link: "/blog/edistysaskeleet-diabeettinen-jalkahoito",
-    date: "01.01.2025",
+    date: "01.05.2025",
   },
 ];
 

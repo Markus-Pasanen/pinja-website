@@ -22,6 +22,15 @@ export default function ServicesPage() {
               <li>Laskutamme ilman erillistä laskutuslisää</li>
             </ul>
           </div>
+
+          <div className="bg-card p-6 rounded-lg shadow-sm">
+            <h2 className="text-2xl font-semibold mb-3 text-black">ePassi</h2>
+            <p>ePassi on digitaalinen maksuväline, joka mahdollistaa joustavan maksamisen palveluista.</p>
+            <ul className="list-disc list-inside mt-3 space-y-1">
+              <li>Voit maksaa ePassilla palvelumme suoraan käynnin aikana</li>
+              <li>Voit myös maksaa ePassilla etukäteen ennen palvelua</li>
+            </ul>
+          </div>
           
           <p className="mt-6 text-center italic text-muted-foreground">
             Jos sinulla on kysyttävää maksutavoista, olethan yhteydessä minuun puhelimitse tai sähköpostitse.

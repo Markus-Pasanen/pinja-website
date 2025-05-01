@@ -73,9 +73,10 @@ export default function AboutPage() {
                 MAKEA pro - 2025
               </p>
             </div>
-            <button className="bg-primary text-white px-8 py-4 rounded-lg hover:bg-hover transition duration-300">
-              <Link href="/yhteystiedot">Varaa aika</Link>
-            </button>
+            <Link href="/yhteystiedot">
+            <button className="bg-primary text-white px-8 py-4 rounded-lg hover:bg-hover transition duration-300 w-full">
+              Varaa aika
+            </button></Link>
           </div>
 
         </div>
