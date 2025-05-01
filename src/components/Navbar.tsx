@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        'py-4 px-6 w-full transition-all duration-300 bg-background',
+        'py-2 px-4 w-full transition-all duration-300 bg-background',
         isSticky ? 'sticky top-0 z-50 shadow-md' : 'relative',
       )}
     >
@@ -71,7 +71,7 @@ const Navbar = () => {
         >
           {/* Close button at top right, always visible when menu is open */}
           <button
-            className="absolute top-6 right-6 flex justify-center items-center w-10 h-10 focus:outline-none"
+            className="absolute top-4 right-4 flex justify-center items-center w-10 h-10 focus:outline-none"
             aria-label="Sulje valikko"
             onClick={() => setMenuOpen(false)}
           >

@@ -16,7 +16,7 @@ export default function ContactPage() {
           </h2>
           <div className="flex flex-col gap-4">
             <p className="text-muted-foreground">
-              <a href="tel:+15551234567" className="hover:text-accent flex flex-row gap-2">
+              <a href="tel:+358451032606" className="hover:text-accent flex flex-row gap-2">
               <Phone className="h-4 my-auto"/>(+358) 45-103 2606
               </a>
             </p>

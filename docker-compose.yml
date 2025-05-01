@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  kotisivut:
+    build: .
+    image: kotisivut:latest
+    container_name: kotisivut
+    ports:
+      - "3000:3000"
+    mem_limit: 3g
+    restart: unless-stopped

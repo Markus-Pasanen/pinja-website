@@ -13,17 +13,6 @@ const services = [
     type: "terapia",
   },
   {
-    id: "",
-    title: "Diabeetikon jalkojen perustutkimus- ja hoito",
-    description:
-      "Silikoniortoosit ovat yksilöllisesti muotoiltuja silikonista valmistettuja tukia, joita käytetään jalkaterän virheasentojen korjaamiseen tai vaimentamaan painetta. Ne helpottavat kipua ja parantavat jalkojen asentoa, auttaen esimerkiksi vaivaisenluun tai vasaravarpaiden hoidossa.",
-    image: "pinja_2025-33.jpg",
-    link: "/palvelut/kynsien-lyhennys",
-    price: "26 € per silikoni",
-    duration: "30 minuuttia",
-    type: "terapia",
-  },
-  {
     id: "Kynsien lyhennys",
     title: "Kynsien lyhennys",
     description:
@@ -71,7 +60,7 @@ const services = [
     id: "Säärien sokerointi",
     title: "Säärien sokerointi",
     description:
-      "Silikoniortoosit ovat yksilöllisesti muotoiltuja silikonista valmistettuja tukia, joita käytetään jalkaterän virheasentojen korjaamiseen tai vaimentamaan painetta. Ne helpottavat kipua ja parantavat jalkojen asentoa, auttaen esimerkiksi vaivaisenluun tai vasaravarpaiden hoidossa.",
+      "Sokerointi poistaa karvat hellävaraisesti, jättäen ihon sileäksi ja pehmeäksi viikoiksi. Samalla iho kuoriutuu kevyesti, mikä tekee siitä ihanteellisen vaihtoehdon myös herkälle iholle.",
     image: "pinja_2025-20.jpg",
     link: "/palvelut/kynsien-lyhennys",
     price: "32 €",
@@ -82,7 +71,7 @@ const services = [
     id: "Kainaloiden sokerointi",
     title: "Kainaloiden sokerointi",
     description:
-      "Silikoniortoosit ovat yksilöllisesti muotoiltuja silikonista valmistettuja tukia, joita käytetään jalkaterän virheasentojen korjaamiseen tai vaimentamaan painetta. Ne helpottavat kipua ja parantavat jalkojen asentoa, auttaen esimerkiksi vaivaisenluun tai vasaravarpaiden hoidossa.",
+      "Sokerointi poistaa karvat hellävaraisesti, jättäen ihon sileäksi ja pehmeäksi viikoiksi. Samalla iho kuoriutuu kevyesti, mikä tekee siitä ihanteellisen vaihtoehdon myös herkälle iholle.",
     image: "pinja_2025-20.jpg",
     link: "/palvelut/kynsien-lyhennys",
     price: "16 €",
@@ -93,7 +82,7 @@ const services = [
     id: "Reisien sokerointi",
     title: "Reisien sokerointi",
     description:
-      "Silikoniortoosit ovat yksilöllisesti muotoiltuja silikonista valmistettuja tukia, joita käytetään jalkaterän virheasentojen korjaamiseen tai vaimentamaan painetta. Ne helpottavat kipua ja parantavat jalkojen asentoa, auttaen esimerkiksi vaivaisenluun tai vasaravarpaiden hoidossa.",
+      "Sokerointi poistaa karvat hellävaraisesti, jättäen ihon sileäksi ja pehmeäksi viikoiksi. Samalla iho kuoriutuu kevyesti, mikä tekee siitä ihanteellisen vaihtoehdon myös herkälle iholle.",
     image: "pinja_2025-20.jpg",
     link: "/palvelut/kynsien-lyhennys",
     price: "36 €",
@@ -104,10 +93,10 @@ const services = [
     id: "Lahjakortti",
     title: "Lahjakortti",
     description:
-      "Osta lahjakortti miellyttääksesi itseäsi tai läheistäsi.",
+      "Jalkaterapia, hieronta tai sokerointi. Valitse lahjakorttiin juuri se hoito, jonka tiedät ilahduttavan. Täydellinen tapa muistaa ystävää, läheistä tai itseäsi!",
     image: "lahjakortti.jpg",
     link: "/palvelut/kynsien-lyhennys",
-    price: "20 - 1000 €",
+    price: "Avoin",
     duration: "palvelusta riippuen",
     type: "sokerointi",
   },

@@ -8,18 +8,11 @@ const Footer = () => {
         <div className="flex-grow border-t border-primary"></div>
         <span className="flex flex-row mx-4 gap-4 font-semibold">
           <a
-            href="#"
+            href="https://www.facebook.com/profile.php?id=61573830269174"
             className="text-primary hover:text-accent transition-colors duration-200 p-3 rounded-full bg-secondary"
             aria-label="Facebook"
           >
             <Facebook className="h-6 w-6" />
-          </a>
-          <a
-            href="#"
-            className="text-primary hover:text-accent transition-colors duration-200 p-3 rounded-full bg-secondary"
-            aria-label="Instagram"
-          >
-            <Instagram className="h-6 w-6" />
           </a>
         </span>
         <div className="flex-grow border-t border-primary"></div>

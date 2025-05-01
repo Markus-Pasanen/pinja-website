@@ -15,7 +15,7 @@ export default function AboutPage() {
             <img
               src="pinja_2025-84.jpg"
               alt="Pinja Pasanen"
-              className="h-full rounded-lg shadow-md object-cover"
+              className="w-full h-96 md:h-full rounded-lg shadow-md object-cover object-top"
             />
           </div>
           <div className="flex flex-col justify-between gap-8">

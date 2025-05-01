@@ -46,7 +46,7 @@ export default function Page() {
     <main className="flex flex-col items-center justify-center min-h-screen bg-background text-foreground gap-8">
       {/* Hero Section backdrop-blur-sm brightness-75 */}
       <section
-        className="relative w-full h-[50vh] flex items-center justify-center text-center text-card"
+        className="relative w-full h-screen flex items-center justify-center text-center text-card"
         style={{
           backgroundImage: `url('hero_background.jpg')`,
           backgroundSize: 'cover',
