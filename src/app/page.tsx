@@ -1,22 +1,129 @@
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
+import { Footprints, Candy, Hand} from "lucide-react";
+import Link from 'next/link';
 
-import Koti from "./pages/koti";
-import Esittely from "./pages/esittely";
-import Palvelut from "./pages/palvelut";
-import Ajankohtaista from "./pages/ajankohtaista";
-import Yhteystiedot from "./pages/yhteystiedot";
+const services = [
+  {
+    title: "Jalkaterapia",
+    description:
+      "Ennaltaehkäisee ja hoitaa alaraajojen vaivoja, kipu tiloja, asentovirheitä ja iho- ja kynsimuutoksia.",
+    icon: Footprints,
+  },
+  {
+    title: "Hieronta",
+    description:
+      "Rentouttaa kehoa ja mieltä. Lievittää lihaskireyksiä ja kiputiloja sekä edistää palautumista.",
+    icon: Hand,
+  },
+  {
+    title: "Sokerointi",
+    description:
+      "Hellävarainen ja tehokas karvanpoistomenetelmä, joka poistaa karvat tehokkaasti ja kuorii ihoa luonnollisesti.",
+    icon: Candy,
+  },
+];
 
-export default function Home() {
+const news = [
+  {
+    title: "Lahjakortti nyt saatavilla",
+    excerpt:
+      "Voit nyt ostaa lahjakortin palveluihini. Lahjakortti on loistava lahjaidea itselle tai läheiselle.",
+    thumbnail: "lahjakortti.jpg",
+    link: "/blog/uusi-tutkimus-jalkakipu",
+    date: "01.05.2025",
+  },
+  {
+    title: "Uusi ulkoasu nettisivuille",
+    excerpt:
+      "Nettisivuille on tullut uusi ilme ja ulkoasu. Toivottavasti pidät siitä!",
+    thumbnail: "pinja_2025-10.jpg",
+    link: "/blog/edistysaskeleet-diabeettinen-jalkahoito",
+    date: "01.05.2025",
+  },
+];
+
+export default function Page() {
   return (
-    <main className="flex flex-col text-text gap-96">
-      <div className="fixed w-screen z-50"><Navbar/></div>
-      <Koti id="0"/>
-      <Esittely id="1"/>
-      <Palvelut id="2"/>
-      <Ajankohtaista id="3"/>
-      <Yhteystiedot id="4"/>
-      <Footer/>
+    <main className="flex flex-col items-center justify-center min-h-screen bg-background text-foreground gap-8">
+      {/* Hero Section backdrop-blur-sm brightness-75 */}
+      <section
+        className="relative w-full h-screen flex items-center justify-center text-center text-card"
+        style={{
+          backgroundImage: `url('hero_background.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: '50% 20%',
+        }}
+      >
+        <div className="absolute inset-0 brightness-75 backdrop-blur-sm "></div>
+        <div className="relative z-10 px-4 rounded-lg">
+          <h1 className="text-5xl font-bold mb-4">
+            Pinja Pasanen
+          </h1>
+          <p className="text-lg mb-16">
+            Jalkaterapeuttiopiskelija, joka on erikoistunut jalkojen terveyteen ja hyvinvointiin nykyaikaisilla hoitomenetelmillä.
+          </p>
+            <Link href="/yhteystiedot" className="bg-primary text-card px-24 py-4 rounded-lg hover:ring-4 ring-secondary transition duration-300  font-semibold">
+              Varaa aika
+            </Link>
+        </div>
+      </section>
+      <div className="container mx-auto px-4 py-24">
+        <section>
+          <h2 className="text-3xl font-semibold mb-4 text-center">
+            Palveluni
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <Link
+                key={index}
+                href="/palvelut"
+                className="p-6 rounded-lg shadow-md bg-card hover:shadow-xl hover:brightness-90 transition duration-300 flex flex-col items-center"
+              >
+                <service.icon className="h-12 w-12 text-primary mb-4" />
+                <h3 className="text-xl font-semibold mb-2 text-center">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground text-center">
+                  {service.description}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <section className="pt-24">
+          <h2 className="text-3xl font-semibold mb-4 text-center">
+            Ajankohtaista
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {news.map((article, index) => (
+              <div
+                key={index}
+                className="rounded-lg shadow-md bg-card overflow-hidden relative flex flex-col justify-between"
+              >
+                <div className="shadow-lg absolute left-0 top-0 rounded-br-lg py-2 px-4 bg-primary text-card z-10 font-semibold">
+                  {article.date}
+                </div>
+                <div>
+                  <img
+                    src={article.thumbnail}
+                    alt={article.title}
+                    className="w-full h-48 object-cover brightness-75"
+                  />
+
+                  <div className="p-4 h-48 flex flex-col gap-2">
+                    <h3 className="text-xl font-semibold">
+                      {article.title}
+                    </h3>
+                    <p className="text-muted-foreground">
+                      {article.excerpt}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
     </main>
   );
 }
