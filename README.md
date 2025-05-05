@@ -2,6 +2,12 @@
 
 This repository contains the source code for the official website of Jalkaterapia Pinja.
 
+## Requirements
+
+- Node.js (v18 or newer recommended)
+- npm (comes with Node.js)
+- (For deployment) Docker & Docker Compose
+
 ## Tech Stack
 - Next.js (React, TypeScript)
 - Tailwind CSS
@@ -19,10 +25,10 @@ This repository contains the source code for the official website of Jalkaterapi
 3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Documentation
-For full documentation, including deployment and technical details, see the `documents` folder or run:
-```bash
-npm run docs
-```
+Full project documentation is available via GitHub Pages:
+
+- [Project Documentation](./docs/README.md)
+- Or visit: **Settings → Pages** in your GitHub repository to find the public documentation URL.
 
 ---
 
