@@ -12,12 +12,6 @@ This project is the official website for Jalkaterapia Pinja, providing informati
 - Styled using Tailwind CSS
 - Dockerized for easy deployment
 
-## Requirements
-
-- Node.js (v18 or newer recommended)
-- npm (comes with Node.js)
-- (For deployment) Docker & Docker Compose
-
 ## Purpose
 
 The website aims to:

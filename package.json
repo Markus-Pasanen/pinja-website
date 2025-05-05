@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "postbuild": "next-sitemap",
-    "docs": "npx docsify-cli serve docs -p 9000"
+    "docs": "npx docsify-cli serve documents -p 9000"
   },
   "dependencies": {
     "lucide-react": "^0.487.0",
