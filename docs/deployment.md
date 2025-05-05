@@ -14,9 +14,9 @@ Deploy your app easily using Docker Compose. This will build and run your app in
    ```
 3. **Build and start the service:**
    ```bash
-   docker compose up -d --build
+   npm run deploy
    ```
-   This will build the Docker image and start the container in the background.
+   This will build the Docker image and start the container in the background using the deploy/docker-compose.yml file.
 4. **Remove temporary folder:**
    ```bash
    sudo rm -r ~/git-build/

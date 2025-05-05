@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "postbuild": "next-sitemap",
-    "docs": "npx docsify-cli serve docs -p 8002"
+    "docs": "npx docsify-cli serve docs -p 8002",
+    "deploy": "docker compose -f deploy/docker-compose.yml up -d --build"
   },
   "dependencies": {
     "lucide-react": "^0.487.0",
