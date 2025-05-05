@@ -26,6 +26,9 @@ const Footer = () => {
             <p className="text-muted-foreground">
             Y-tunnus: 3453859-7
             </p>
+            <p className="text-muted-foreground">
+            Varkaus
+            </p>
           </div>
           <div>
             <h3 className="font-semibold text-lg mb-4">Varaa aika</h3>
