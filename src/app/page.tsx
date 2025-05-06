@@ -27,7 +27,7 @@ const news = [
     title: "Lahjakortti nyt saatavilla",
     excerpt:
       "Voit nyt ostaa lahjakortin palveluihini. Lahjakortti on loistava lahjaidea itselle tai läheiselle.",
-    thumbnail: "lahjakortti.jpg",
+    thumbnail: "/images/lahjakortti.jpg",
     link: "/blog/uusi-tutkimus-jalkakipu",
     date: "01.05.2025",
   },
@@ -35,7 +35,7 @@ const news = [
     title: "Uusi ulkoasu nettisivuille",
     excerpt:
       "Nettisivuille on tullut uusi ilme ja ulkoasu. Toivottavasti pidät siitä!",
-    thumbnail: "pinja_2025-10.jpg",
+    thumbnail: "/images/pinja_2025-10.jpg",
     link: "/blog/edistysaskeleet-diabeettinen-jalkahoito",
     date: "01.05.2025",
   },
@@ -48,7 +48,7 @@ export default function Page() {
       <section
         className="relative w-full h-screen flex items-center justify-center text-center text-card"
         style={{
-          backgroundImage: `url('hero_background.jpg')`,
+          backgroundImage: `url('/images/hero_background.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: '50% 20%',
         }}

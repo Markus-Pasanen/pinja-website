@@ -129,7 +129,7 @@ export default function ServicesPage() {
             <div>
               <div>
                 <img
-                  src={service.image}
+                  src={"/images/" + service.image}
                   alt={service.title}
                   className="w-full h-48 mb-6 brightness-75 object-cover object-[50%_35%]"
                 />

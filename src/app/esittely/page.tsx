@@ -13,7 +13,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <img
-              src="pinja_2025-84.jpg"
+              src="/images/pinja_2025-84.jpg"
               alt="Pinja Pasanen"
               className="w-full h-96 md:h-full rounded-lg shadow-md object-cover object-top"
             />

@@ -36,7 +36,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between">
         <Link href="/" className="text-2xl font-bold z-50">
-          <img src="/logo.png" alt="Logo" className="h-14" />
+          <img src="/images/logo.png" alt="Logo" className="h-14" />
         </Link>
         {/* Burger menu button for mobile */}
         <button
