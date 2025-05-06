@@ -1,9 +1,7 @@
 version: '3.8'
 services:
   kotisivut:
-    build:
-      context: ..
-      dockerfile: deploy/Dockerfile
+    build: .
     image: kotisivut:latest
     container_name: kotisivut
     ports:
