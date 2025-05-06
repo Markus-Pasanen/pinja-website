@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { cn } from "@/lib/utils";
 import { usePathname } from 'next/navigation';
-import { Menu, X } from "lucide-react";
+import { Menu, X, Facebook } from "lucide-react";
 
 const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -65,7 +65,7 @@ const Navbar = () => {
         {/* Mobile nav */}
         <div
           className={cn(
-            "fixed inset-0 z-40 flex flex-col items-center justify-center space-y-8 text-xl font-medium transition-all duration-300 md:hidden",
+            "fixed inset-0 z-40 flex flex-col items-center justify-center space-y-0 text-2xl font-medium transition-all duration-300 md:hidden",
             menuOpen ? "pointer-events-auto opacity-100 bg-secondary" : "pointer-events-none opacity-0"
           )}
         >
@@ -97,6 +97,19 @@ const Navbar = () => {
           </div>
           {/* Footer for mobile menu */}
           <footer className="absolute bottom-4 left-0 w-full flex flex-col items-center text-sm text-gray-500 dark:text-gray-400">
+            <div className="relative flex items-center w-full mb-4">
+              <div className="flex-grow border-t border-primary"></div>
+              <span className="flex flex-row mx-4 gap-4 font-semibold">
+                <a
+                  href="https://www.facebook.com/profile.php?id=61573830269174"
+                  className="text-primary hover:text-accent transition-colors duration-200 p-3 rounded-full bg-card"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="h-6 w-6" />
+                </a>
+              </span>
+              <div className="flex-grow border-t border-primary"></div>
+            </div>
             <span>&copy; {new Date().getFullYear()} Pinja</span>
             <span>Kaikki oikeudet pidätetään</span>
           </footer>

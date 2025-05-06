@@ -1,4 +1,4 @@
-import { Facebook, Instagram } from "lucide-react";
+import { Facebook } from "lucide-react";
 import Link from "next/link";
 
 const Footer = () => {
@@ -27,23 +27,36 @@ const Footer = () => {
             Y-tunnus: 3453859-7
             </p>
             <p className="text-muted-foreground">
-            Varkaus
+            <a
+              href="https://www.google.com/maps/place/Varkaus/@62.3234278,27.8290594,12z/data=!3m1!4b1!4m6!3m5!1s0x469b1fae772c9653:0x40146d63c75c390!8m2!3d62.31792!4d27.8598871!16zL20vMDNjNGt6?entry=ttu&g_ep=EgoyMDI1MDQzMC4xIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-accent transition-colors"
+            >
+              78300 Varkaus
+            </a>
             </p>
           </div>
           <div>
             <h3 className="font-semibold text-lg mb-4">Varaa aika</h3>
-            <p className="text-muted-foreground">(+358) 45-103 2606</p>
             <p className="text-muted-foreground">
-              jalkaterapia.pinja@gmail.com
+              <a href="tel:+358451032606" className="hover:text-accent transition-colors">
+                (+358) 45-103 2606
+              </a>
+            </p>
+            <p className="text-muted-foreground">
+              <a href="mailto:jalkaterapia.pinja@gmail.com" className="hover:text-accent transition-colors">
+                jalkaterapia.pinja@gmail.com
+              </a>
             </p>
           </div>
           <div>
             <h3 className="font-semibold text-lg mb-4">Sivusto</h3>
             <p className="text-muted-foreground">
-              <Link href="/toimitusehdot" className="text-muted-foreground">Toimitusehdot</Link>
+              <Link href="/toimitusehdot" className="hover:text-accent transition-colors">Toimitusehdot</Link>
             </p>
             <p className="text-muted-foreground">
-              <Link href="/maksutavat" className="text-muted-foreground">Maksutavat</Link>
+              <Link href="/maksutavat" className="hover:text-accent transition-colors">Maksutavat</Link>
             </p>
           </div>
         </div>

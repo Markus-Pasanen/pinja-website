@@ -24,19 +24,19 @@ const services = [
 
 const news = [
   {
+    title: "Tiedotus asiakkaille",
+    excerpt:
+      "Olen työharjoittelussa viikot 19–24 Kuopion yliopistollisessa sairaalassa (KYS). Harjoittelun aikana en välttämättä pysty vastaamaan yhteydenottoihin heti, mutta pyrin palaamaan viestiisi mahdollisimman pian.",
+    thumbnail: "/images/pinja_2025-10.jpg",
+    link: "/blog/edistysaskeleet-diabeettinen-jalkahoito",
+    date: "06.05.2025",
+  },
+  {
     title: "Lahjakortti nyt saatavilla",
     excerpt:
       "Voit nyt ostaa lahjakortin palveluihini. Lahjakortti on loistava lahjaidea itselle tai läheiselle.",
     thumbnail: "/images/lahjakortti.jpg",
     link: "/blog/uusi-tutkimus-jalkakipu",
-    date: "01.05.2025",
-  },
-  {
-    title: "Uusi ulkoasu nettisivuille",
-    excerpt:
-      "Nettisivuille on tullut uusi ilme ja ulkoasu. Toivottavasti pidät siitä!",
-    thumbnail: "/images/pinja_2025-10.jpg",
-    link: "/blog/edistysaskeleet-diabeettinen-jalkahoito",
     date: "01.05.2025",
   },
 ];
