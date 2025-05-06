@@ -21,8 +21,8 @@ The website aims to:
 
 ## Documentation Structure
 
-- **Project Overview** (this page): General information and purpose
-- **Technical Information**: Project structure, development setup, and stack details
-- **Deployment**: Instructions for deploying and maintaining the site
+- [Project Overview](overview.md) (this page): General information and purpose
+- [Technical Information](technical.md): Project structure, development setup, and stack details
+- [Deployment](deployment.md): Instructions for deploying and maintaining the site
 
 Use the sidebar to navigate through the documentation.

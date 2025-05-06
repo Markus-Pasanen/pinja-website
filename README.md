@@ -1,5 +1,7 @@
 # Jalkaterapia Pinja Website
 
+[![Build Status](https://github.com/Markus-Pasanen/pinja-website/actions/workflows/deploy.yml/badge.svg)](https://github.com/Markus-Pasanen/pinja-website/actions)
+
 This repository contains the source code for the official website of Jalkaterapia Pinja.
 
 ## Tech Stack
@@ -19,10 +21,9 @@ This repository contains the source code for the official website of Jalkaterapi
 3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Documentation
-For full documentation, including deployment and technical details, see the `documents` folder or run:
-```bash
-npm run docs
-```
+- [Project Overview](docs/overview.md)
+- [Technical Information](docs/technical.md)
+- [Deployment](docs/deployment.md)
 
 ---
 

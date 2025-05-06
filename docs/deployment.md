@@ -1,5 +1,7 @@
 # Deployment
 
+[← Technical Information](technical.md)
+
 ## Using Docker Compose
 
 Deploy your app easily using Docker Compose. This will build and run your app in a container, automatically replacing any previous instance.

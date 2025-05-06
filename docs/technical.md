@@ -1,5 +1,7 @@
 # Technical Information
 
+[← Project Overview](overview.md) | [Deployment →](deployment.md)
+
 ## Development setup
 
 First, install dependencies:
@@ -18,8 +20,16 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 ## Project Structure
 
-- `src/app/` – Main application pages (etusivu, palvelut, esittely, yhteystiedot, etc.)
-- `src/components/` – Reusable UI components (Navbar, Footer, etc.)
-- `public/` – Static assets (images, logo, etc.)
-- `Dockerfile` – Docker configuration for deployment
-- `templates/` – Deployment templates (docker-compose, nginx)
+- `src/app/` – Main application pages (etusivu, palvelut, esittely, yhteystiedot, toimitusehdot, maksutavat, etc.)
+- `src/components/` – Reusable UI components (Navbar, Footer, UI elements)
+- `src/assets/` – Static image assets used in the app
+- `src/lib/` – Utility functions and helpers
+- `public/` – Public static assets (images, favicon, robots.txt, etc.)
+- `deploy/` – Deployment configuration (Dockerfile, docker-compose.yml)
+- `docs/` – Project documentation (deployment, technical info, etc.)
+- `group_vars/` – Ansible or deployment variable files
+- `thirdparty/` – Third-party styles or libraries
+- `placeholder/` – Placeholder or draft content
+- `package.json` – Project metadata and scripts
+- `tailwind.config.ts` – Tailwind CSS configuration
+- `tsconfig.json` – TypeScript configuration
