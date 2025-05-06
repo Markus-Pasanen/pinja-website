@@ -1,7 +1,4 @@
 # Jalkaterapia Pinja Website
-
-[![Build Status](https://github.com/Markus-Pasanen/pinja-website/actions/workflows/deploy.yml/badge.svg)](https://github.com/Markus-Pasanen/pinja-website/actions)
-
 This repository contains the source code for the official website of Jalkaterapia Pinja.
 
 ## Tech Stack
