@@ -20,7 +20,5 @@ jobs:
             eval "$(ssh-agent)"
             ssh-add ~/.ssh/githubactions_deploy
             git clone ${{ vars.REPO_URL }} ~/git-build
-            cd ~/git-build
-            npm run deploy
-            cd ~
+            docker compose -f ~/git-build/deploy/docker-compose.yml up -d --build
             sudo rm -r ~/git-build/
