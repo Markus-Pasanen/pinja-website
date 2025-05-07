@@ -25,7 +25,6 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 - `src/assets/` – Static image assets used in the app
 - `src/lib/` – Utility functions and helpers
 - `public/` – Public static assets (images, favicon, robots.txt, etc.)
-- `deploy/` – Deployment configuration (Dockerfile, docker-compose.yml)
 - `docs/` – Project documentation (deployment, technical info, etc.)
 - `group_vars/` – Ansible or deployment variable files
 - `thirdparty/` – Third-party styles or libraries
