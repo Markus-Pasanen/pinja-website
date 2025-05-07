@@ -9,16 +9,26 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to VPS via SSH
-        uses: appleboy/ssh-action@v1.0.3
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Copy files to VPS
+        uses: appleboy/scp-action@v1
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          source: .
+          target: ~/git-build
+
+      - name: Deploy on VPS
+        uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            eval "$(ssh-agent)"
-            ssh-add ~/.ssh/githubactions_deploy
-            git clone ${{ vars.REPO_URL }} ~/git-build
             docker compose -f ~/git-build/deploy/docker-compose.yml up -d --build
-            sudo rm -r ~/git-build/
+            rm -rf ~/git-build
