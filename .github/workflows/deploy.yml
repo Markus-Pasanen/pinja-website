@@ -17,5 +17,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
+            eval "$(ssh-agent)"
+            ssh-add ~/.ssh/githubactions_deploy
             git clone ${{ vars.REPO_URL }} ~/git-build
             cd ~/git-build
