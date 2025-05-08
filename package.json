@@ -11,6 +11,7 @@
     "deploy": "docker compose -f deploy/docker-compose.yml up -d --build"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.1.5",
     "lucide-react": "^0.487.0",
     "next": "^14.2.4",
     "next-sitemap": "^4.2.3",

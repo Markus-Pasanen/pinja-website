@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Card from "@/components/shared/Card";
 
 export default function AboutPage() {
   return (
@@ -20,7 +21,7 @@ export default function AboutPage() {
           </div>
           <div className="flex flex-col justify-between gap-8">
 
-            <div className="bg-card p-6 rounded-lg shadow-sm h-full">
+            <Card className="h-full">
               <h3 className="text-2xl font-semibold mb-2 text-black">
                 Pinja Pasanen
               </h3>
@@ -32,9 +33,9 @@ export default function AboutPage() {
                 Jalkaterapeutti on terveydenhuollon ammattilainen, joka on suorittanut 3,5-vuotisen korkeakoulututkinnon.
                 Erikoisosaamiseni keskittyy alaraajojen terveyteen ja hyvinvointiin.
               </p>
-            </div>
+            </Card>
 
-            <div className="bg-card p-6 rounded-lg shadow-sm h-full">
+            <Card className="h-full">
               <h3 className="text-2xl font-semibold mb-2 text-black">Missio</h3>
               <p className="pb-4">
                 Jalkaterapeuttina tarjoan kokonaisvaltaista hoitoa, joka erottuu tavallisesta jalkojen hoidosta koulutukseni syvyyden ja monipuolisuuden ansiosta.
@@ -44,12 +45,9 @@ export default function AboutPage() {
                 Tavoitteenani on edistää ja ylläpitää jalkojesi terveyttä ennaltaehkäisevästi sekä ratkaista mahdolliset ongelmat tehokkaasti.
                 Jokainen asiakas on ainutlaatuinen, joten räätälöin hoidot juuri sinun tarpeidesi mukaisiksi.
               </p>
-            </div>
+            </Card>
 
-
-
-
-            <div className="p-4 rounded-lg shadow-md bg-card h-full">
+            <Card className="h-full">
               <h3 className="text-2xl font-semibold mb-2 text-black">Koulutus</h3>
               <p className="text-muted-foreground">
                 <strong>Jalkaterapeutti (AMK)</strong>
@@ -61,18 +59,16 @@ export default function AboutPage() {
                 <br />
                 Savon ammatti- ja aikuisopisto - 2020
               </p>
-            </div>
+            </Card>
 
-
-            {/* Certifications */}
-            <div className="p-4 rounded-lg shadow-md bg-card h-full">
+            <Card className="h-full">
               <h3 className="text-2xl font-semibold mb-2 text-black">Sertifikaatit</h3>
               <p className="text-muted-foreground">
                 <strong>Fast&Furious sugaring (level 1)</strong>
                 <br />
                 MAKEA pro - 2025
               </p>
-            </div>
+            </Card>
             <Link href="/yhteystiedot">
             <button className="bg-primary text-white px-8 py-4 rounded-lg hover:bg-hover transition duration-300 w-full">
               Varaa aika
