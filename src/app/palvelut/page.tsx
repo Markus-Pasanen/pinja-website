@@ -1,4 +1,5 @@
 import { Clock, Wallet } from "lucide-react";
+import Link from "next/link";
 
 const services = [
   {
@@ -115,8 +116,8 @@ interface Service {
 
 export default function ServicesPage() {
   return (
-    <main className="container mx-auto py-16 px-4">
-      <section className="text-center mb-12">
+    <main>
+      <section>
         <h1 className="text-4xl font-bold mb-4">Palvelut</h1>
         <p className="text-lg text-muted-foreground">
           Tarjoan laajan valikoiman jalkaterveyspalveluita pitääkseni sinut liikkeessä.
@@ -125,35 +126,38 @@ export default function ServicesPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service: Service, index: number) => (
-          <section id={service.id} key={index} className="rounded-lg shadow-md bg-card flex flex-col justify-between gap-4 overflow-hidden">
+          <section id={service.id} key={index} className="rounded-lg shadow-md bg-card flex flex-col justify-between overflow-hidden text-left">
             <div>
               <div>
                 <img
                   src={"/images/" + service.image}
                   alt={service.title}
-                  className="w-full h-48 mb-6 brightness-75 object-cover object-[50%_35%]"
+                  className="w-full h-48 brightness-75 object-cover object-[50%_35%]"
                 />
-                <div className="p-4 text-ellipsis overflow-hidden">
+                <div className="p-4">
                   <h3 className="text-xl font-semibold mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground">
+                  <p className="line-clamp-2">
                     {service.description}
                   </p>
+                  <Link href={service.link} className="text-primary hover:underline mt-2 block">
+                    Lue lisää
+                  </Link>
                 </div>
               </div>
             </div>
-            <div className="p-6">
-              <div className="flex items-center mb-2">
+            <div className="p-4">
+              <div className="flex items-center pb-2">
                 <Wallet className="h-4 w-4 mr-2 text-muted-foreground" />
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground m-0">
                   Hinta: {service.price}
                 </p>
               </div>
 
               <div className="flex items-center">
                 <Clock className="h-4 w-4 mr-2 text-muted-foreground" />
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm m-0">
                   Ajanvaraus: {service.duration}
                 </p>
               </div>

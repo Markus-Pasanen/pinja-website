@@ -24,6 +24,30 @@ body {
     --accent-foreground: 0 0% 100%;
     --radius: 0.5rem;
   }
+
+  h1 {
+    @apply text-3xl md:text-4xl font-bold mb-2 leading-tight tracking-tight text-black;
+  }
+  h2 {
+    @apply text-2xl md:text-2xl font-bold mb-6 leading-snug tracking-tight text-black;
+  }
+  h3 {
+    @apply text-xl md:text-xl font-semibold mb-2 leading-snug tracking-tight text-black;
+  }
+  p {
+    @apply leading-relaxed text-muted-foreground mb-2;
+  }
+  strong {
+    @apply font-semibold;
+  }
+
+  main {
+    @apply container mx-auto px-4 text-muted-foreground subpixel-antialiased;
+  }
+
+  section {
+    @apply mb-12 text-center;
+  }
 }
 
 
