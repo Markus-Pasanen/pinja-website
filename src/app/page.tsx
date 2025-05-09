@@ -123,11 +123,11 @@ export default function Page() {
         <Modal isOpen={!!openArticle} onClose={() => setOpenArticle(null)}>
           {openArticle && (
             <div className="flex flex-col h-full">
-              <div className="w-full" style={{height: '200px'}}>
+              <div className="w-full" style={{ height: "400px" }}>
                 <img
                   src={openArticle.thumbnail}
                   alt={openArticle.title}
-                  className="w-full h-full object-cover rounded-t-lg"
+                  className="w-full h-full object-cover rounded-t-lg object-top"
                   style={{display: 'block', padding: 0, margin: 0}}
                 />
               </div>

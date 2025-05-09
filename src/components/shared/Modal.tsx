@@ -15,7 +15,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
       onClick={onClose}
     >
       <div
-        className="bg-white rounded-lg shadow-lg max-w-lg w-full relative m-4"
+        className="bg-white rounded-lg shadow-lg max-h-[90%] w-screen md:max-w-lg relative m-4 flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -25,7 +25,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
         >
           <X className="size-8"/>
         </button>
-        <div className="text-left">{children}</div>
+        <div className="text-left overflow-y-auto max-h-[80vh]">{children}</div>
       </div>
     </div>
   );

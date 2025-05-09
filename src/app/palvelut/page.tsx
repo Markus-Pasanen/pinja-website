@@ -65,7 +65,7 @@ const services = [
 		id: "Sokerointi",
 		title: "Sokerointi (harjoittelija)",
 		description:
-			"Sokerointi poistaa karvat hellävaraisesti, jättäen ihon sileäksi ja pehmeäksi viikoiksi. Samalla iho kuoriutuu kevyesti, mikä tekee siitä ihanteellisen vaihtoehdon myös herkälle iholle.",
+			"Sokerointi poistaa karvat hellävaraisesti, jättäen ihon sileäksi ja pehmeäksi viikoiksi. Samalla iho kuoriutuu kevyesti, mikä tekee siitä ihanteellisen vaihtoehdon myös herkälle iholle. Palvelun hinta ja kesto vaihtelevat sokeroitavan alueen mukaan. Vaihtoehtoina ovat kainaloiden, säärien ja reisien sokerointi.",
 		image: "pinja_2025-20.jpg",
 		link: "/palvelut/kynsien-lyhennys",
 		price: "16 - 38 €",
@@ -159,7 +159,7 @@ export default function ServicesPage() {
 			<Modal isOpen={!!openService} onClose={() => setOpenService(null)}>
 				{openService && (
 					<div className="flex flex-col h-full">
-						<div className="w-full" style={{ height: "200px" }}>
+						<div className="w-full" style={{ height: "400px" }}>
 							<img
 								src={"/images/" + openService.image}
 								alt={openService.title}
