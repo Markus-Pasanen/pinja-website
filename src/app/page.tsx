@@ -26,7 +26,7 @@ const news = [
   {
     title: "Tiedotus asiakkaille",
     excerpt:
-      "Olen työharjoittelussa viikot 19–24 Kuopion yliopistollisessa sairaalassa (KYS). Harjoittelun aikana en välttämättä pysty vastaamaan yhteydenottoihin heti, mutta pyrin palaamaan viestiisi mahdollisimman pian.",
+      "Olen työharjoittelussa viikot 19–24 Kuopion yliopistollisessa sairaalassa (KYS), ja harjoittelu painottuu erikoissairaanhoidon puolelle. Harjoittelun aikana en välttämättä pysty vastaamaan yhteydenottoihin heti, mutta pyrin palaamaan viestiisi mahdollisimman pian. Seuraavat vapaat hoitoajat sijoittuvat kesäkuun puolelle, mutta ota rohkeasti yhteyttä, niin etsitään sinulle sopiva aika yhdessä! Kiitos ymmärryksestä ja ihanaa kevättä!",
     thumbnail: "/images/pinja_2025-10.jpg",
     link: "/blog/edistysaskeleet-diabeettinen-jalkahoito",
     date: "06.05.2025",
@@ -34,7 +34,7 @@ const news = [
   {
     title: "Lahjakortti nyt saatavilla",
     excerpt:
-      "Voit nyt ostaa lahjakortin palveluihini. Lahjakortti on loistava lahjaidea itselle tai läheiselle.",
+      "Jalkaterapia, hieronta tai sokerointi. Valitse lahjakorttiin juuri se hoito, jonka tiedät ilahduttavan. Täydellinen tapa muistaa ystävää, läheistä tai itseäsi!",
     thumbnail: "/images/lahjakortti.jpg",
     link: "/blog/uusi-tutkimus-jalkakipu",
     date: "01.05.2025",
@@ -71,11 +71,11 @@ export default function Page() {
             <Link
               key={index}
               href="/palvelut"
-              className="p-4 rounded-lg shadow-md bg-card hover:shadow-xl hover:brightness-90 transition duration-300 flex flex-col items-center"
+              className="p-6 rounded-lg shadow-md bg-card hover:shadow-xl hover:brightness-90 transition duration-300 flex flex-col items-center"
             >
-              <service.icon className="h-12 w-12 text-primary mb-4" />
-              <h3 className="text-center">{service.title}</h3>
-              <p className="text-center">
+              <service.icon className="size-12 text-primary mb-4" />
+              <h3>{service.title}</h3>
+              <p>
                 {service.description}
               </p>
             </Link>
@@ -99,7 +99,7 @@ export default function Page() {
                   alt={article.title}
                   className="w-full h-48 object-cover brightness-75"
                 />
-                <div className="p-4 text-ellipsis overflow-hidden text-left">
+                <div className="p-4 text-ellipsis overflow-hidden text-left h-48">
                   <h3>{article.title}</h3>
                   <p className="line-clamp-2">
                     {article.excerpt}

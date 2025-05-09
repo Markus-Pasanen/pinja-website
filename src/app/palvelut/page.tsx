@@ -58,36 +58,14 @@ const services = [
     type: "hieronta",
   },
   {
-    id: "Säärien sokerointi",
-    title: "Säärien sokerointi",
+    id: "Sokerointi",
+    title: "Sokerointi (harjoittelija)",
     description:
       "Sokerointi poistaa karvat hellävaraisesti, jättäen ihon sileäksi ja pehmeäksi viikoiksi. Samalla iho kuoriutuu kevyesti, mikä tekee siitä ihanteellisen vaihtoehdon myös herkälle iholle.",
     image: "pinja_2025-20.jpg",
     link: "/palvelut/kynsien-lyhennys",
-    price: "32 €",
-    duration: "60 minuuttia",
-    type: "sokerointi",
-  },
-  {
-    id: "Kainaloiden sokerointi",
-    title: "Kainaloiden sokerointi",
-    description:
-      "Sokerointi poistaa karvat hellävaraisesti, jättäen ihon sileäksi ja pehmeäksi viikoiksi. Samalla iho kuoriutuu kevyesti, mikä tekee siitä ihanteellisen vaihtoehdon myös herkälle iholle.",
-    image: "pinja_2025-20.jpg",
-    link: "/palvelut/kynsien-lyhennys",
-    price: "16 €",
-    duration: "45 minuuttia",
-    type: "sokerointi",
-  },
-  {
-    id: "Reisien sokerointi",
-    title: "Reisien sokerointi",
-    description:
-      "Sokerointi poistaa karvat hellävaraisesti, jättäen ihon sileäksi ja pehmeäksi viikoiksi. Samalla iho kuoriutuu kevyesti, mikä tekee siitä ihanteellisen vaihtoehdon myös herkälle iholle.",
-    image: "pinja_2025-20.jpg",
-    link: "/palvelut/kynsien-lyhennys",
-    price: "36 €",
-    duration: "60 minuuttia",
+    price: "16 - 38 €",
+    duration: "30 - 60 minuuttia",
     type: "sokerointi",
   },
   {
