@@ -1,3 +1,6 @@
+"use client";
+import { useState } from "react";
+import Modal from "@/components/shared/Modal";
 import { Footprints, Candy, Hand} from "lucide-react";
 import Link from 'next/link';
 
@@ -42,11 +45,13 @@ const news = [
 ];
 
 export default function Page() {
+  const [openArticle, setOpenArticle] = useState(null);
+
   return (
     <main className="flex flex-col items-center justify-center min-h-screen bg-background text-foreground gap-8">
       {/* Hero Section backdrop-blur-sm brightness-75 */}
       <section
-        className="relative top-0 w-screen h-[50vh] xl:h-[75vh] flex items-center justify-center text-center text-card"
+        className="relative top-0 w-screen h-[75vh] flex items-center justify-center text-center text-card"
         style={{
           backgroundImage: `url('/images/hero_background.jpg')`,
           backgroundSize: 'cover',
@@ -56,10 +61,10 @@ export default function Page() {
         <div className="absolute inset-0 brightness-75 backdrop-blur-sm"></div>
         <div className="relative z-10 px-4 rounded-lg">
           <h1 className="text-card">Pinja Pasanen</h1>
-          <p className="text-card mb-10">
+          <p className="text-card mb-12">
             Jalkaterapeuttiopiskelija, joka on erikoistunut jalkojen terveyteen ja hyvinvointiin nykyaikaisilla hoitomenetelmillä.
           </p>
-            <Link href="/yhteystiedot" className="bg-primary text-card px-24 py-4  rounded-lg font-semibold">
+            <Link href="/yhteystiedot" className="bg-primary text-card px-24 py-4 rounded-lg font-semibold">
               Varaa aika
             </Link>
         </div>
@@ -104,14 +109,36 @@ export default function Page() {
                   <p className="line-clamp-2">
                     {article.excerpt}
                   </p>
-                  <Link href={article.link} className="text-primary hover:underline mt-2 block">
+                  <button
+                    className="text-primary hover:underline mt-2 block p-0 bg-transparent border-none cursor-pointer"
+                    onClick={() => setOpenArticle(article)}
+                  >
                     Lue lisää
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>
           ))}
         </div>
+        <Modal isOpen={!!openArticle} onClose={() => setOpenArticle(null)}>
+          {openArticle && (
+            <div className="flex flex-col h-full">
+              <div className="w-full" style={{height: '200px'}}>
+                <img
+                  src={openArticle.thumbnail}
+                  alt={openArticle.title}
+                  className="w-full h-full object-cover rounded-t-lg"
+                  style={{display: 'block', padding: 0, margin: 0}}
+                />
+              </div>
+              <div className="p-6 flex-1 flex flex-col">
+                <h2 className="text-2xl font-bold mb-2">{openArticle.title}</h2>
+                <div className="text-sm text-muted-foreground mb-2">{openArticle.date}</div>
+                <p>{openArticle.excerpt}</p>
+              </div>
+            </div>
+          )}
+        </Modal>
       </section>
     </main>
   );

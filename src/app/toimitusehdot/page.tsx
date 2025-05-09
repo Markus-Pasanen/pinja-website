@@ -6,7 +6,7 @@ export default function ServicesPage() {
       <section>
         <h1>Toimitusehdot</h1>
         <p>Tutustu toimitusehtojemme yksityiskohtiin alla.</p>
-        <div className="max-w-3xl mx-auto text-left space-y-8">
+        <div className="max-w-3xl mx-auto text-left space-y-8 my-4">
           <Card>
             <h2>Peruutusehdot</h2>
             <p>

@@ -11,7 +11,7 @@ export default function ContactPage() {
       </section>
       <div className="flex flex-col md:flex-row gap-8 align-center justify-center">
         <div className="p-6 rounded-lg shadow-md bg-card flex flex-col h-48 w-full max-w-md">
-          <h2>Yhteystiedot</h2>
+          <h3>Yhteystiedot</h3>
           <div className="flex flex-col">
             <p>
               <a href="tel:+358451032606" className="hover:text-accent flex flex-row gap-2">
@@ -32,7 +32,7 @@ export default function ContactPage() {
           </div>
         </div>
         <div className="p-6 rounded-lg shadow-md bg-card flex flex-col h-48 w-full max-w-md">
-          <h2>Aukioloajat</h2>
+          <h3>Aukioloajat</h3>
           <p>
             Maanantai - Perjantai: 9:00 - 17:00
             <br />
