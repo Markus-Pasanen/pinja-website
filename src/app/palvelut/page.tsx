@@ -159,11 +159,11 @@ export default function ServicesPage() {
 			<Modal isOpen={!!openService} onClose={() => setOpenService(null)}>
 				{openService && (
 					<div className="flex flex-col h-full">
-						<div className="w-full" style={{ height: "400px" }}>
+						<div className="w-full" style={{ height: "200px" }}>
 							<img
 								src={"/images/" + openService.image}
 								alt={openService.title}
-								className="w-full h-full object-cover rounded-t-lg"
+								className="w-full h-full object-cover rounded-t-lg object-top"
 								style={{ display: "block", padding: 0, margin: 0 }}
 							/>
 						</div>
