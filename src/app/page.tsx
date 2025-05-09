@@ -45,7 +45,7 @@ const news = [
 ];
 
 export default function Page() {
-  const [openArticle, setOpenArticle] = useState(null);
+  const [openArticle, setOpenArticle] = useState<typeof news[0] | null>(null);
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen bg-background text-foreground gap-8">
@@ -123,7 +123,7 @@ export default function Page() {
         <Modal isOpen={!!openArticle} onClose={() => setOpenArticle(null)}>
           {openArticle && (
             <div className="flex flex-col h-full">
-              <div className="w-full" style={{ height: "200px" }}>
+              <div className="w-full" style={{ height: "400px" }}>
                 <img
                   src={openArticle.thumbnail}
                   alt={openArticle.title}
