@@ -24,6 +24,34 @@ body {
     --accent-foreground: 0 0% 100%;
     --radius: 0.5rem;
   }
+
+  h1 {
+    @apply text-4xl font-bold mt-8 leading-tight tracking-tight text-black;
+  }
+  h2 {
+    @apply text-3xl font-bold mb-4 leading-snug tracking-tight text-black;
+  }
+  h3 {
+    @apply text-xl font-semibold mb-4 leading-snug tracking-tight text-black;
+  }
+  p {
+    @apply leading-relaxed text-muted-foreground mb-2;
+  }
+  strong {
+    @apply font-semibold;
+  }
+
+  ul {
+    @apply list-inside list-disc;
+  }
+
+  main {
+    @apply container mx-auto px-4 text-muted-foreground subpixel-antialiased;
+  }
+
+  section {
+    @apply mb-12 text-center;
+  }
 }
 
 
