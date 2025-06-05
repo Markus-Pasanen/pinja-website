@@ -26,22 +26,20 @@ const services = [
 ];
 
 const news = [
+    {
+    title: "Muutoksia hinnastoon",
+    excerpt:
+      "Hintoihin tulee pieniä korotuksia 1.7.2025 alkaen. Hintoihin vaikuttavat kustannusten nousu ja ammattitaidon kasvaminen opintojen edetessä loppuvaiheeseen. Hinnat nousevat arviolta 1-3€/palvelu.",
+    thumbnail: "/images/raha.jpg",
+    date: "05.06.2025",
+  },
   {
     title: "Tiedotus asiakkaille",
     excerpt:
       "Olen työharjoittelussa viikot 19–24 Kuopion yliopistollisessa sairaalassa (KYS), ja harjoittelu painottuu erikoissairaanhoidon puolelle. Harjoittelun aikana en välttämättä pysty vastaamaan yhteydenottoihin heti, mutta pyrin palaamaan viestiisi mahdollisimman pian. Seuraavat vapaat hoitoajat sijoittuvat kesäkuun puolelle, mutta ota rohkeasti yhteyttä, niin etsitään sinulle sopiva aika yhdessä! Kiitos ymmärryksestä ja ihanaa kevättä!",
     thumbnail: "/images/pinja_2025-10.jpg",
-    link: "/blog/edistysaskeleet-diabeettinen-jalkahoito",
     date: "06.05.2025",
-  },
-  {
-    title: "Lahjakortti nyt saatavilla",
-    excerpt:
-      "Jalkaterapia, hieronta tai sokerointi. Valitse lahjakorttiin juuri se hoito, jonka tiedät ilahduttavan. Täydellinen tapa muistaa ystävää, läheistä tai itseäsi!",
-    thumbnail: "/images/lahjakortti.jpg",
-    link: "/blog/uusi-tutkimus-jalkakipu",
-    date: "01.05.2025",
-  },
+  }
 ];
 
 export default function Page() {
