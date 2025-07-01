@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { cn } from "@/lib/utils";
 import { usePathname } from 'next/navigation';
 import { Menu, X, Facebook } from "lucide-react";
+import Image from 'next/image';
 
 const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -36,7 +37,8 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between">
         <Link href="/" className="text-2xl font-bold z-50">
-          <img src="/images/logo.png" alt="Logo" className="h-14" />
+          <Image src="/images/logo.png" alt="Logo" width={64}
+            height={64} />
         </Link>
         {/* Burger menu button for mobile */}
         <button

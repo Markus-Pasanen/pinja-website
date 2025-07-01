@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
 import Modal from "@/components/shared/Modal";
-import { Footprints, Candy, Hand} from "lucide-react";
+import { Footprints, Candy, Hand } from "lucide-react";
 import Link from 'next/link';
+import Image from "next/image";
 
 const services = [
   {
@@ -26,19 +27,19 @@ const services = [
 ];
 
 const news = [
-    {
+  {
+    title: "Uusia palveluita",
+    excerpt:
+      "Saatavilla on nyt tehokas ja kivuton Verrutop-syylänpoistohoito, joka sopii erityisesti sitkeisiin tai kipeisiin syyliin. Lisäksi tarjoan asiantuntevaa jalkaterapiaa, joka helpottaa yleisiä jalkavaivoja ja ennaltaehkäisee ongelmia. Molemmat hoidot toteutetaan yksilöllisesti nykyaikaisin menetelmin ja huolellisella asiakaspalvelulla. Tervetuloa hoitoon – jalkasi kiittävät!",
+    thumbnail: "/images/syyla.jpg",
+    date: "01.07.2025",
+  },
+  {
     title: "Muutoksia hinnastoon",
     excerpt:
       "Hintoihin tulee pieniä korotuksia 1.7.2025 alkaen. Hintoihin vaikuttavat kustannusten nousu ja ammattitaidon kasvaminen opintojen edetessä loppuvaiheeseen. Hinnat nousevat arviolta 1-3€/palvelu.",
     thumbnail: "/images/raha.jpg",
     date: "05.06.2025",
-  },
-  {
-    title: "Tiedotus asiakkaille",
-    excerpt:
-      "Olen työharjoittelussa viikot 19–24 Kuopion yliopistollisessa sairaalassa (KYS), ja harjoittelu painottuu erikoissairaanhoidon puolelle. Harjoittelun aikana en välttämättä pysty vastaamaan yhteydenottoihin heti, mutta pyrin palaamaan viestiisi mahdollisimman pian. Seuraavat vapaat hoitoajat sijoittuvat kesäkuun puolelle, mutta ota rohkeasti yhteyttä, niin etsitään sinulle sopiva aika yhdessä! Kiitos ymmärryksestä ja ihanaa kevättä!",
-    thumbnail: "/images/pinja_2025-10.jpg",
-    date: "06.05.2025",
   }
 ];
 
@@ -62,9 +63,9 @@ export default function Page() {
           <p className="text-card mb-12">
             Jalkaterapeuttiopiskelija, joka on erikoistunut jalkojen terveyteen ja hyvinvointiin nykyaikaisilla hoitomenetelmillä.
           </p>
-            <Link href="/yhteystiedot" className="bg-primary text-card px-24 py-4 rounded-lg font-semibold">
-              Varaa aika
-            </Link>
+          <Link href="/yhteystiedot" className="bg-primary text-card px-24 py-4 rounded-lg font-semibold">
+            Varaa aika
+          </Link>
         </div>
       </section>
       <section>
@@ -87,7 +88,7 @@ export default function Page() {
       </section>
       <section>
         <h2 className="text-center">Ajankohtaista</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {news.map((article, index) => (
             <div
               key={index}
@@ -97,10 +98,12 @@ export default function Page() {
                 {article.date}
               </div>
               <div>
-                <img
+                <Image
                   src={article.thumbnail}
                   alt={article.title}
                   className="w-full h-48 object-cover brightness-75"
+                  width={500}
+									height={500}
                 />
                 <div className="p-4 text-ellipsis overflow-hidden text-left h-48">
                   <h3>{article.title}</h3>
@@ -122,11 +125,13 @@ export default function Page() {
           {openArticle && (
             <div className="flex flex-col h-full">
               <div className="w-full" style={{ height: "400px" }}>
-                <img
+                <Image
                   src={openArticle.thumbnail}
                   alt={openArticle.title}
                   className="w-full h-full object-cover rounded-t-lg object-top"
-                  style={{display: 'block', padding: 0, margin: 0}}
+                  style={{ display: 'block', padding: 0, margin: 0 }}
+                  width={500}
+									height={500}
                 />
               </div>
               <div className="p-6 flex-1 flex flex-col">

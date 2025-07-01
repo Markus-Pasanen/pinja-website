@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Card from "@/components/shared/Card";
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
@@ -11,10 +12,12 @@ export default function AboutPage() {
       <section>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <img
+            <Image
               src="/images/pinja_2025-84.jpg"
               alt="Pinja Pasanen"
               className="w-full h-96 md:h-full rounded-lg shadow-md object-cover object-top"
+              width={500}
+              height={500}
             />
           </div>
           <div className="flex flex-col justify-between gap-8">

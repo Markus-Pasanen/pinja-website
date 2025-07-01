@@ -1,9 +1,9 @@
 "use client";
 
 import { Clock, Wallet } from "lucide-react";
-import Link from "next/link";
 import { useState } from "react";
 import Modal from "@/components/shared/Modal";
+import Image from "next/image";
 
 const services = [
 	{
@@ -13,8 +13,30 @@ const services = [
 			"Kliininen jalkahoito on terveydenhoitoa, jossa hoidetaan jalkojen iho- ja kynsiongelmia sekä ehkäistään jalkavaivoja. Ihon rasvaushieronta ja lampaanvillat varpaiden väliin. Se on erityisen tärkeää riskiryhmille, kuten diabeetikoille, ja sen tavoitteena on ylläpitää jalkojen terveyttä.",
 		image: "pinja_2025-52.jpg",
 		link: "kliininen-jalkahoito",
-		price: "78 €",
+		price: "81 €",
 		duration: "90 minuuttia",
+		type: "terapia",
+	},
+	{
+		id: "Jalkaterapia",
+		title: "Jalkaterapia",
+		description:
+			"Yksilöllistä ja asiantuntevaa jalkaterapiaa, joka tuo helpotusta vaivoihin ja edistää kokonaisvaltaista hyvinvointia. Hoidoissani yhdistyvät puhtaus, nykyaikaiset menetelmät ja lämmin, asiakaslähtöinen kohtaaminen. Olipa kyseessä kovettumat, kynsiongelmat tai jalkakipu, saat juuri sinun tarpeisiisi räätälöidyn hoidon turvallisessa ja rauhallisessa ympäristössä.",
+		image: "pinja_2025-38.jpg",
+		link: "kliininen-jalkahoito",
+		price: "52 €",
+		duration: "60 minuuttia",
+		type: "terapia",
+	},
+	{
+		id: "Syylä",
+		title: "Syylänhoito",
+		description:
+			"Verrutop-syylähoito on tehokas ja kivuton tapa päästä eroon pitkäaikaisista tai kivuliaista syylistä. Verrutopin vaikuttava aine Nitrizinc Complex vähentää syyläkudosta, ja hoito toteutetaan yksilöllisesti parhaimman lopputuloksen saavuttamiseksi. Pitkään olleet tai syvälle ulottuvat syylät vaativat yleensä useamman käsittelykerran, ja uusintahoito tehdään 7–14 vuorokauden välein. Hoidon tueksi saat selkeät kotihoito-ohjeet – erityisesti desinfiointi on tärkeää syylän kuivumisen edistämiseksi. Hoitoa ei suositella alle 6-vuotiaille, raskauden tai imetyksen aikana, tulehtuneelle iholle, kasvoihin tai muiden paikallishoitojen kanssa.",
+		image: "syyla.jpg",
+		link: "kliininen-jalkahoito",
+		price: "53 €",
+		duration: "45 - 60 minuuttia",
 		type: "terapia",
 	},
 	{
@@ -24,7 +46,7 @@ const services = [
 			"Kynsien lyhennys on toimenpide, jossa kynnet leikataan sopivaan pituuteen ja muotoon. Se auttaa ylläpitämään kynsien terveyttä ja ehkäisee esimerkiksi sisäänkasvaneita kynsiä.",
 		image: "pinja_2025-45.jpg",
 		link: "/palvelut/kynsien-lyhennys",
-		price: "46 €",
+		price: "48 €",
 		duration: "30 minuuttia",
 		type: "terapia",
 	},
@@ -46,7 +68,7 @@ const services = [
 			"Silikoniortoosit ovat yksilöllisesti muotoiltuja silikonista valmistettuja tukia, joita käytetään jalkaterän virheasentojen korjaamiseen tai vaimentamaan painetta. Ne helpottavat kipua ja parantavat jalkojen asentoa, auttaen esimerkiksi vaivaisenluun tai vasaravarpaiden hoidossa.",
 		image: "pinja_2025-5.jpg",
 		link: "/palvelut/kynsien-lyhennys",
-		price: "28 € per silikoni",
+		price: "31 € per silikoni",
 		duration: "30 minuuttia",
 		type: "terapia",
 	},
@@ -117,10 +139,12 @@ export default function ServicesPage() {
 					>
 						<div>
 							<div>
-								<img
+								<Image
 									src={"/images/" + service.image}
 									alt={service.title}
 									className="w-full h-48 brightness-75 object-cover object-[50%_35%]"
+									width={500}
+									height={500}
 								/>
 								<div className="p-4">
 									<h3 className="text-xl font-semibold mb-2">
@@ -160,11 +184,13 @@ export default function ServicesPage() {
 				{openService && (
 					<div className="flex flex-col h-full">
 						<div className="w-full" style={{ height: "400px" }}>
-							<img
+							<Image
 								src={"/images/" + openService.image}
 								alt={openService.title}
 								className="w-full h-full rounded-t-lg object-cover object-top"
 								style={{ display: "block", padding: 0, margin: 0 }}
+								width={500}
+								height={500}
 							/>
 						</div>
 						<div className="p-6 flex-1 flex flex-col">

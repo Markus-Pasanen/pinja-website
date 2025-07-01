@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Tapahtumapäivä",
+    "platform": "facebook",
+    "file": "tapahtumapaiva_facebook.md"
+  },
+  {
+    "name": "Tapahtumapäivä",
+    "platform": "instagram",
+    "file": "tapahtumapaiva_instagram.md"
+  },
+  {
+    "name": "Vinkki / tietoisku",
+    "platform": "facebook",
+    "file": "vinkki_facebook.md"
+  },
+  {
+    "name": "Vinkki / tietoisku",
+    "platform": "instagram",
+    "file": "vinkki_instagram.md"
+  },
+  {
+    "name": "Asiakaspalaute",
+    "platform": "facebook",
+    "file": "asiakaspalaute_facebook.md"
+  },
+  {
+    "name": "Asiakaspalaute",
+    "platform": "instagram",
+    "file": "asiakaspalaute_instagram.md"
+  },
+  {
+    "name": "Pinjan esittely",
+    "platform": "facebook",
+    "file": "esittely_facebook.md"
+  },
+  {
+    "name": "Pinjan esittely",
+    "platform": "instagram",
+    "file": "esittely_instagram.md"
+  }
+]
