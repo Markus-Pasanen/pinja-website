@@ -21,7 +21,7 @@ const services = [
 		id: "Jalkaterapia",
 		title: "Jalkaterapia",
 		description:
-			"Yksilöllistä ja asiantuntevaa jalkaterapiaa, joka tuo helpotusta vaivoihin ja edistää kokonaisvaltaista hyvinvointia. Hoidoissani yhdistyvät puhtaus, nykyaikaiset menetelmät ja lämmin, asiakaslähtöinen kohtaaminen. Olipa kyseessä kovettumat, kynsiongelmat tai jalkakipu, saat juuri sinun tarpeisiisi räätälöidyn hoidon turvallisessa ja rauhallisessa ympäristössä.",
+			"Yksilöllistä ja asiantuntevaa jalkaterapiaa, joka tuo helpotusta vaivoihin ja edistää kokonaisvaltaista hyvinvointia. Hoidoissani yhdistyvät puhtaus, nykyaikaiset menetelmät ja lämmin, asiakaslähtöinen kohtaaminen. Olipa kyseessä kynsiongelmat tai jalkakipu, saat juuri sinun tarpeisiisi räätälöidyn hoidon turvallisessa ja rauhallisessa ympäristössä.",
 		image: "pinja_2025-38.jpg",
 		link: "kliininen-jalkahoito",
 		price: "52 €",
