@@ -28,6 +28,13 @@ const services = [
 
 const news = [
   {
+    title: "Muistutus!",
+    excerpt:
+      "Olen tavattavissa Kommilan apteekilla maanantaina 7.7. ja 14.7. klo 9–16. Voit tulla keskustelemaan jalkaterapiapalveluista. Tarjolla myös sokerointeja harjoitteluhinnoin: kainalot 16 €, sääret 36 €, reidet 38 €. 14.7. päivälle on enää yksi aika jäljellä!",
+    thumbnail: "/images/apteekki.jpg",
+    date: "01.07.2025",
+  },
+  {
     title: "Uusia palveluita",
     excerpt:
       "Saatavilla on nyt tehokas ja kivuton Verrutop-syylänpoistohoito, joka sopii erityisesti sitkeisiin tai kipeisiin syyliin. Lisäksi tarjoan asiantuntevaa jalkaterapiaa, joka helpottaa yleisiä jalkavaivoja ja ennaltaehkäisee ongelmia. Molemmat hoidot toteutetaan yksilöllisesti nykyaikaisin menetelmin ja huolellisella asiakaspalvelulla. Tervetuloa hoitoon – jalkasi kiittävät!",
@@ -88,7 +95,7 @@ export default function Page() {
       </section>
       <section>
         <h2 className="text-center">Ajankohtaista</h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {news.map((article, index) => (
             <div
               key={index}
@@ -103,9 +110,9 @@ export default function Page() {
                   alt={article.title}
                   className="w-full h-48 object-cover brightness-75"
                   width={500}
-									height={500}
+                  height={500}
                 />
-                <div className="p-4 text-ellipsis overflow-hidden text-left h-48">
+                <div className="p-4 text-ellipsis overflow-hidden text-left">
                   <h3>{article.title}</h3>
                   <p className="line-clamp-2">
                     {article.excerpt}
@@ -131,7 +138,7 @@ export default function Page() {
                   className="w-full h-full object-cover rounded-t-lg object-top"
                   style={{ display: 'block', padding: 0, margin: 0 }}
                   width={500}
-									height={500}
+                  height={500}
                 />
               </div>
               <div className="p-6 flex-1 flex flex-col">
