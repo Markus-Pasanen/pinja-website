@@ -28,6 +28,13 @@ const services = [
 
 const news = [
   {
+    title: "Lomalla!",
+    excerpt:
+      "Olen vaeltamassa 27.7.-3.8. Vaelluksen aikana en vastaa puheluihin tai sähköposteihin, mutta voit jättää viestin, niin palaan asiaan loman jälkeen.",
+    thumbnail: "/images/lappi.jpg",
+    date: "26.07.2025",
+  },
+  {
     title: "Muistutus!",
     excerpt:
       "Olen tavattavissa Kommilan apteekilla maanantaina 7.7. ja 14.7. klo 9–16. Voit tulla keskustelemaan jalkaterapiapalveluista. Tarjolla myös sokerointeja harjoitteluhinnoin: kainalot 16 €, sääret 36 €, reidet 38 €. 14.7. päivälle on enää yksi aika jäljellä!",
@@ -40,13 +47,6 @@ const news = [
       "Saatavilla on nyt tehokas ja kivuton Verrutop-syylänpoistohoito, joka sopii erityisesti sitkeisiin tai kipeisiin syyliin. Lisäksi tarjoan asiantuntevaa jalkaterapiaa, joka helpottaa yleisiä jalkavaivoja ja ennaltaehkäisee ongelmia. Molemmat hoidot toteutetaan yksilöllisesti nykyaikaisin menetelmin ja huolellisella asiakaspalvelulla. Tervetuloa hoitoon – jalkasi kiittävät!",
     thumbnail: "/images/syyla.jpg",
     date: "01.07.2025",
-  },
-  {
-    title: "Muutoksia hinnastoon",
-    excerpt:
-      "Hintoihin tulee pieniä korotuksia 1.7.2025 alkaen. Hintoihin vaikuttavat kustannusten nousu ja ammattitaidon kasvaminen opintojen edetessä loppuvaiheeseen. Hinnat nousevat arviolta 1-3€/palvelu.",
-    thumbnail: "/images/raha.jpg",
-    date: "05.06.2025",
   }
 ];
 
