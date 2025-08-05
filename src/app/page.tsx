@@ -28,6 +28,13 @@ const services = [
 
 const news = [
   {
+    title: "Apteekkiin jalkahoitoon!",
+    excerpt:
+      "Kommilan apteekilla Maanantaina 11.8 klo 9-16. Tule juttelemaan jalkaterapiapalveluista. Tarjolla apteekkihintaan: Kliinistä jalkahoitoa 78€, Syylänhoitoa 53€, Kynnenoikaisua Podofix-menetelmällä 58€. Päivälle enää kaksi vapaata aikaa: 9:00 ja 12:00.",
+    thumbnail: "/images/apteekki.jpg",
+    date: "05.08.2025",
+  },
+  {
     title: "Lomalla!",
     excerpt:
       "Olen vaeltamassa 27.7.-3.8. Vaelluksen aikana en vastaa puheluihin tai sähköposteihin, mutta voit jättää viestin, niin palaan asiaan loman jälkeen.",
@@ -39,13 +46,6 @@ const news = [
     excerpt:
       "Olen tavattavissa Kommilan apteekilla maanantaina 7.7. ja 14.7. klo 9–16. Voit tulla keskustelemaan jalkaterapiapalveluista. Tarjolla myös sokerointeja harjoitteluhinnoin: kainalot 16 €, sääret 36 €, reidet 38 €. 14.7. päivälle on enää yksi aika jäljellä!",
     thumbnail: "/images/apteekki.jpg",
-    date: "01.07.2025",
-  },
-  {
-    title: "Uusia palveluita",
-    excerpt:
-      "Saatavilla on nyt tehokas ja kivuton Verrutop-syylänpoistohoito, joka sopii erityisesti sitkeisiin tai kipeisiin syyliin. Lisäksi tarjoan asiantuntevaa jalkaterapiaa, joka helpottaa yleisiä jalkavaivoja ja ennaltaehkäisee ongelmia. Molemmat hoidot toteutetaan yksilöllisesti nykyaikaisin menetelmin ja huolellisella asiakaspalvelulla. Tervetuloa hoitoon – jalkasi kiittävät!",
-    thumbnail: "/images/syyla.jpg",
     date: "01.07.2025",
   }
 ];
