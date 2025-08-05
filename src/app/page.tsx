@@ -30,7 +30,7 @@ const news = [
   {
     title: "Apteekkiin jalkahoitoon!",
     excerpt:
-      "Kommilan apteekilla Maanantaina 11.8 klo 9-16. Tule juttelemaan jalkaterapiapalveluista. Tarjolla apteekkihintaan: Kliinistä jalkahoitoa 78€, Syylänhoitoa 53€, Kynnenoikaisua Podofix-menetelmällä 58€. Päivälle enää kaksi vapaata aikaa: 9:00 ja 12:00.",
+      "Kommilan apteekilla Maanantaina 11.8 klo 9-16. Tule juttelemaan jalkaterapiapalveluista. Tarjolla apteekkihintaan: Kliinistä jalkahoitoa 81€, Syylänhoitoa 53€, Kynnenoikaisua Podofix-menetelmällä 58€. Päivälle enää kaksi vapaata aikaa: 9:00 ja 12:00.",
     thumbnail: "/images/apteekki.jpg",
     date: "05.08.2025",
   },
