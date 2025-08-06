@@ -3,8 +3,10 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { cn } from "@/lib/utils";
 import { usePathname } from 'next/navigation';
-import { Menu, X, Facebook } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Image from 'next/image';
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { IoMenu, IoClose } from "react-icons/io5";
 
 const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -47,7 +49,7 @@ const Navbar = () => {
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((open) => !open)}
         >
-          {menuOpen ? <X size={28} /> : <Menu size={28} />}
+          {menuOpen ? <IoClose size={28}/> : <IoMenu size={28} />}
         </button>
         {/* Desktop nav */}
         <div className="hidden md:flex items-center space-x-6">
@@ -107,7 +109,14 @@ const Navbar = () => {
                   className="text-primary hover:text-accent transition-colors duration-200 p-3 rounded-full bg-card"
                   aria-label="Facebook"
                 >
-                  <Facebook className="h-6 w-6" />
+                  <FaFacebookF className="h-6 w-6" />
+                </a>
+                <a
+                  href="https://www.instagram.com/jalkaterapiapinja/"
+                  className="text-primary hover:text-accent transition-colors duration-200 p-3 rounded-full bg-card"
+                  aria-label="Instagram"
+                >
+                  <FaInstagram className="h-6 w-6" />
                 </a>
               </span>
               <div className="flex-grow border-t border-primary"></div>

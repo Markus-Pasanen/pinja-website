@@ -1,5 +1,5 @@
-import { Facebook } from "lucide-react";
 import Link from "next/link";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -12,7 +12,14 @@ const Footer = () => {
             className="text-primary hover:text-accent transition-colors duration-200 p-3 rounded-full bg-secondary"
             aria-label="Facebook"
           >
-            <Facebook className="h-6 w-6" />
+            <FaFacebookF className="h-6 w-6" />
+          </a>
+          <a
+            href="https://www.instagram.com/jalkaterapiapinja/"
+            className="text-primary hover:text-accent transition-colors duration-200 p-3 rounded-full bg-secondary"
+            aria-label="Instagram"
+          >
+            <FaInstagram className="h-6 w-6" />
           </a>
         </span>
         <div className="flex-grow border-t border-primary"></div>
