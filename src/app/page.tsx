@@ -28,6 +28,13 @@ const services = [
 
 const news = [
   {
+    title: "Uusi palvelu!",
+    excerpt:
+      "Uutuutena 1.9. alkaen Lympha Press -kompressiohoito, jota voidaan käyttää tukena mm. sekundaarisen lymfaödeeman, lipödeeman, laskimoperäisen turvotuksen, suonikohjujen, säärihaavojen, urheiluvammojen ja palautumisen tukena. Hoito kestää 30 minuuttia ja maksaa 48 €. Hoidon soveltuvuus kartoitetaan aina ennen hoitoa. Ota yhteyttä, niin varataan sinulle sopiva aika.",
+    thumbnail: "/images/buutsi.jpg",
+    date: "12.08.2025",
+  },
+  {
     title: "Apteekkiin jalkahoitoon!",
     excerpt:
       "Kommilan apteekilla Maanantaina 11.8 klo 9-16. Tule juttelemaan jalkaterapiapalveluista. Tarjolla apteekkihintaan: Kliinistä jalkahoitoa 81€, Syylänhoitoa 53€, Kynnenoikaisua Podofix-menetelmällä 58€. Päivälle enää kaksi vapaata aikaa: 9:00 ja 12:00.",
@@ -40,13 +47,6 @@ const news = [
       "Olen vaeltamassa 27.7.-3.8. Vaelluksen aikana en vastaa puheluihin tai sähköposteihin, mutta voit jättää viestin, niin palaan asiaan loman jälkeen.",
     thumbnail: "/images/lappi.jpg",
     date: "26.07.2025",
-  },
-  {
-    title: "Muistutus!",
-    excerpt:
-      "Olen tavattavissa Kommilan apteekilla maanantaina 7.7. ja 14.7. klo 9–16. Voit tulla keskustelemaan jalkaterapiapalveluista. Tarjolla myös sokerointeja harjoitteluhinnoin: kainalot 16 €, sääret 36 €, reidet 38 €. 14.7. päivälle on enää yksi aika jäljellä!",
-    thumbnail: "/images/apteekki.jpg",
-    date: "01.07.2025",
   }
 ];
 

@@ -29,6 +29,17 @@ const services = [
 		type: "terapia",
 	},
 	{
+		id: "Lympha",
+		title: "Lympha Press -kompressiohoito",
+		description:
+			"Lympha Press -kompressiohoito, jota voidaan käyttää tukena mm. sekundaarisen lymfaödeeman, lipödeeman, laskimoperäisen turvotuksen, suonikohjujen, säärihaavojen, urheiluvammojen ja palautumisen tukena.",
+		image: "buutsi.jpg",
+		link: "lympha-press",
+		price: "48 €",
+		duration: "30 minuuttia",
+		type: "terapia",
+	},
+	{
 		id: "Syylä",
 		title: "Syylänhoito",
 		description:
