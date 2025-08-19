@@ -28,10 +28,18 @@ export default function ServicesPage() {
               <li>Voit myös maksaa ePassilla etukäteen ennen palvelua</li>
             </ul>
           </Card>
+          <Card>
+            <h2>Smartum</h2>
+            <p>Smartum on liikunta- ja kulttuurietujen maksuväline, jota voit käyttää palveluidemme maksamiseen joustavasti.</p>
+            <ul>
+              <li>Voit maksaa Smartumilla suoraan palvelukäynnin yhteydessä</li>
+              <li>Voit hyödyntää Smartumia myös etukäteen ennen palvelua</li>
+            </ul>
+          </Card>
         </div>
         <p className="text-center italic">
-            Jos sinulla on kysyttävää maksutavoista, olethan yhteydessä minuun puhelimitse tai sähköpostitse.
-          </p>
+          Jos sinulla on kysyttävää maksutavoista, olethan yhteydessä minuun puhelimitse tai sähköpostitse.
+        </p>
       </section>
     </main>
   );
