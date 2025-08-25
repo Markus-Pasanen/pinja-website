@@ -12,6 +12,10 @@ export default function ServicesPage() {
             <p>Voit maksaa palvelumme käteisellä heti palvelun suorittamisen yhteydessä.</p>
           </Card>
           <Card>
+            <h2>Korttimaksu</h2>
+            <p>Voit maksaa palvelumme kortilla hoidon yhteydessä lähimaksulla.</p>
+          </Card>
+          <Card>
             <h2>Lasku</h2>
             <p>Tarjoamme myös laskutusmahdollisuuden. Laskun maksuaika on 14 päivää laskun päiväyksestä.</p>
             <ul>

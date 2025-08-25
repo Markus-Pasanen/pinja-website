@@ -30,6 +30,13 @@ const news = [
   {
     title: "Uusi maksutapa!",
     excerpt:
+      "Korttimaksu lähimaksulla on nyt mahdollista! Tee maksusi kätevästi hoidon yhteydessä.",
+    thumbnail: "/images/sumup.jpg",
+    date: "23.08.2025",
+  },
+  {
+    title: "Uusi maksutapa!",
+    excerpt:
       "Nyt voit maksaa palvelun myös Smartumilla käynnin yhteydessä tai etukäteen.",
     thumbnail: "/images/smartum.png",
     date: "19.08.2025",
@@ -40,13 +47,6 @@ const news = [
       "Uutuutena 1.9. alkaen Lympha Press -kompressiohoito, jota voidaan käyttää tukena mm. sekundaarisen lymfaödeeman, lipödeeman, laskimoperäisen turvotuksen, suonikohjujen, säärihaavojen, urheiluvammojen ja palautumisen tukena. Hoito kestää 30 minuuttia ja maksaa 48 €. Hoidon soveltuvuus kartoitetaan aina ennen hoitoa. Ota yhteyttä, niin varataan sinulle sopiva aika.",
     thumbnail: "/images/buutsi.jpg",
     date: "12.08.2025",
-  },
-  {
-    title: "Apteekkiin jalkahoitoon!",
-    excerpt:
-      "Kommilan apteekilla Maanantaina 11.8 klo 9-16. Tule juttelemaan jalkaterapiapalveluista. Tarjolla apteekkihintaan: Kliinistä jalkahoitoa 81€, Syylänhoitoa 53€, Kynnenoikaisua Podofix-menetelmällä 58€. Päivälle enää kaksi vapaata aikaa: 9:00 ja 12:00.",
-    thumbnail: "/images/apteekki.jpg",
-    date: "05.08.2025",
   }
 ];
 
