@@ -13,7 +13,7 @@ export default function ServicesPage() {
           </Card>
           <Card>
             <h2>Korttimaksu</h2>
-            <p>Voit maksaa palvelumme kortilla hoidon yhteydessä lähimaksulla..</p>
+            <p>Voit maksaa palvelumme kortilla hoidon yhteydessä lähimaksulla.</p>
           </Card>
           <Card>
             <h2>Lasku</h2>
