@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Card from "@/components/shared/Card";
 import Image from "next/image";
+import { Card, Button } from "@/components";
 
 export default function AboutPage() {
   return (
@@ -66,9 +66,9 @@ export default function AboutPage() {
               </p>
             </Card>
             <Link href="/yhteystiedot">
-              <button className="bg-primary text-white px-8 py-4 rounded-lg hover:bg-hover transition duration-300 w-full">
+              <Button variant="primary" size="lg" fullWidth>
                 Varaa aika
-              </button>
+              </Button>
             </Link>
           </div>
         </div>

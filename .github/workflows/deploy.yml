@@ -30,5 +30,5 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            docker compose -f ~/git-build/deploy/docker-compose.yml up -d --build
+            docker compose -f ~/git-build/docker-compose.yml up -d --build
             rm -rf ~/git-build
