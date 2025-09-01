@@ -24,6 +24,13 @@ export const servicesPreviews: ServicePreview[] = [
 
 export const newsArticles: NewsArticle[] = [
   {
+    title: "Lympha press sarjahoito tarjous!",
+    excerpt:
+      "Lympha press sarjahoito: 3 hoitokertaa valitsemallasi aikavälillä. Osta 1.9 - 7.9 välisenä aikana niin saat sarjahoidon tarjoushintaan 120€ (norm. 144€). Voit varata hoidon käyttämisen myöhemmin itsellesi sopivaan aikaan.",
+    thumbnail: "/images/buutsi.jpg",
+    date: "01.09.2025",
+  },
+  {
     title: "Uusi maksutapa!",
     excerpt:
       "Korttimaksu lähimaksulla on nyt mahdollista! Tee maksusi kätevästi hoidon yhteydessä.",
@@ -36,13 +43,6 @@ export const newsArticles: NewsArticle[] = [
       "Nyt voit maksaa palvelun myös Smartumilla käynnin yhteydessä tai etukäteen.",
     thumbnail: "/images/smartum.png",
     date: "19.08.2025",
-  },
-  {
-    title: "Uusi palvelu!",
-    excerpt:
-      "Uutuutena 1.9. alkaen Lympha Press -kompressiohoito, jota voidaan käyttää tukena mm. sekundaarisen lymfaödeeman, lipödeeman, laskimoperäisen turvotuksen, suonikohjujen, säärihaavojen, urheiluvammojen ja palautumisen tukena. Hoito kestää 30 minuuttia ja maksaa 48 €. Hoidon soveltuvuus kartoitetaan aina ennen hoitoa. Ota yhteyttä, niin varataan sinulle sopiva aika.",
-    thumbnail: "/images/buutsi.jpg",
-    date: "12.08.2025",
   }
 ];
 
