@@ -24,6 +24,13 @@ export const servicesPreviews: ServicePreview[] = [
 
 export const newsArticles: NewsArticle[] = [
   {
+    title: "Syksyn kuulumisia!",
+    excerpt:
+      "Ihanaa kertoa, että hierontaopintoni ovat edenneet siihen vaiheeseen, että voin nyt tarjota asiakkaille hierontaa harjoitteluhinnoin! Alkaen maanantaista 27.10.2025: Osahieronta 50 min - 36€ & kokohieronta 80 min - 57€. Tämä on loistava mahdollisuus päästä hierottavaksi edullisesti ja samalla tukea opintojeni etenemistä.",
+    thumbnail: "/images/pinja.jpg",
+    date: "22.10.2025",
+  },
+  {
     title: "Lympha press sarjahoito tarjous!",
     excerpt:
       "Lympha press sarjahoito: 3 hoitokertaa valitsemallasi aikavälillä. Osta 1.9 - 7.9 välisenä aikana niin saat sarjahoidon tarjoushintaan 120€ (norm. 144€). Voit varata hoidon käyttämisen myöhemmin itsellesi sopivaan aikaan.",
@@ -36,13 +43,6 @@ export const newsArticles: NewsArticle[] = [
       "Korttimaksu lähimaksulla on nyt mahdollista! Tee maksusi kätevästi hoidon yhteydessä.",
     thumbnail: "/images/sumup.jpg",
     date: "23.08.2025",
-  },
-  {
-    title: "Uusi maksutapa!",
-    excerpt:
-      "Nyt voit maksaa palvelun myös Smartumilla käynnin yhteydessä tai etukäteen.",
-    thumbnail: "/images/smartum.png",
-    date: "19.08.2025",
   }
 ];
 
@@ -87,7 +87,7 @@ export const services: Service[] = [
       "Verrutop-syylähoito on tehokas ja kivuton tapa päästä eroon pitkäaikaisista tai kivuliaista syylistä. Verrutopin vaikuttava aine Nitrizinc Complex vähentää syyläkudosta, ja hoito toteutetaan yksilöllisesti parhaimman lopputuloksen saavuttamiseksi. Pitkään olleet tai syvälle ulottuvat syylät vaativat yleensä useamman käsittelykerran, ja uusintahoito tehdään 7–14 vuorokauden välein. Hoidon tueksi saat selkeät kotihoito-ohjeet – erityisesti desinfiointi on tärkeää syylän kuivumisen edistämiseksi. Hoitoa ei suositella alle 6-vuotiaille, raskauden tai imetyksen aikana, tulehtuneelle iholle, kasvoihin tai muiden paikallishoitojen kanssa.",
     image: "syyla.jpg",
     link: "kliininen-jalkahoito",
-    price: "53 €",
+    price: "53 € + ajankäyttö",
     duration: "45 - 60 minuuttia",
     type: "terapia",
   },
@@ -125,14 +125,25 @@ export const services: Service[] = [
     type: "terapia",
   },
   {
-    id: "Alaraajahieronta",
-    title: "Alaraajahieronta (harjoittelija)",
+    id: "Osahieronta",
+    title: "Osahieronta (harjoittelija)",
     description:
-      "Alaraajahieronta keskittyy reisien, säärien, nilkkojen ja jalkaterien alueelle. Hieronnassa käsitellään lihaksia ja pehmytkudoksia kokonaisvaltaisesti. Hoito lievittää lihaskireyksiä ja kiputiloja, erityisesti pohkeissa ja reisissä. Hieronta rentouttaa lihaksia, parantaa verenkiertoa ja tehostaa aineenvaihduntaa alaraajoissa. Se edistää palautumista rasituksesta ja tukee fyysisen hyvinvoinnin ylläpitämistä.",
-    image: "pinja_2025-14.jpg",
+      "Osahieronta keskittyy esimerkiksi alaraajojen lihaksiin lantiosta alaspäin. Hieronta rentouttaa lihaksia ja lievittää kireys- ja kiputiloja. Hieronta edistää palautumista rasituksesta ja tukee fyysisen hyvinvoinnin ylläpitämistä.",
+    image: "osahieronta.jpg",
     link: "/palvelut/kynsien-lyhennys",
-    price: "48 €",
-    duration: "90 minuuttia",
+    price: "36 €",
+    duration: "50 minuuttia",
+    type: "hieronta",
+  },
+  {
+    id: "Kokohieronta",
+    title: "Kokohieronta (harjoittelija)",
+    description:
+      "Kokohieronta on koko kehon kattava hierontahoito. Hieronta rentouttaa lihaksia ja lievittää kireys- ja kiputiloja. Hieronta edistää palautumista rasituksesta ja tukee fyysisen hyvinvoinnin ylläpitämistä.",
+    image: "kokohieronta.jpg",
+    link: "/palvelut/kynsien-lyhennys",
+    price: "57 €",
+    duration: "80 minuuttia",
     type: "hieronta",
   },
   {
