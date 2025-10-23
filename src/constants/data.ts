@@ -87,7 +87,7 @@ export const services: Service[] = [
       "Verrutop-syylähoito on tehokas ja kivuton tapa päästä eroon pitkäaikaisista tai kivuliaista syylistä. Verrutopin vaikuttava aine Nitrizinc Complex vähentää syyläkudosta, ja hoito toteutetaan yksilöllisesti parhaimman lopputuloksen saavuttamiseksi. Pitkään olleet tai syvälle ulottuvat syylät vaativat yleensä useamman käsittelykerran, ja uusintahoito tehdään 7–14 vuorokauden välein. Hoidon tueksi saat selkeät kotihoito-ohjeet – erityisesti desinfiointi on tärkeää syylän kuivumisen edistämiseksi. Hoitoa ei suositella alle 6-vuotiaille, raskauden tai imetyksen aikana, tulehtuneelle iholle, kasvoihin tai muiden paikallishoitojen kanssa.",
     image: "syyla.jpg",
     link: "kliininen-jalkahoito",
-    price: "53 € + ajankäyttö",
+    price: "53 € + käytetty aika",
     duration: "45 - 60 minuuttia",
     type: "terapia",
   },
