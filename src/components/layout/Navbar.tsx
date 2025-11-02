@@ -49,7 +49,7 @@ const Navbar = () => {
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((open) => !open)}
         >
-          {menuOpen ? <IoClose size={28}/> : <IoMenu size={28} />}
+          {menuOpen ? <IoClose size={28} /> : <IoMenu size={28} />}
         </button>
         {/* Desktop nav */}
         <div className="hidden md:flex items-center space-x-6">
@@ -58,6 +58,9 @@ const Navbar = () => {
           </Link>
           <Link href="/palvelut" className={cn("hover:text-accent", pathname === "/palvelut" ? "font-semibold" : "")}>
             Palvelut
+          </Link>
+          <Link href="/hinnasto" className={cn("hover:text-accent", pathname === "/hinnasto" ? "font-semibold" : "")}>
+            Hinnasto
           </Link>
           <Link href="/esittely" className={cn("hover:text-accent", pathname === "/esittely" ? "font-semibold" : "")}>
             Minusta
@@ -89,6 +92,10 @@ const Navbar = () => {
             <Link href="/palvelut" className={cn("hover:text-accent", pathname === "/palvelut" ? "font-semibold" : "")}
               onClick={() => setMenuOpen(false)}>
               Palvelut
+            </Link>
+            <Link href="/hinnasto" className={cn("hover:text-accent", pathname === "/hinnasto" ? "font-semibold" : "")}
+              onClick={() => setMenuOpen(false)}>
+              Hinnasto
             </Link>
             <Link href="/esittely" className={cn("hover:text-accent", pathname === "/esittely" ? "font-semibold" : "")}
               onClick={() => setMenuOpen(false)}>

@@ -147,14 +147,36 @@ export const services: Service[] = [
     type: "hieronta",
   },
   {
-    id: "Sokerointi",
-    title: "Sokerointi (harjoittelija)",
+    id: "Sokerointi1",
+    title: "Kainaloiden sokerointi (harjoittelija)",
     description:
       "Sokerointi poistaa karvat hellävaraisesti, jättäen ihon sileäksi ja pehmeäksi viikoiksi. Samalla iho kuoriutuu kevyesti, mikä tekee siitä ihanteellisen vaihtoehdon myös herkälle iholle. Palvelun hinta ja kesto vaihtelevat sokeroitavan alueen mukaan. Vaihtoehtoina ovat kainaloiden, säärien ja reisien sokerointi.",
     image: "pinja_2025-20.jpg",
     link: "/palvelut/kynsien-lyhennys",
-    price: "16 - 38 €",
-    duration: "30 - 60 minuuttia",
+    price: "16 €",
+    duration: "30 minuuttia",
+    type: "sokerointi",
+  },
+  {
+    id: "Sokerointi2",
+    title: "Säärien sokerointi (harjoittelija)",
+    description:
+      "Sokerointi poistaa karvat hellävaraisesti, jättäen ihon sileäksi ja pehmeäksi viikoiksi. Samalla iho kuoriutuu kevyesti, mikä tekee siitä ihanteellisen vaihtoehdon myös herkälle iholle. Palvelun hinta ja kesto vaihtelevat sokeroitavan alueen mukaan. Vaihtoehtoina ovat kainaloiden, säärien ja reisien sokerointi.",
+    image: "jalkaterapia.jpg",
+    link: "/palvelut/kynsien-lyhennys",
+    price: "28 €",
+    duration: "60 minuuttia",
+    type: "sokerointi",
+  },
+  {
+    id: "Pohjallinen",
+    title: "Yksilölliset palapohjalliset",
+    description:
+      "Yksilöllisellä palapohjallisella pyritään ohjaamaan ja tasaamaan jalkaterään kohdistuvaa kuormitusta ja painetta koko jalkaterän alueelle. Pohjallisen tarkoituksena on auttaa jalkaterää pysymään oikeassa asennossa. Palapohjallisten hinta sisältää palapohjallistarpeen arvioinnin, pohjallisten valmistuksen, itse tukipohjalliset, sovituksen sekä kontrollin.",
+    image: "pohjallinen.jpg",
+    link: "/palvelut/kynsien-lyhennys",
+    price: "160 -180 €",
+    duration: "Sovitaan tilattaessa",
     type: "sokerointi",
   },
   {
