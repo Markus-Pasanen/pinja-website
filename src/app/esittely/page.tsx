@@ -7,7 +7,6 @@ export default function AboutPage() {
     <main>
       <section>
         <h1>Minusta</h1>
-        <p>Opi lisää taustastani ja asiantuntemuksestani.</p>
       </section>
       <section>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -24,13 +23,12 @@ export default function AboutPage() {
             <Card>
               <h3>Pinja Pasanen</h3>
               <p>
-                Olen kolmannen vuoden jalkaterapeuttiopiskelija Kaakkois-Suomen ammattikorkeakoulussa (XAMK) Savonlinnassa.
-                Taustaltani olen lähihoitaja, ja vuosien työskentely hoitoalalla sytytti intohimoni jalkojen hyvinvointiin ja terveyden edistämiseen.
+                Olen valmistunut 12/2025 jalkaterapeutiksi Kaakkois-Suomen ammattikorkeakoulusta (XAMK) Savonlinnasta.
+                Taustaltani olen lähihoitaja ja vuosien työskentely hoitoalalla sytytti intohimoni jalkojen hyvinvointiin sekä terveyden edistämiseen.
               </p>
               <p>
-                Tämä innostus johdatti minut jalkaterapian korkeakouluopintoihin.
-                Jalkaterapeutti on terveydenhuollon ammattilainen, joka on suorittanut 3,5-vuotisen korkeakoulututkinnon.
-                Erikoisosaamiseni keskittyy alaraajojen terveyteen ja hyvinvointiin.
+                Tämä innostus johdatti minut hakeutumaan jalkaterapian korkeakouluopintoihin, josta valmistuin 3,5-vuotisen tutkinnon suorittaneena terveydenhuollon ammattilaisena.
+                Erikoisosaamiseni keskittyy alaraajojen terveyteen, toimintakykyyn ja hyvinvointiin.
               </p>
             </Card>
             <Card>
@@ -50,6 +48,11 @@ export default function AboutPage() {
                 <strong>Jalkaterapeutti (AMK)</strong>
                 <br />
                 Kaakkois-Suomen ammattikorkeakoulu - 2025
+              </p>
+              <p>
+                <strong>Hieroja</strong>
+                <br />
+                Samiedu - 2026
               </p>
               <p>
                 <strong>Lähihoitaja</strong>

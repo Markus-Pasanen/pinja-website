@@ -6,7 +6,7 @@ export default function Page() {
     <main className="flex flex-col items-center justify-center min-h-screen bg-background text-foreground gap-8">
       <HeroSection
         title="Pinja Pasanen"
-        description="Jalkaterapeuttiopiskelija, joka on erikoistunut jalkojen terveyteen ja hyvinvointiin nykyaikaisilla hoitomenetelmillä."
+        description="Jalkaterapeutti, joka on erikoistunut jalkojen terveyteen ja hyvinvointiin nykyaikaisilla hoitomenetelmillä."
         ctaText="Varaa aika"
         ctaLink="/yhteystiedot"
         backgroundImage="/images/hero_background.jpg"

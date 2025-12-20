@@ -23,6 +23,13 @@ export const servicesPreviews: ServicePreview[] = [
 ];
 
 export const newsArticles: NewsArticle[] = [
+    {
+    title: "Muutoksia hinnastoon vuoden 2026 alusta",
+    excerpt:
+      "Hinnat nousevat arviolta 3 € / palvelu yleisten kustannusten nousun sekä opintojeni päättymisen myötä. Uusi hinnasto tulee näkyviin 1.1.2026. Lämpimästi tervetuloa hoitoihin!",
+    thumbnail: "/images/raha.jpg",
+    date: "19.12.2025",
+  },
   {
     title: "Syksyn kuulumisia!",
     excerpt:
@@ -36,13 +43,6 @@ export const newsArticles: NewsArticle[] = [
       "Lympha press sarjahoito: 3 hoitokertaa valitsemallasi aikavälillä. Osta 1.9 - 7.9 välisenä aikana niin saat sarjahoidon tarjoushintaan 120€ (norm. 144€). Voit varata hoidon käyttämisen myöhemmin itsellesi sopivaan aikaan.",
     thumbnail: "/images/buutsi.jpg",
     date: "01.09.2025",
-  },
-  {
-    title: "Uusi maksutapa!",
-    excerpt:
-      "Korttimaksu lähimaksulla on nyt mahdollista! Tee maksusi kätevästi hoidon yhteydessä.",
-    thumbnail: "/images/sumup.jpg",
-    date: "23.08.2025",
   }
 ];
 
