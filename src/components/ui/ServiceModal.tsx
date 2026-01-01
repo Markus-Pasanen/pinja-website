@@ -28,7 +28,7 @@ const ServiceModal = ({ service, isOpen, onClose }: ServiceModalProps) => {
             <h2 className="text-2xl font-bold mb-2">
               {service.title}
             </h2>
-            <p className="mb-4">{service.description}</p>
+            <p className="mb-4 text-muted-foreground">{service.description}</p>
             <div className="flex items-center mb-2">
               <Wallet className="h-4 w-4 mr-2 text-muted-foreground" />
               <span className="text-sm">Hinta: {service.price}</span>

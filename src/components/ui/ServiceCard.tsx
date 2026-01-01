@@ -27,7 +27,7 @@ const ServiceCard = React.memo(({ service, onLearnMore }: ServiceCardProps) => {
             <h3 className="text-xl font-semibold mb-2">
               {service.title}
             </h3>
-            <p className="line-clamp-2">
+            <p className="line-clamp-2 text-muted-foreground">
               {service.description}
             </p>
             <button
@@ -48,7 +48,7 @@ const ServiceCard = React.memo(({ service, onLearnMore }: ServiceCardProps) => {
         </div>
         <div className="flex items-center">
           <Clock className="h-4 w-4 mr-2 text-muted-foreground" />
-          <p className="text-sm m-0">
+          <p className="text-sm m-0 text-muted-foreground">
             Ajanvaraus: {service.duration}
           </p>
         </div>

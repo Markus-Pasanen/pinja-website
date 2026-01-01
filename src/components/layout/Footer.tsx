@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
@@ -87,6 +88,53 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+        {/* Payment method logos */}
+        <div className="mt-10 flex flex-col items-center gap-4">
+          <div
+            className="flex flex-col md:flex-row items-center justify-center gap-6"
+            aria-label="Siirry maksutavat-sivulle"
+          >
+            <a href="https://www.epassi.fi/etusivu" className="relative h-8 w-28 opacity-80 hover:opacity-100 transition-opacity">
+              <Image
+                src="/images/epassi.png"
+                alt="ePassi"
+                fill
+                sizes="112px"
+                className="object-contain"
+              />
+            </a>
+            <a href="https://www.smartum.fi/" className="relative h-8 w-28 opacity-80 hover:opacity-100 transition-opacity">
+              <Image
+                src="/images/smartum.png"
+                alt="Smartum"
+                fill
+                sizes="112px"
+                className="object-contain"
+              />
+            </a>
+            <a href="https://www.tarjoomo.fi/" className="relative h-8 w-28 opacity-80 hover:opacity-100 transition-opacity">
+              <Image
+                src="/images/tarjoomo.png"
+                alt="Tarjoomo"
+                fill
+                sizes="112px"
+                className="object-contain"
+              />
+            </a>
+            <a href="https://www.sjjl.fi/" className="relative h-8 w-28 opacity-80 hover:opacity-100 transition-opacity">
+              <Image
+                src="/images/sjjl.png"
+                alt="SJJL"
+                fill
+                sizes="112px"
+                className="object-contain"
+              />
+            </a>
+          </div>
+        </div>
+
+
+
 
         <div className="mt-12 text-center">
           <p className="text-muted-foreground">

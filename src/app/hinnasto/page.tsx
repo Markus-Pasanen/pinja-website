@@ -14,8 +14,8 @@ export default function HinnastoPage() {
 				<Link href='/palvelut'>
 					<Card>
 						<div className="flex justify-between">
-							<p className="my-auto">Kliininen jalkahoito</p>
-							<p className="my-auto">81€ / 90min</p>
+							<p className="my-auto">Jalkahoito</p>
+							<p className="my-auto">84€ / 90min</p>
 						</div>
 					</Card>
 				</Link>
@@ -23,7 +23,7 @@ export default function HinnastoPage() {
 					<Card>
 						<div className="flex justify-between">
 							<p className="my-auto">Jalkaterapia</p>
-							<p className="my-auto">52€ / 60min</p>
+							<p className="my-auto">56€ / 60min</p>
 						</div>
 					</Card>
 				</Link>
@@ -63,7 +63,7 @@ export default function HinnastoPage() {
 					<Card>
 						<div className="flex justify-between">
 							<p className="my-auto">Silikoniortoosi</p>
-							<p className="my-auto">31€ / kappale</p>
+							<p className="my-auto">32€ / kappale</p>
 						</div>
 					</Card>
 				</Link>
@@ -79,16 +79,24 @@ export default function HinnastoPage() {
 				<Link href='/palvelut'>
 					<Card>
 						<div className="flex justify-between">
-							<p className="my-auto">Osahieronta (harjoittelija)</p>
-							<p className="my-auto">36€ / 50min</p>
+							<p className="my-auto">Puolihieronta (harjoittelija)</p>
+							<p className="my-auto">39€ / 60min</p>
 						</div>
 					</Card>
 				</Link>
 				<Link href='/palvelut'>
 					<Card>
 						<div className="flex justify-between">
-							<p className="my-auto">Kokohieronta (harjoittelija)</p>
-							<p className="my-auto">57€ / 80min</p>
+							<p className="my-auto">Kokohieronta 90 min (harjoittelija)</p>
+							<p className="my-auto">57€ / 90min</p>
+						</div>
+					</Card>
+				</Link>
+				<Link href='/palvelut'>
+					<Card>
+						<div className="flex justify-between">
+							<p className="my-auto">Kokohieronta 120 min (harjoittelija)</p>
+							<p className="my-auto">78€ / 120min</p>
 						</div>
 					</Card>
 				</Link>
@@ -97,7 +105,7 @@ export default function HinnastoPage() {
 					<Card>
 						<div className="flex justify-between">
 							<p className="my-auto">Kainalot (harjoittelija)</p>
-							<p className="my-auto">16€ / 30min</p>
+							<p className="my-auto">19€ / 30min</p>
 						</div>
 					</Card>
 				</Link>
@@ -105,7 +113,7 @@ export default function HinnastoPage() {
 					<Card>
 						<div className="flex justify-between">
 							<p className="my-auto">Sääret (harjoittelija)</p>
-							<p className="my-auto">28€ / 60min</p>
+							<p className="my-auto">29€ / 60min</p>
 						</div>
 					</Card>
 				</Link>

@@ -19,7 +19,7 @@ const ServicesPreviewSection = React.memo(({ services }: ServicesPreviewSectionP
           >
             <service.icon className="size-12 text-primary mb-4" />
             <h3>{service.title}</h3>
-            <p>
+            <p className="text-muted-foreground">
               {service.description}
             </p>
           </Link>

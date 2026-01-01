@@ -22,39 +22,39 @@ export default function AboutPage() {
           <div className="flex flex-col justify-between gap-8">
             <Card>
               <h3>Pinja Pasanen</h3>
-              <p>
+              <p className="text-muted-foreground">
                 Olen valmistunut 12/2025 jalkaterapeutiksi Kaakkois-Suomen ammattikorkeakoulusta (XAMK) Savonlinnasta.
                 Taustaltani olen lähihoitaja ja vuosien työskentely hoitoalalla sytytti intohimoni jalkojen hyvinvointiin sekä terveyden edistämiseen.
               </p>
-              <p>
+              <p className="text-muted-foreground">
                 Tämä innostus johdatti minut hakeutumaan jalkaterapian korkeakouluopintoihin, josta valmistuin 3,5-vuotisen tutkinnon suorittaneena terveydenhuollon ammattilaisena.
                 Erikoisosaamiseni keskittyy alaraajojen terveyteen, toimintakykyyn ja hyvinvointiin.
               </p>
             </Card>
             <Card>
               <h3>Missio</h3>
-              <p>
+              <p className="text-muted-foreground">
                 Jalkaterapeuttina tarjoan kokonaisvaltaista hoitoa, joka erottuu tavallisesta jalkojen hoidosta koulutukseni syvyyden ja monipuolisuuden ansiosta.
                 Osaamiseni kattaa iho- ja kynsiongelmien hoidon sekä yksilölliset apuvälineet, kuten silikoniortoosit ja tukipohjalliset.
               </p>
-              <p>
+              <p className="text-muted-foreground">
                 Tavoitteenani on edistää ja ylläpitää jalkojesi terveyttä ennaltaehkäisevästi sekä ratkaista mahdolliset ongelmat tehokkaasti.
                 Jokainen asiakas on ainutlaatuinen, joten räätälöin hoidot juuri sinun tarpeidesi mukaisiksi.
               </p>
             </Card>
             <Card>
               <h3>Koulutus</h3>
-              <p>
+              <p className="text-muted-foreground">
                 <strong>Jalkaterapeutti (AMK)</strong>
                 <br />
                 Kaakkois-Suomen ammattikorkeakoulu - 2025
               </p>
-              <p>
+              <p className="text-muted-foreground">
                 <strong>Hieroja</strong>
                 <br />
                 Samiedu - 2026
               </p>
-              <p>
+              <p className="text-muted-foreground">
                 <strong>Lähihoitaja</strong>
                 <br />
                 Savon ammatti- ja aikuisopisto - 2020
@@ -62,7 +62,7 @@ export default function AboutPage() {
             </Card>
             <Card>
               <h3>Sertifikaatit</h3>
-              <p>
+              <p className="text-muted-foreground">
                 <strong>Fast&Furious sugaring (level 1)</strong>
                 <br />
                 MAKEA pro - 2025

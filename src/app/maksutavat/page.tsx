@@ -5,20 +5,20 @@ export default function ServicesPage() {
     <main>
       <section>
         <h1>Maksutavat</h1>
-        <p>Tarjoamme asiakkaillemme joustavat maksuvaihtoehdot palveluihimme.</p>
+        <p className="text-muted-foreground">Tarjoamme asiakkaillemme joustavat maksuvaihtoehdot palveluihimme.</p>
         <div className="max-w-3xl mx-auto text-left space-y-8 my-4">
           <Card>
             <h2>Käteinen</h2>
-            <p>Voit maksaa palvelumme käteisellä heti palvelun suorittamisen yhteydessä.</p>
+            <p className="text-muted-foreground">Voit maksaa palvelumme käteisellä heti palvelun suorittamisen yhteydessä.</p>
           </Card>
           <Card>
             <h2>Korttimaksu</h2>
-            <p>Voit maksaa palvelumme kortilla hoidon yhteydessä lähimaksulla.</p>
+            <p className="text-muted-foreground">Voit maksaa palvelumme kortilla hoidon yhteydessä lähimaksulla.</p>
           </Card>
           <Card>
             <h2>Lasku</h2>
-            <p>Tarjoamme myös laskutusmahdollisuuden. Laskun maksuaika on 14 päivää laskun päiväyksestä.</p>
-            <ul>
+            <p className="text-muted-foreground">Tarjoamme myös laskutusmahdollisuuden. Laskun maksuaika on 14 päivää laskun päiväyksestä.</p>
+            <ul className="text-muted-foreground">
               <li>Lähetämme laskun palvelun suorittamisen jälkeen</li>
               <li>Maksuehto: 14 päivää netto</li>
               <li>Laskutamme ilman erillistä laskutuslisää</li>
@@ -26,22 +26,22 @@ export default function ServicesPage() {
           </Card>
           <Card>
             <h2>ePassi</h2>
-            <p>ePassi on digitaalinen maksuväline, joka mahdollistaa joustavan maksamisen palveluista.</p>
-            <ul>
+            <p className="text-muted-foreground">ePassi on digitaalinen maksuväline, joka mahdollistaa joustavan maksamisen palveluista.</p>
+            <ul className="text-muted-foreground">
               <li>Voit maksaa ePassilla palvelumme suoraan käynnin aikana</li>
               <li>Voit myös maksaa ePassilla etukäteen ennen palvelua</li>
             </ul>
           </Card>
           <Card>
             <h2>Smartum</h2>
-            <p>Smartum on liikunta- ja kulttuurietujen maksuväline, jota voit käyttää palveluidemme maksamiseen joustavasti.</p>
-            <ul>
+            <p className="text-muted-foreground">Smartum on liikunta- ja kulttuurietujen maksuväline, jota voit käyttää palveluidemme maksamiseen joustavasti.</p>
+            <ul className="text-muted-foreground">
               <li>Voit maksaa Smartumilla suoraan palvelukäynnin yhteydessä</li>
               <li>Voit hyödyntää Smartumia myös etukäteen ennen palvelua</li>
             </ul>
           </Card>
         </div>
-        <p className="text-center italic">
+        <p className="text-center italic text-muted-foreground">
           Jos sinulla on kysyttävää maksutavoista, olethan yhteydessä minuun puhelimitse tai sähköpostitse.
         </p>
       </section>

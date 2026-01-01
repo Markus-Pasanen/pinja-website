@@ -23,7 +23,7 @@ export const servicesPreviews: ServicePreview[] = [
 ];
 
 export const newsArticles: NewsArticle[] = [
-    {
+  {
     title: "Muutoksia hinnastoon vuoden 2026 alusta",
     excerpt:
       "Hinnat nousevat arviolta 3 € / palvelu yleisten kustannusten nousun sekä opintojeni päättymisen myötä. Uusi hinnasto tulee näkyviin 1.1.2026. Lämpimästi tervetuloa hoitoihin!",
@@ -48,28 +48,85 @@ export const newsArticles: NewsArticle[] = [
 
 export const services: Service[] = [
   {
-    id: "Kliininen jalkahoito",
-    title: "Kliininen jalkahoito",
-    description:
-      "Kliininen jalkahoito on terveydenhoitoa, jossa hoidetaan jalkojen iho- ja kynsiongelmia sekä ehkäistään jalkavaivoja. Ihon rasvaushieronta ja lampaanvillat varpaiden väliin. Se on erityisen tärkeää riskiryhmille, kuten diabeetikoille, ja sen tavoitteena on ylläpitää jalkojen terveyttä.",
+    id: "Jalkahoito-90",
+    title: "Jalkahoito",
+    description: `Kliininen jalkaterapia on yleisin tarjoamamme palvelu ja se toteutetaan aina yksilöllisesti asiakkaan tarpeiden mukaan. Hoito soveltuu kaikenlaisille jaloille ja perustuu terveydenhuollon suosituksiin.
+Hoito sisältää jalkojen ja ihon kunnon tarkistuksen, kynsien lyhennyksen ja tarvittaessa ohennuksen, kovettumien ja känsien poiston ja jalkojen rasvauksen.
+Jos hoidossa havaitaan muita hoidettavia ongelmakohtia, ne käsitellään osana kokonaisvaltaista hoitoa.`,
     image: "pinja_2025-52.jpg",
-    link: "kliininen-jalkahoito",
-    price: "81 €",
-    duration: "90 minuuttia",
+    link: "/palvelut",
+    price: "84 €",
+    duration: "90 min",
     type: "terapia",
   },
   {
-    id: "Jalkaterapia",
+    id: "Kynsien-lyhennys",
+    title: "Kynsien lyhennys",
+    description: `Kynsien lyhennys on tarkoitettu sinulle, kun kynnet kaipaavat ammattimaista ja turvallista hoitoa. 
+Vastaanotolla tarkastamme kynsien ja ympäröivän ihon kunnon sekä huomioimme mahdolliset perussairaudet. Kynnet lyhennetään huolellisesti ja tarvittaessa ohennetaan. Hoito toteutetaan terveydenhuollon suositusten mukaisesti.
+
+Kynsien lyhennys auttaa ehkäisemään kynsiongelmia, kuten sisäänkasvaneita kynsiä, kipua ja tulehduksia. Palvelu sopii myös säännölliseksi ylläpitohoidoksi.`,
+    image: "pinja_2025-45.jpg",
+    link: "/palvelut",
+    price: "48 €",
+    duration: "45 min",
+    type: "terapia",
+  },
+  {
+    id: "Jalkaterapia-60",
     title: "Jalkaterapia",
-    description:
-      "Yksilöllistä ja asiantuntevaa jalkaterapiaa, joka tuo helpotusta vaivoihin ja edistää kokonaisvaltaista hyvinvointia. Hoidoissani yhdistyvät puhtaus, nykyaikaiset menetelmät ja lämmin, asiakaslähtöinen kohtaaminen. Olipa kyseessä kynsiongelmat tai jalkakipu, saat juuri sinun tarpeisiisi räätälöidyn hoidon turvallisessa ja rauhallisessa ympäristössä.",
+    description: `Jalkaterapian tavoitteena on antaa sinulle kattavaa tietoa jalkojesi toiminnasta ja rakenteista sekä kartoittaa mahdollisia puolieroja tai lihasepätasapainoja. 
+
+Vastaanotollemme tullaan usein esimerkiksi vaivasenluun (hallux valgus) tai plantaarifaskiitin aiheuttamien kipujen vuoksi.
+
+Arviointikäynnillä tutkimme jalkaterien nivelliikkuvuudet, jalan kaarirakenteet ja linjaukset sekä mahdolliset puolierot ja toiminnalliset poikkeamat.
+
+Tutkimuksen perusteella saat yksilöllistä ohjausta, joka voi sisältää lihaksia vahvistavia ja tukevia harjoitteita, arvion mahdollisesta tukipohjallistarpeesta tai kenkäohjausta arjen ja liikunnan tarpeisiin.
+
+`,
     image: "pinja_2025-38.jpg",
-    link: "kliininen-jalkahoito",
-    price: "52 €",
-    duration: "60 minuuttia",
+    link: "/palvelut",
+    price: "56 €",
+    duration: "60 min",
     type: "terapia",
   },
   {
+    id: "Syyla-hoito",
+    title: "Syylän hoito",
+    description: `Syylien hoito toteutetaan vastaanotollamme Verrutop-hoitomenetelmällä. Vastaanotolla käymme hoidon kulun huolellisesti läpi yhdessä asiakkaan kanssa.
+
+Syylän hoito perustuu syyläkudoksen päällä olevan kovettuneen ihon poistoon, jotta hoitava aine pääsee vaikuttamaan itse syylään. Hoito voidaan aloittaa jo ensimmäisellä vastaanottokäynnillä.
+
+Verrutop-syylähoito on tehokas ja kivuton hoitomuoto erityisesti pitkäaikaisiin tai kivuliaisiin syyliin. Verrutopin vaikuttava aine, Nitrizinc Complex, vähentää syyläkudosta hallitusti. Hoito toteutetaan yksilöllisesti parhaan mahdollisen lopputuloksen saavuttamiseksi.
+
+Pitkään olleet tai syvälle ulottuvat syylät edellyttävät yleensä useampaa käsittelykertaa, ja uusintahoito tehdään 7–14 vuorokauden välein.
+
+Hoidon tueksi saat selkeät kotihoito-ohjeet. 
+Huomioitavaa: Verrutop-hoitoa ei suositella alle 6-vuotiaille, raskauden tai imetyksen aikana, tulehtuneelle iholle, kasvoihin eikä samanaikaisesti muiden paikallishoitojen kanssa.`,
+    image: "syyla.jpg",
+    link: "/palvelut",
+    price: "53 € + käytetty aika",
+    duration: "45 min",
+    type: "terapia",
+  },
+  {
+    id: "Podofix-kynnenoikaisu",
+    title: "Podofix-kynnenoikaisu",
+    description: `Podofix-kynnenoikaisu on yksi käytetyimmistä ja luotettavimmista hoitomenetelmistä sisäänkasvaneiden ja taipuneiden kynsien hoidossa. Podofix-menetelmä soveltuu lähes kaikille epämuodostuneille kynsille, kuten sisäänkasvaneille ja voimakkaasti kaartuville kynsille. Hoidon tavoitteena on oikaista kynnen kasvusuuntaa, nostaa kynnen reunaa ja poistaa kipua sekä painetta kynsivallista.
+
+Hoito on kivuton ja tehokas, ja vaikutus alkaa välittömästi. Menetelmä soveltuu kynsille, joissa ei ole kynsisientä, kynsi ei ole voimakkaasti paksuuntunut ja kynsipatja on terve.
+
+
+Hoidon eteneminen: hoito uusitaan 2 viikon–2 kuukauden välein yksilöllisen tarpeen mukaan. Hoitoa suositellaan jatkettavaksi säännöllisesti noin 6-12 kuukauden ajan parhaan lopputuloksen saavuttamiseksi.
+
+Hoidon kesto ja hoitoväli määritellään aina kynnen tilanteen mukaan vastaanotolla.`,
+    image: "pinja_2025-76.jpg",
+    link: "/palvelut",
+    price: "58 € + käytetty aika",
+    duration: "45min",
+    type: "terapia",
+  },
+    {
     id: "Lympha",
     title: "Lympha Press -kompressiohoito",
     description:
@@ -81,69 +138,64 @@ export const services: Service[] = [
     type: "terapia",
   },
   {
-    id: "Syylä",
-    title: "Syylänhoito",
-    description:
-      "Verrutop-syylähoito on tehokas ja kivuton tapa päästä eroon pitkäaikaisista tai kivuliaista syylistä. Verrutopin vaikuttava aine Nitrizinc Complex vähentää syyläkudosta, ja hoito toteutetaan yksilöllisesti parhaimman lopputuloksen saavuttamiseksi. Pitkään olleet tai syvälle ulottuvat syylät vaativat yleensä useamman käsittelykerran, ja uusintahoito tehdään 7–14 vuorokauden välein. Hoidon tueksi saat selkeät kotihoito-ohjeet – erityisesti desinfiointi on tärkeää syylän kuivumisen edistämiseksi. Hoitoa ei suositella alle 6-vuotiaille, raskauden tai imetyksen aikana, tulehtuneelle iholle, kasvoihin tai muiden paikallishoitojen kanssa.",
-    image: "syyla.jpg",
-    link: "kliininen-jalkahoito",
-    price: "53 € + käytetty aika",
-    duration: "45 - 60 minuuttia",
-    type: "terapia",
-  },
-  {
-    id: "Kynsien lyhennys",
-    title: "Kynsien lyhennys",
-    description:
-      "Kynsien lyhennys on toimenpide, jossa kynnet leikataan sopivaan pituuteen ja muotoon. Se auttaa ylläpitämään kynsien terveyttä ja ehkäisee esimerkiksi sisäänkasvaneita kynsiä.",
-    image: "pinja_2025-45.jpg",
-    link: "/palvelut/kynsien-lyhennys",
-    price: "48 €",
-    duration: "30 minuuttia",
-    type: "terapia",
-  },
-  {
-    id: "Kynnenoikaisu",
-    title: "Kynnenoikaisu",
-    description:
-      "Podofix-menetelmä, joka soveltuu lähes kaikkien epämuodostuneille kynsille, kuten sisäänkasvaneille kynsille sekä taipuneiden kynsien hoitoon. Podofix-hoito uusitaan 2vk-2kk välein, kunnes haluttu tulos on saavutettu.",
-    image: "pinja_2025-76.jpg",
-    link: "/palvelut/kynsien-lyhennys",
-    price: "58 € + käytetty aika",
-    duration: "45 minuuttia",
-    type: "terapia",
-  },
-  {
     id: "Silikoniortoosi",
     title: "Silikoniortoosi",
-    description:
-      "Silikoniortoosit ovat yksilöllisesti muotoiltuja silikonista valmistettuja tukia, joita käytetään jalkaterän virheasentojen korjaamiseen tai vaimentamaan painetta. Ne helpottavat kipua ja parantavat jalkojen asentoa, auttaen esimerkiksi vaivaisenluun tai vasaravarpaiden hoidossa.",
+    description: `Silikoniortoosi valmistetaan aina yksilöllisesti vastaanotolla. Se on varpaita keventävä, korjaava ja suojaava tuki, jonka avulla ohjataan varpaiden asentoa oikeaan suuntaan. Ortoosi on pitkäikäinen, joustava ja pestävä, joten se soveltuu hyvin päivittäiseen käyttöön.
+
+
+Varvasortoosit valmistetaan erilaisista silikonimassoista, joiden vahvuus ja joustavuus valitaan käyttötarkoituksen mukaan. Ortoosi muotoillaan yksilöllisesti jalan ja varpaiden rakenteiden perusteella, jotta se on mahdollisimman toimiva ja miellyttävä käyttää.`,
     image: "pinja_2025-5.jpg",
-    link: "/palvelut/kynsien-lyhennys",
-    price: "31 € per silikoni",
-    duration: "30 minuuttia",
+    link: "/palvelut",
+    price: "32 € / kpl + käytetty aika",
+    duration: "45min",
     type: "terapia",
   },
   {
-    id: "Osahieronta",
-    title: "Osahieronta (harjoittelija)",
-    description:
-      "Osahieronta keskittyy esimerkiksi alaraajojen lihaksiin lantiosta alaspäin. Hieronta rentouttaa lihaksia ja lievittää kireys- ja kiputiloja. Hieronta edistää palautumista rasituksesta ja tukee fyysisen hyvinvoinnin ylläpitämistä.",
+    id: "Puolihieronta-60 (opiskelija)",
+    title: "Puolihieronta",
+    description: `Puolihieronta on tehokas ja rentouttava hoito, jonka aikana käsitellään valitsemasi kehonosat. Hoito sopii erityisesti lihasjännitysten, kiputilojen ja kuormituksen lievittämiseen sekä palautumisen tueksi.
+
+Hieronnassa voidaan käsitellä esimerkiksi:
+• ylävartalo: niska, hartiat, selkä ja käsivarret
+• alavartalo: alaselkä, pakarat ja alaraajat
+
+Hieronnan kohteet räätälöidään aina yhdessä hoitajan kanssa asiakkaan tarpeiden ja toiveiden mukaan.
+
+Hieronta toteutetaan ammattitaitoisesti ja rauhallisesti, ja tarvittaessa sen intensiteetti voidaan mukauttaa kevyemmäksi tai napakammaksi. Puolihieronta sopii hyvin osaksi säännöllistä kehonhuoltoa tai yksittäisenä hoitona lihasvaivojen lievittämiseen.`,
     image: "osahieronta.jpg",
-    link: "/palvelut/kynsien-lyhennys",
-    price: "36 €",
-    duration: "50 minuuttia",
+    link: "/palvelut",
+    price: "39 €",
+    duration: "60 min",
+    type: "hieronta",
+  },
+    {
+    id: "Kokohieronta-90 (opiskelija)",
+    title: "Kokohieronta 90 min",
+    description: `Kokohieronta on kokonaisvaltainen ja rentouttava hoito, jossa käydään läpi koko kehon lihaksisto. Hoito sopii erityisesti lihasjännitysten, kiputilojen ja kuormituksen lievittämiseen sekä yleisen hyvinvoinnin ja palautumisen tukemiseen. Kokemus on samalla kokonaisvaltainen ja hyvin rentouttava.
+Hieronnassa voidaan käsitellä selän, hartioiden, niskan, käsivarsien, pakaroiden ja jalkojen lihaksisto. Hoidon sisältö ja käsiteltävät alueet räätälöidään aina yksilöllisesti asiakkaan tarpeiden ja toiveiden mukaan.
+Hieronta toteutetaan ammattitaitoisesti ja rauhallisesti. Voimakkuutta voidaan mukauttaa kevyemmäksi tai napakammaksi asiakkaan mieltymyksen ja tarpeen mukaan.
+Kokohieronta sopii hyvin osaksi säännöllistä kehonhuoltoa tai yksittäisenä hoitona lihasjännitysten lievittämiseen ja rentoutumiseen.
+`,
+    image: "kokohieronta.jpg",
+    link: "/palvelut",
+    price: "57 €",
+    duration: "90 min",
     type: "hieronta",
   },
   {
-    id: "Kokohieronta",
-    title: "Kokohieronta (harjoittelija)",
-    description:
-      "Kokohieronta on koko kehon kattava hierontahoito. Hieronta rentouttaa lihaksia ja lievittää kireys- ja kiputiloja. Hieronta edistää palautumista rasituksesta ja tukee fyysisen hyvinvoinnin ylläpitämistä.",
+    id: "Kokohieronta-120 (opiskelija)",
+    title: "Kokohieronta 120 min",
+    description: `120 minuutin kokohieronta on kokonaisvaltainen ja syvempi hoito, jossa käsitellään koko kehon lihaksisto perusteellisesti. Hoito sopii erityisesti lihasjännitysten ja kiputilojen lievittämiseen, kuormituksen palautumiseen sekä kokonaisvaltaisen rentoutumisen tukemiseen.
+
+Hoidon sisältö ja käsiteltävät alueet räätälöidään aina asiakkaan tarpeiden ja toiveiden mukaan.
+
+Hieronta toteutetaan ammattitaitoisesti ja rauhallisesti, ja hieronnan voimakkuutta voidaan mukauttaa kevyemmäksi tai napakammaksi asiakkaan mieltymyksen ja tarpeen mukaan.
+
+120 minuutin kokohieronta tarjoaa erityisen kokonaisvaltaisen ja syvän rentoutumiskokemuksen, ja se sopii sekä säännölliseksi kehonhuoltoon että yksittäiseksi hemmotteluhoidoksi.`,
     image: "kokohieronta.jpg",
-    link: "/palvelut/kynsien-lyhennys",
-    price: "57 €",
-    duration: "80 minuuttia",
+    link: "/palvelut",
+    price: "78 €",
+    duration: "120 min",
     type: "hieronta",
   },
   {
@@ -153,7 +205,7 @@ export const services: Service[] = [
       "Sokerointi poistaa karvat hellävaraisesti, jättäen ihon sileäksi ja pehmeäksi viikoiksi. Samalla iho kuoriutuu kevyesti, mikä tekee siitä ihanteellisen vaihtoehdon myös herkälle iholle. Palvelun hinta ja kesto vaihtelevat sokeroitavan alueen mukaan. Vaihtoehtoina ovat kainaloiden, säärien ja reisien sokerointi.",
     image: "pinja_2025-20.jpg",
     link: "/palvelut/kynsien-lyhennys",
-    price: "16 €",
+    price: "19 €",
     duration: "30 minuuttia",
     type: "sokerointi",
   },
@@ -164,7 +216,7 @@ export const services: Service[] = [
       "Sokerointi poistaa karvat hellävaraisesti, jättäen ihon sileäksi ja pehmeäksi viikoiksi. Samalla iho kuoriutuu kevyesti, mikä tekee siitä ihanteellisen vaihtoehdon myös herkälle iholle. Palvelun hinta ja kesto vaihtelevat sokeroitavan alueen mukaan. Vaihtoehtoina ovat kainaloiden, säärien ja reisien sokerointi.",
     image: "jalkaterapia.jpg",
     link: "/palvelut/kynsien-lyhennys",
-    price: "28 €",
+    price: "29 €",
     duration: "60 minuuttia",
     type: "sokerointi",
   },

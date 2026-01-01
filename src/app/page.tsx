@@ -1,4 +1,4 @@
-import { HeroSection, ServicesPreviewSection, NewsSection } from "@/components";
+import { HeroSection, ServicesPreviewSection, NewsSection, GiftCardSection } from "@/components";
 import { servicesPreviews, newsArticles } from "@/constants/data";
 
 export default function Page() {
@@ -12,6 +12,7 @@ export default function Page() {
         backgroundImage="/images/hero_background.jpg"
       />
       <ServicesPreviewSection services={servicesPreviews} />
+      <GiftCardSection />
       <NewsSection articles={newsArticles} />
     </main>
   );

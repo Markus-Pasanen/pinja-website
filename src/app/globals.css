@@ -11,7 +11,8 @@ body {
     --background: 27, 17%, 90%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
-    --card-foreground: 27, 17%, 90%;
+    /* Ensure text on cards is dark (was incorrectly set to a light value) */
+    --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
     --primary: 24, 15%, 48%;
@@ -20,7 +21,8 @@ body {
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
     --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
+    /* Make secondary/body text darker for better readability */
+    --muted-foreground: 0 0% 28%;
     --accent: 180 100% 25%;
     --accent-foreground: 0 0% 100%;
     --radius: 0.5rem;
@@ -39,7 +41,7 @@ body {
   }
 
   p {
-    @apply leading-relaxed text-muted-foreground mb-2;
+    @apply leading-relaxed text-foreground mb-2;
   }
 
   strong {
@@ -51,7 +53,7 @@ body {
   }
 
   main {
-    @apply container mx-auto px-4 text-muted-foreground subpixel-antialiased;
+    @apply container mx-auto px-4 text-foreground subpixel-antialiased;
   }
 
   section {

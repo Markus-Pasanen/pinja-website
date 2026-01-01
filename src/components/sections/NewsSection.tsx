@@ -34,7 +34,7 @@ const NewsSection = ({ articles }: NewsSectionProps) => {
               />
               <div className="p-4 text-ellipsis overflow-hidden text-left">
                 <h3>{article.title}</h3>
-                <p className="line-clamp-2">
+                <p className="line-clamp-2  text-muted-foreground">
                   {article.excerpt}
                 </p>
                 <button

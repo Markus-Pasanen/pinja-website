@@ -11,6 +11,7 @@ export { default as Modal } from './shared/Modal';
 export { default as HeroSection } from './sections/HeroSection';
 export { default as ServicesPreviewSection } from './sections/ServicesPreviewSection';
 export { default as NewsSection } from './sections/NewsSection';
+export { default as GiftCardSection } from './sections/GiftCardSection';
 
 // UI components
 export { default as ServiceCard } from './ui/ServiceCard';

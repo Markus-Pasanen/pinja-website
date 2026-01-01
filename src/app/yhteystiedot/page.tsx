@@ -5,15 +5,15 @@ export default function ContactPage() {
     <main>
       <section>
         <h1>Ota Yhteyttä</h1>
-        <p>
+        <p className="text-muted-foreground">
           Voit varata ajan hoitoon tai kysyä lisätietoja palveluistani. Ota yhteyttä suoraan puhelimitse tai sähköpostitse.
         </p>
       </section>
       <div className="flex flex-col md:flex-row gap-8 align-center justify-center">
         <div className="p-6 rounded-lg shadow-md bg-card flex flex-col h-48 w-full max-w-md">
           <h3>Yhteystiedot</h3>
-          <div className="flex flex-col">
-            <p>
+          <div className="flex flex-col text-muted-foreground">
+            <p className="text-muted-foreground">
               <a href="tel:+358451032606" className="hover:text-accent flex flex-row gap-2">
                 <Phone className="h-4 my-auto"/>(+358) 45-103 2606
               </a>
@@ -33,7 +33,7 @@ export default function ContactPage() {
         </div>
         <div className="p-6 rounded-lg shadow-md bg-card flex flex-col h-48 w-full max-w-md">
           <h3>Aukioloajat</h3>
-          <p>
+          <p className="text-muted-foreground">
             Maanantai - Perjantai: 9:00 - 17:00
             <br />
             Lauantai: Suljettu
