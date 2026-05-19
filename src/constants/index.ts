@@ -1,1 +1,0 @@
-export { servicesPreviews, newsArticles, services } from './data';

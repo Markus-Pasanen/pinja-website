@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jalkaterapeutti Pinja Pasanen</title>
+  <meta name="description" content="Lämpimästi tervetuloa vastaanotolleni!">
+  <meta name="keywords" content="Pinja Pasanen, jalkaterapia, jalkaterapeutti, jalkahoito, Varkaus, Savo, Pohjois-Savo, podofix">
+  <meta name="author" content="Pinja Pasanen">
+  <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="eKt69DMazR5m-ysWDWcwd6r8nPtUHZfvSMYuI2sC62s">
+  <link rel="icon" href="public/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: 'hsl(27, 17%, 90%)',
+            foreground: 'hsl(0, 0%, 3.9%)',
+            card: {
+              DEFAULT: 'hsl(0, 0%, 100%)',
+              foreground: 'hsl(0, 0%, 3.9%)'
+            },
+            primary: {
+              DEFAULT: 'hsl(24, 15%, 48%)',
+              foreground: 'hsl(210, 10%, 20%)'
+            },
+            secondary: {
+              DEFAULT: 'hsl(0, 0%, 96.1%)',
+              foreground: 'hsl(0, 0%, 9%)'
+            },
+            muted: {
+              DEFAULT: 'hsl(0, 0%, 96.1%)',
+              foreground: 'hsl(0, 0%, 28%)'
+            },
+            accent: {
+              DEFAULT: 'hsl(180, 100%, 25%)',
+              foreground: 'hsl(0, 0%, 100%)'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased min-h-screen bg-background text-foreground flex flex-col justify-between">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar" class="py-2 px-4 w-full transition-all duration-300 bg-background relative">
+    <div class="container mx-auto flex items-center justify-between">
+      <a href="index.html" class="text-2xl font-bold z-50">
+        <img src="public/images/logo.png" alt="Logo" width="64" height="64">
+      </a>
+      <!-- Hamburger button (mobile only) -->
+      <button id="menu-toggle"
+        class="md:hidden flex justify-center items-center w-10 h-10 focus:outline-none z-50"
+        aria-label="Avaa valikko" aria-expanded="false">
+        <!-- Hamburger icon -->
+        <img src="public/icons/menu.svg" width="28" height="28" class="block" alt="Menu">
+        <!-- Close icon -->
+        <img src="public/icons/x%20(1).svg" width="28" height="28" class="hidden" alt="Sulje">
+      </button>
+      <!-- Desktop nav links -->
+      <div class="hidden md:flex items-center space-x-6">
+        <a href="index.html" class="font-semibold hover:text-accent">Etusivu</a>
+        <a href="palvelut.html" class="hover:text-accent">Palvelut</a>
+        <a href="hinnasto.html" class="hover:text-accent">Hinnasto</a>
+        <a href="esittely.html" class="hover:text-accent">Minusta</a>
+        <a href="yhteystiedot.html" class="hover:text-accent">Ota yhteyttä</a>
+      </div>
+      <!-- Mobile nav overlay -->
+      <div id="mobile-menu-overlay" class="fixed inset-0 z-40 flex flex-col items-center justify-center space-y-0 text-2xl font-medium transition-all duration-300 md:hidden opacity-0 pointer-events-none bg-secondary">
+        <button id="menu-close" class="absolute top-4 right-4 flex justify-center items-center w-10 h-10 focus:outline-none" aria-label="Sulje valikko">
+          <img src="public/icons/x%20(1).svg" width="28" height="28" alt="Sulje">
+        </button>
+        <div class="flex flex-col items-center space-y-8 mt-12">
+          <a href="index.html" class="font-semibold hover:text-accent mobile-menu-link">Etusivu</a>
+          <a href="palvelut.html" class="hover:text-accent mobile-menu-link">Palvelut</a>
+          <a href="hinnasto.html" class="hover:text-accent mobile-menu-link">Hinnasto</a>
+          <a href="esittely.html" class="hover:text-accent mobile-menu-link">Minusta</a>
+          <a href="yhteystiedot.html" class="hover:text-accent mobile-menu-link">Ota yhteyttä</a>
+        </div>
+        <!-- Mobile menu footer -->
+        <div class="absolute bottom-4 left-0 w-full flex flex-col items-center text-sm text-gray-500">
+          <div class="relative flex items-center w-full mb-4">
+            <div class="flex-grow border-t border-primary"></div>
+            <span class="flex flex-row mx-4 gap-4 font-semibold">
+              <a href="https://www.facebook.com/profile.php?id=61573830269174" class="text-primary hover:text-accent transition-colors duration-200 p-3 rounded-full bg-card" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.378 14.192 5 15.115 5H18V0h-3.808C10.596 0 9 2.017 9 4.667V8z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/jalkaterapiapinja/" class="text-primary hover:text-accent transition-colors duration-200 p-3 rounded-full bg-card" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </a>
+            </span>
+            <div class="flex-grow border-t border-primary"></div>
+          </div>
+          <span>&copy; <span class="js-current-year">2025</span> Pinja</span>
+          <span>Kaikki oikeudet pidätetään</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HOMEPAGE CONTENT ===== -->
+  <main class="flex flex-col items-center justify-center min-h-screen bg-background text-foreground gap-8 !max-w-none !px-0">
+
+    <!-- Hero Section -->
+    <section class="relative top-0 w-screen h-[75vh] flex items-center justify-center text-center text-card overflow-hidden !mb-0">
+      <img src="public/images/hero_background.jpg" alt="Hero background" class="absolute inset-0 w-full h-full object-cover brightness-75" style="object-position: 50% 20%;">
+      <div class="absolute inset-0 bg-black bg-opacity-25 backdrop-blur-sm z-10"></div>
+      <div class="relative z-20 px-4 rounded-lg">
+        <h1 class="text-white">Pinja Pasanen</h1>
+        <p class="text-white mb-12">Jalkaterapeutti, joka on erikoistunut jalkojen terveyteen ja hyvinvointiin nykyaikaisilla hoitomenetelmillä.</p>
+        <a href="yhteystiedot.html" class="inline-block bg-primary text-white px-24 py-4 rounded-lg font-semibold hover:brightness-90 transition-colors duration-300">Varaa aika</a>
+      </div>
+    </section>
+
+    <!-- Services Preview Section -->
+    <section class="!mx-auto !px-4 !max-w-6xl">
+      <h2 class="text-center">Palveluni</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Jalkaterapia -->
+        <a href="palvelut.html" class="p-6 rounded-lg shadow-md bg-card hover:shadow-xl hover:brightness-90 transition duration-300 flex flex-col items-center">
+          <img src="public/icons/footprints.svg" width="48" height="48" class="text-primary mb-4" alt="Jalkaterapia">
+          <h3>Jalkaterapia</h3>
+          <p class="text-muted-foreground">Ennaltaehkäisee ja hoitaa alaraajojen vaivoja, kipu tiloja, asentovirheitä ja iho- ja kynsimuutoksia.</p>
+        </a>
+        <!-- Hieronta -->
+        <a href="palvelut.html" class="p-6 rounded-lg shadow-md bg-card hover:shadow-xl hover:brightness-90 transition duration-300 flex flex-col items-center">
+          <img src="public/icons/hand.svg" width="48" height="48" class="text-primary mb-4" alt="Hieronta">
+          <h3>Hieronta</h3>
+          <p class="text-muted-foreground">Rentouttaa kehoa ja mieltä. Lievittää lihaskireyksiä ja kiputiloja sekä edistää palautumista.</p>
+        </a>
+        <!-- Sokerointi -->
+        <a href="palvelut.html" class="p-6 rounded-lg shadow-md bg-card hover:shadow-xl hover:brightness-90 transition duration-300 flex flex-col items-center">
+          <img src="public/icons/candy.svg" width="48" height="48" class="text-primary mb-4" alt="Sokerointi">
+          <h3>Sokerointi</h3>
+          <p class="text-muted-foreground">Hellävarainen ja tehokas karvanpoistomenetelmä, joka poistaa karvat tehokkaasti ja kuorii ihoa luonnollisesti.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Gift Card Section -->
+    <section class="w-full !mx-auto !px-4 !max-w-6xl">
+      <div class="mx-auto">
+        <div class="mx-auto max-w-3xl">
+          <h2 class="text-center">Lahjakortti</h2>
+        </div>
+        <div class="mt-6 overflow-hidden rounded-2xl bg-card shadow-md ring-1 ring-black/5">
+          <div class="grid grid-cols-1 gap-0 lg:grid-cols-2">
+            <!-- Image side -->
+            <div class="relative min-h-[260px] lg:min-h-[420px]">
+              <img src="public/images/lahjakortti-kasi.jpg" alt="Lahjakortti" class="absolute inset-0 w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent"></div>
+              <div class="absolute bottom-4 left-4 right-4 rounded-xl bg-white/70 p-4 backdrop-blur-sm ring-1 ring-black/5">
+                <div class="flex items-start gap-3">
+                  <div class="mt-0.5 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/15 text-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275Z"/></svg>
+                  </div>
+                  <div class="text-left">
+                    <p class="mb-0 font-semibold text-black">Helppo ja ihana lahja</p>
+                    <p class="mb-0 text-sm text-muted-foreground">Tilaa lahjakortti helposti sähköpostilla tai puhelimitse.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Content side -->
+            <div class="p-6 text-left sm:p-8">
+              <h3 class="mb-3">Miten lahjakortti toimii?</h3>
+              <div class="space-y-3">
+                <div class="grid grid-cols-[2.25rem_1fr] items-start gap-3">
+                  <div class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                    <img src="public/icons/clock.svg" width="16" height="16" alt="Kello">
+                  </div>
+                  <p class="mb-0 text-muted-foreground"><strong class="text-black">Voimassa 4 kuukautta</strong> ostopäivästä. Varaus tehdään voimassaoloaikana, vaikka aika menisi pidemmälle.</p>
+                </div>
+                <div class="grid grid-cols-[2.25rem_1fr] items-start gap-3">
+                  <div class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                    <img src="public/icons/mail.svg" width="16" height="16" alt="Sähköposti">
+                  </div>
+                  <p class="mb-0 text-muted-foreground"><strong class="text-black">Tilaa sähköpostitse</strong> ja kerro summa/palvelu sekä toimitustapa (sähköinen / nouto).</p>
+                </div>
+                <div class="grid grid-cols-[2.25rem_1fr] items-start gap-3">
+                  <div class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                    <img src="public/icons/phone.svg" width="16" height="16" alt="Puhelin">
+                  </div>
+                  <p class="mb-0 text-muted-foreground"><strong class="text-black">Soita</strong>, niin sovitaan lahjakortti ja toimitus nopeasti.</p>
+                </div>
+                <div class="grid grid-cols-[2.25rem_1fr] items-start gap-3">
+                  <div class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                    <img src="public/icons/map-pin.svg" width="16" height="16" alt="Sijainti">
+                  </div>
+                  <p class="mb-0 text-muted-foreground">Jos suunnittelet tulevasi hoitolalle, <strong class="text-black">sovi tulostasi etukäteen</strong>, jotta olen paikalla.</p>
+                </div>
+              </div>
+              <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+                <a href="mailto:jalkaterapia.pinja@gmail.com?subject=Lahjakortin%20osto&body=Hei!%0A%0AHaluaisin%20ostaa%20lahjakortin.%0A%0A%E2%80%A2%20Lahjakortin%20summa%20tai%20palvelu%3A%20%0A%E2%80%A2%20Toivottu%20toimitustapa%20(s%C3%A4hk%C3%B6inen%20%2F%20nouto)%3A%20%0A%E2%80%A2%20Lahjan%20saajan%20nimi%20(halutessasi)%3A%20%0A%0AYst%C3%A4v%C3%A4llisin%20terveisin%2C%0A" class="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-white shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 sm:w-auto">
+                  <img src="public/icons/mail.svg" width="20" height="20" alt="Sähköposti">
+                  Tilaa
+                </a>
+                <a href="tel:+358451032606" class="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-primary/30 bg-transparent px-6 py-3 font-semibold text-primary transition-colors hover:bg-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 sm:w-auto">
+                  <img src="public/icons/phone.svg" width="20" height="20" alt="Puhelin">
+                  Soita
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="!mx-auto !px-4 !max-w-6xl">
+      <h2 class="text-center">Ajankohtaista</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+        <!-- Article 1: Muutoksia hinnastoon -->
+        <div class="rounded-lg shadow-md bg-card overflow-hidden relative flex flex-col justify-between">
+          <div class="shadow-lg absolute left-0 top-0 rounded-br-lg py-2 px-4 bg-primary text-white z-10">19.12.2025</div>
+          <div>
+            <img src="public/images/raha.jpg" alt="Muutoksia hinnastoon vuoden 2026 alusta" class="w-full h-48 object-cover brightness-75">
+            <div class="p-4 text-ellipsis overflow-hidden text-left">
+              <h3>Muutoksia hinnastoon vuoden 2026 alusta</h3>
+              <p class="line-clamp-2 text-muted-foreground">Hinnat nousevat arviolta 3 € / palvelu yleisten kustannusten nousun sekä opintojeni päättymisen myötä. Uusi hinnasto tulee näkyviin 1.1.2026. Lämpimästi tervetuloa hoitoihin!</p>
+              <button class="text-primary hover:underline mt-2 block p-0 bg-transparent border-none cursor-pointer" onclick="openModal('news-modal-1')">Lue lisää</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 2: Syksyn kuulumisia -->
+        <div class="rounded-lg shadow-md bg-card overflow-hidden relative flex flex-col justify-between">
+          <div class="shadow-lg absolute left-0 top-0 rounded-br-lg py-2 px-4 bg-primary text-white z-10">22.10.2025</div>
+          <div>
+            <img src="public/images/pinja.jpg" alt="Syksyn kuulumisia" class="w-full h-48 object-cover brightness-75">
+            <div class="p-4 text-ellipsis overflow-hidden text-left">
+              <h3>Syksyn kuulumisia!</h3>
+              <p class="line-clamp-2 text-muted-foreground">Ihanaa kertoa, että hierontaopintoni ovat edenneet siihen vaiheeseen, että voin nyt tarjota asiakkaille hierontaa harjoitteluhinnoin! Alkaen maanantaista 27.10.2025: Osahieronta 50 min - 36€ & kokohieronta 80 min - 57€. Tämä on loistava mahdollisuus päästä hierottavaksi edullisesti ja samalla tukea opintojeni etenemistä.</p>
+              <button class="text-primary hover:underline mt-2 block p-0 bg-transparent border-none cursor-pointer" onclick="openModal('news-modal-2')">Lue lisää</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 3: Lympha press -->
+        <div class="rounded-lg shadow-md bg-card overflow-hidden relative flex flex-col justify-between">
+          <div class="shadow-lg absolute left-0 top-0 rounded-br-lg py-2 px-4 bg-primary text-white z-10">01.09.2025</div>
+          <div>
+            <img src="public/images/buutsi.jpg" alt="Lympha press sarjahoito tarjous" class="w-full h-48 object-cover brightness-75">
+            <div class="p-4 text-ellipsis overflow-hidden text-left">
+              <h3>Lympha press sarjahoito tarjous!</h3>
+              <p class="line-clamp-2 text-muted-foreground">Lympha press sarjahoito: 3 hoitokertaa valitsemallasi aikavälillä. Osta 1.9 - 7.9 välisenä aikana niin saat sarjahoidon tarjoushintaan 120€ (norm. 144€). Voit varata hoidon käyttämisen myöhemmin itsellesi sopivaan aikaan.</p>
+              <button class="text-primary hover:underline mt-2 block p-0 bg-transparent border-none cursor-pointer" onclick="openModal('news-modal-3')">Lue lisää</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- News Modals -->
+      <div id="news-modal-1" class="modal hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm" onclick="event.target === this && closeModal('news-modal-1')">
+        <div class="bg-white rounded-lg shadow-lg max-h-[90%] w-screen md:max-w-lg relative m-4 flex flex-col" onclick="event.stopPropagation()">
+          <button class="absolute top-2 right-2 z-10 bg-white rounded-full p-1 text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-colors" onclick="closeModal('news-modal-1')" aria-label="Sulje">
+            <img src="public/icons/x%20(1).svg" width="24" height="24" alt="Sulje">
+          </button>
+          <div class="text-left overflow-y-auto max-h-[80vh]">
+            <div class="flex flex-col h-full">
+              <div class="w-full" style="height:400px">
+                <img src="public/images/raha.jpg" alt="Muutoksia hinnastoon vuoden 2026 alusta" class="w-full h-full object-cover rounded-t-lg object-top block" style="padding:0;margin:0">
+              </div>
+              <div class="p-6 flex-1 flex flex-col">
+                <h2 class="text-2xl font-bold mb-2">Muutoksia hinnastoon vuoden 2026 alusta</h2>
+                <div class="text-sm text-muted-foreground mb-2">19.12.2025</div>
+                <p>Hinnat nousevat arviolta 3 € / palvelu yleisten kustannusten nousun sekä opintojeni päättymisen myötä. Uusi hinnasto tulee näkyviin 1.1.2026. Lämpimästi tervetuloa hoitoihin!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="news-modal-2" class="modal hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm" onclick="event.target === this && closeModal('news-modal-2')">
+        <div class="bg-white rounded-lg shadow-lg max-h-[90%] w-screen md:max-w-lg relative m-4 flex flex-col" onclick="event.stopPropagation()">
+          <button class="absolute top-2 right-2 z-10 bg-white rounded-full p-1 text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-colors" onclick="closeModal('news-modal-2')" aria-label="Sulje">
+            <img src="public/icons/x%20(1).svg" width="24" height="24" alt="Sulje">
+          </button>
+          <div class="text-left overflow-y-auto max-h-[80vh]">
+            <div class="flex flex-col h-full">
+              <div class="w-full" style="height:400px">
+                <img src="public/images/pinja.jpg" alt="Syksyn kuulumisia" class="w-full h-full object-cover rounded-t-lg object-top block" style="padding:0;margin:0">
+              </div>
+              <div class="p-6 flex-1 flex flex-col">
+                <h2 class="text-2xl font-bold mb-2">Syksyn kuulumisia!</h2>
+                <div class="text-sm text-muted-foreground mb-2">22.10.2025</div>
+                <p>Ihanaa kertoa, että hierontaopintoni ovat edenneet siihen vaiheeseen, että voin nyt tarjota asiakkaille hierontaa harjoitteluhinnoin! Alkaen maanantaista 27.10.2025: Osahieronta 50 min - 36€ & kokohieronta 80 min - 57€. Tämä on loistava mahdollisuus päästä hierottavaksi edullisesti ja samalla tukea opintojeni etenemistä.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="news-modal-3" class="modal hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm" onclick="event.target === this && closeModal('news-modal-3')">
+        <div class="bg-white rounded-lg shadow-lg max-h-[90%] w-screen md:max-w-lg relative m-4 flex flex-col" onclick="event.stopPropagation()">
+          <button class="absolute top-2 right-2 z-10 bg-white rounded-full p-1 text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-colors" onclick="closeModal('news-modal-3')" aria-label="Sulje">
+            <img src="public/icons/x%20(1).svg" width="24" height="24" alt="Sulje">
+          </button>
+          <div class="text-left overflow-y-auto max-h-[80vh]">
+            <div class="flex flex-col h-full">
+              <div class="w-full" style="height:400px">
+                <img src="public/images/buutsi.jpg" alt="Lympha press sarjahoito tarjous" class="w-full h-full object-cover rounded-t-lg object-top block" style="padding:0;margin:0">
+              </div>
+              <div class="p-6 flex-1 flex flex-col">
+                <h2 class="text-2xl font-bold mb-2">Lympha press sarjahoito tarjous!</h2>
+                <div class="text-sm text-muted-foreground mb-2">01.09.2025</div>
+                <p>Lympha press sarjahoito: 3 hoitokertaa valitsemallasi aikavälillä. Osta 1.9 - 7.9 välisenä aikana niin saat sarjahoidon tarjoushintaan 120€ (norm. 144€). Voit varata hoidon käyttämisen myöhemmin itsellesi sopivaan aikaan.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="w-full h-full flex flex-col items-center justify-center text-center gap-6 py-6">
+    <div class="relative flex items-center w-full">
+      <div class="flex-grow border-t border-primary"></div>
+      <span class="flex flex-row mx-4 gap-4 font-semibold">
+        <a href="https://www.facebook.com/profile.php?id=61573830269174" class="text-primary hover:text-accent transition-colors duration-200 p-3 rounded-full bg-secondary" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.378 14.192 5 15.115 5H18V0h-3.808C10.596 0 9 2.017 9 4.667V8z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/jalkaterapiapinja/" class="text-primary hover:text-accent transition-colors duration-200 p-3 rounded-full bg-secondary" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+      </span>
+      <div class="flex-grow border-t border-primary"></div>
+    </div>
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center w-full">
+        <div>
+          <h3 class="font-semibold text-lg mb-4">Yritys</h3>
+          <ul class="text-muted-foreground list-none">
+            <li>Jalkaterapia Pinja</li>
+            <li>Y-tunnus: 3453859-7</li>
+            <li><a href="https://www.google.com/maps/place/Varkaus/@62.3234278,27.8290594,12z/data=!3m1!4b1!4m6!3m5!1s0x469b1fae772c9653:0x40146d63c75c390!8m2!3d62.31792!4d27.8598871!16zL20vMDNjNGt6?entry=ttu&g_ep=EgoyMDI1MDQzMC4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">78300 Varkaus</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg mb-4">Varaa aika</h3>
+          <ul class="text-muted-foreground list-none">
+            <li><a href="tel:+358451032606" class="hover:text-accent transition-colors">(+358) 45-103 2606</a></li>
+            <li><a href="mailto:jalkaterapia.pinja@gmail.com" class="hover:text-accent transition-colors">jalkaterapia.pinja@gmail.com</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg mb-4">Sivusto</h3>
+          <ul class="text-muted-foreground list-none">
+            <li><a href="toimitusehdot.html" class="hover:text-accent transition-colors">Toimitusehdot</a></li>
+            <li><a href="maksutavat.html" class="hover:text-accent transition-colors">Maksutavat</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Payment logos -->
+      <div class="mt-10 flex flex-col items-center gap-4">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-6" aria-label="Siirry maksutavat-sivulle">
+          <a href="https://www.epassi.fi/etusivu" class="relative h-8 w-28 opacity-80 hover:opacity-100 transition-opacity">
+            <img src="public/images/epassi.png" alt="ePassi" class="h-full w-full object-contain">
+          </a>
+          <a href="https://www.smartum.fi/" class="relative h-8 w-28 opacity-80 hover:opacity-100 transition-opacity">
+            <img src="public/images/smartum.png" alt="Smartum" class="h-full w-full object-contain">
+          </a>
+          <a href="https://www.tarjoomo.fi/" class="relative h-8 w-28 opacity-80 hover:opacity-100 transition-opacity">
+            <img src="public/images/tarjoomo.png" alt="Tarjoomo" class="h-full w-full object-contain">
+          </a>
+          <a href="https://www.sjjl.fi/" class="relative h-8 w-28 opacity-80 hover:opacity-100 transition-opacity">
+            <img src="public/images/sjjl.png" alt="SJJL" class="h-full w-full object-contain">
+          </a>
+        </div>
+      </div>
+      <div class="mt-12 text-center">
+        <p class="text-muted-foreground">Copyright <span class="js-current-year">2025</span> @ Pinja Pasanen</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

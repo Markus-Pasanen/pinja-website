@@ -1,9 +1,0 @@
-# Next.js app
-domain: "jalkaterapiapinja.fi"
-email: "jalkaterapia.pinja@gmail.com"
-
-# Docker configuration
-nextjs_app_name: "kotisivut"
-docker_image_name: "kotisivut"
-docker_container_port: 3000
-host_port: 3000
