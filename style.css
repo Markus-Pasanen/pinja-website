@@ -128,3 +128,11 @@ a, button {
 .border-primary { border-color: hsl(var(--primary)); }
 .text-white { color: white; }
 .text-black { color: black; }
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
