@@ -19,7 +19,7 @@
       menuToggle.setAttribute('aria-expanded', 'true');
       menuToggle.setAttribute('aria-label', 'Sulje valikko');
       var imgs = menuToggle.querySelectorAll('img');
-      if (imgs.length >= 2) { imgs[0].style.display = 'none'; imgs[1].style.display = 'block'; }
+      if (imgs.length >= 1) { imgs[0].style.display = 'none'; }
     }
   }
 
@@ -33,7 +33,7 @@
       menuToggle.setAttribute('aria-expanded', 'false');
       menuToggle.setAttribute('aria-label', 'Avaa valikko');
       var imgs = menuToggle.querySelectorAll('img');
-      if (imgs.length >= 2) { imgs[0].style.display = 'block'; imgs[1].style.display = 'none'; }
+      if (imgs.length >= 1) { imgs[0].style.display = 'block'; }
     }
   }
 

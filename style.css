@@ -12,6 +12,15 @@
   --accent: 175, 55%, 32%;
   --accent-foreground: 0, 0%, 100%;
   --radius: 1rem;
+  --g0: 0.5rem;
+  --g1: 0.809rem;
+  --g2: 1.309rem;
+  --g3: 2.118rem;
+  --g4: 3.427rem;
+  --g5: 5.545rem;
+  --g6: 8.972rem;
+  --g7: 14.517rem;
+  --g8: 23.488rem;
 }
 
 html {
@@ -58,7 +67,7 @@ strong {
 }
 
 section {
-  margin-bottom: 5rem;
+  margin-bottom: var(--g5);
   text-align: center;
 }
 
@@ -66,7 +75,7 @@ section {
   background-color: hsl(var(--card));
   border-radius: var(--radius);
   box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
-  padding: 1.5rem;
+  padding: var(--g2);
   text-align: left;
 }
 
@@ -130,8 +139,8 @@ a, button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 0.875rem 2rem;
+  gap: var(--g0);
+  padding: var(--g1) var(--g3);
   background-color: hsl(var(--primary));
   color: white;
   font-weight: 600;
@@ -155,8 +164,8 @@ a, button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 0.875rem 2rem;
+  gap: var(--g0);
+  padding: var(--g1) var(--g3);
   background-color: transparent;
   color: hsl(var(--primary));
   font-weight: 600;
@@ -223,8 +232,8 @@ a, button {
 .trust-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.5rem 1rem;
+  gap: var(--g1);
+  padding: var(--g0) var(--g2);
   background-color: hsla(160, 28%, 36%, 0.08);
   border-radius: 9999px;
   font-size: 0.85rem;
@@ -233,5 +242,5 @@ a, button {
 }
 
 @media (max-width: 768px) {
-  section { margin-bottom: 3rem; }
+  section { margin-bottom: var(--g4); }
 }

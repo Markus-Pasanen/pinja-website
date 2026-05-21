@@ -22,7 +22,18 @@
             secondary: { DEFAULT: 'hsl(210, 20%, 96%)', foreground: 'hsl(200, 15%, 20%)' },
             muted: { DEFAULT: 'hsl(210, 15%, 92%)', foreground: 'hsl(200, 8%, 42%)' },
             accent: { DEFAULT: 'hsl(175, 55%, 32%)', foreground: 'hsl(0, 0%, 100%)' }
-          }
+          },
+          spacing: {
+            'g0': '0.5rem',
+            'g1': '0.809rem',
+            'g2': '1.309rem',
+            'g3': '2.118rem',
+            'g4': '3.427rem',
+            'g5': '5.545rem',
+            'g6': '8.972rem',
+            'g7': '14.517rem',
+            'g8': '23.488rem',
+          },
         }
       }
     }
@@ -37,40 +48,40 @@
 
 
 
-  <nav id="navbar" class="py-3 w-full transition-all duration-300 bg-background relative z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+  <nav id="navbar" class="py-g1 w-full transition-all duration-300 bg-background relative z-50">
+    <div class="max-w-7xl mx-auto px-g1 sm:px-g2 lg:px-g3 flex items-center justify-between">
       <a href="../index.html" class="z-50">
         <img src="../public/images/logo.png" alt="Jalkaterapia Pinja" width="56" height="56">
       </a>
       <button id="menu-toggle" class="md:hidden flex justify-center items-center w-10 h-10 focus:outline-none z-50" aria-label="Avaa valikko" aria-expanded="false">
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
-      <div class="hidden md:flex items-center gap-8">
+      <div class="hidden md:flex items-center gap-g3">
         <a href="../index.html" class="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Etusivu</a>
         <a href="../palvelut.html" class="text-sm font-semibold text-foreground hover:text-primary transition-colors">Palvelut</a>
         <a href="../hinnasto.html" class="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Hinnasto</a>
         <a href="../esittely.html" class="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Minusta</a>
         <a href="../yhteystiedot.html" class="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Ota yhteyttä</a>
-        <a href="../yhteystiedot.html" class="btn-primary text-sm !py-2 !px-5">Varaa aika</a>
+        <a href="../yhteystiedot.html" class="btn-primary text-sm !py-g0 !px-g2">Varaa aika</a>
       </div>
       <div id="mobile-menu-overlay" class="fixed inset-0 z-40 flex flex-col items-center justify-center space-y-0 text-2xl font-medium opacity-0 pointer-events-none bg-white/95 backdrop-blur-xl md:hidden">
-        <button id="menu-close" class="absolute top-4 right-4 flex justify-center items-center w-10 h-10 focus:outline-none" aria-label="Sulje valikko">
+        <button id="menu-close" class="absolute top-g2 right-g1 flex justify-center items-center w-10 h-10 focus:outline-none" aria-label="Sulje valikko">
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
-        <div class="flex flex-col items-center space-y-8 mt-12">
+        <div class="flex flex-col items-center space-y-g3 mt-g4">
           <a href="../index.html" class="text-muted-foreground mobile-menu-link">Etusivu</a>
           <a href="../palvelut.html" class="font-semibold text-foreground mobile-menu-link">Palvelut</a>
           <a href="../hinnasto.html" class="text-muted-foreground mobile-menu-link">Hinnasto</a>
           <a href="../esittely.html" class="text-muted-foreground mobile-menu-link">Minusta</a>
           <a href="../yhteystiedot.html" class="text-muted-foreground mobile-menu-link">Ota yhteyttä</a>
-          <a href="../yhteystiedot.html" class="btn-primary mt-4">Varaa aika</a>
+          <a href="../yhteystiedot.html" class="btn-primary mt-g1">Varaa aika</a>
         </div>
-        <div class="absolute bottom-8 left-0 w-full flex flex-col items-center text-sm text-muted-foreground">
-          <div class="flex items-center gap-4 mb-4">
-            <a href="https://www.facebook.com/profile.php?id=61573830269174" class="text-primary hover:text-accent transition-colors p-2" aria-label="Facebook">
+        <div class="absolute bottom-g3 left-0 w-full flex flex-col items-center text-sm text-muted-foreground">
+          <div class="flex items-center gap-g1 mb-g1">
+            <a href="https://www.facebook.com/profile.php?id=61573830269174" class="text-primary hover:text-accent transition-colors p-g0" aria-label="Facebook">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.378 14.192 5 15.115 5H18V0h-3.808C10.596 0 9 2.017 9 4.667V8z"/></svg>
             </a>
-            <a href="https://www.instagram.com/jalkaterapiapinja/" class="text-primary hover:text-accent transition-colors p-2" aria-label="Instagram">
+            <a href="https://www.instagram.com/jalkaterapiapinja/" class="text-primary hover:text-accent transition-colors p-g0" aria-label="Instagram">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
             </a>
           </div>
@@ -80,21 +91,21 @@
     </div>
   </nav>
 
-  <main>
+  <main class="pb-g5">
 
     <!-- Hero -->
-    <section class="relative w-full min-h-[70vh] overflow-hidden bg-foreground flex items-center !mb-0">
+    <section class="relative w-full min-h-[70vh] overflow-hidden bg-foreground flex items-center ">
       <img src="../public/images/pinja_2025-5.jpg" alt="Silikoniortoosi" class="absolute inset-0 w-full h-full object-cover" style="object-position: 50% 35%;">
       <div class="absolute inset-0 z-[2]" style="background: linear-gradient(90deg, hsla(200, 15%, 14%, 0.92) 0%, hsla(200, 15%, 14%, 0.6) 50%, hsla(200, 15%, 14%, 0.2) 100%);"></div>
-      <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+      <div class="relative z-10 w-full max-w-7xl mx-auto px-g1 sm:px-g2 lg:px-g3 py-g5 md:py-g6">
         <div class="w-full md:w-3/5 text-left">
-          <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/80 text-sm font-medium mb-6">
+          <div class="inline-flex items-center gap-g0 px-g1 py-g0 bg-white/10 backdrop-blur-sm rounded-full text-white/80 text-sm font-medium mb-g2">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
             Tukituotteet
           </div>
-          <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight mb-4 tracking-tight">Silikoniortoosi</h1>
-          <p class="text-lg sm:text-xl text-white/80 max-w-lg mb-6 leading-relaxed font-light">Yksilöllisesti valmistettu, korjaava ja suojaava tuki varpaille.</p>
-          <div class="inline-flex items-center gap-3 px-6 py-3 bg-white/10 backdrop-blur-md rounded-full text-white">
+          <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight mb-g1 tracking-tight">Silikoniortoosi</h1>
+          <p class="text-lg sm:text-xl text-white/80 max-w-lg mb-g2 leading-relaxed font-light">Yksilöllisesti valmistettu, korjaava ja suojaava tuki varpaille.</p>
+          <div class="inline-flex items-center gap-g1 px-g2 py-g1 bg-white/10 backdrop-blur-md rounded-full text-white">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M20 12a8 8 0 0 0-8-8"/><path d="M12 2v10l6 6"/></svg>
             <span class="text-lg font-semibold">32 € / kpl</span>
           </div>
@@ -103,82 +114,82 @@
     </section>
 
     <!-- Description -->
-    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-left">
-        <h2 class="mb-6">Mit&auml; palvelu sis&auml;lt&auml;&auml;?</h2>
-        <div class="bg-white rounded-2xl shadow-sm border border-black/5 p-8 md:p-10">
-          <p class="text-base text-muted-foreground leading-relaxed mb-6">Silikoniortoosi valmistetaan aina yksilöllisesti vastaanotolla. Se on varpaita keventävä, korjaava ja suojaava tuki, jonka avulla ohjataan varpaiden asentoa oikeaan suuntaan. Ortoosi on pitkäikäinen, joustava ja pestävä, joten se soveltuu hyvin päivittäiseen käyttöön.</p>
+    <section class="max-w-4xl mx-auto px-g1 sm:px-g2 lg:px-g3">
+      <div class="text-center">
+        <h2 class="mb-g2">Mit&auml; palvelu sis&auml;lt&auml;&auml;?</h2>
+        <div class="bg-white rounded-2xl shadow-sm border border-black/5 p-g3 md:p-g4">
+          <p class="text-base text-muted-foreground leading-relaxed mb-g2">Silikoniortoosi valmistetaan aina yksilöllisesti vastaanotolla. Se on varpaita keventävä, korjaava ja suojaava tuki, jonka avulla ohjataan varpaiden asentoa oikeaan suuntaan. Ortoosi on pitkäikäinen, joustava ja pestävä, joten se soveltuu hyvin päivittäiseen käyttöön.</p>
           <p class="text-base text-muted-foreground leading-relaxed">Varvasortoosit valmistetaan erilaisista silikonimassoista, joiden vahvuus ja joustavuus valitaan käyttötarkoituksen mukaan. Ortoosi muotoillaan yksilöllisesti jalan ja varpaiden rakenteiden perusteella, jotta se on mahdollisimman toimiva ja miellyttävä käyttää.</p>
         </div>
       </div>
     </section>
 
     <!-- Benefits -->
-    <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-center mb-12">Hy&ouml;dyt</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-white rounded-2xl shadow-sm border border-black/5 p-6 text-center hover:shadow-md transition-shadow">
-          <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+    <section class="max-w-5xl mx-auto px-g1 sm:px-g2 lg:px-g3">
+      <h2 class="text-center mb-g4">Hy&ouml;dyt</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-g2">
+        <div class="bg-white rounded-2xl shadow-sm border border-black/5 p-g2 text-center hover:shadow-md transition-shadow">
+          <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-g1">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="hsl(160, 28%, 36%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
           </div>
-          <h3 class="text-sm font-semibold mb-2">Yksilöllisesti valmistettu</h3>
+          <h3 class="text-sm font-semibold mb-g0">Yksilöllisesti valmistettu</h3>
           <p class="text-xs text-muted-foreground">Ortoosi muotoillaan juuri sinun jalkojesi mukaan vastaanotolla.</p>
         </div>
-        <div class="bg-white rounded-2xl shadow-sm border border-black/5 p-6 text-center hover:shadow-md transition-shadow">
-          <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+        <div class="bg-white rounded-2xl shadow-sm border border-black/5 p-g2 text-center hover:shadow-md transition-shadow">
+          <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-g1">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="hsl(160, 28%, 36%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
-          <h3 class="text-sm font-semibold mb-2">Korjaava ja suojaava</h3>
+          <h3 class="text-sm font-semibold mb-g0">Korjaava ja suojaava</h3>
           <p class="text-xs text-muted-foreground">Ohjaa varpaiden asentoa oikeaan suuntaan ja suojaa paineilta.</p>
         </div>
-        <div class="bg-white rounded-2xl shadow-sm border border-black/5 p-6 text-center hover:shadow-md transition-shadow">
-          <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+        <div class="bg-white rounded-2xl shadow-sm border border-black/5 p-g2 text-center hover:shadow-md transition-shadow">
+          <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-g1">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="hsl(160, 28%, 36%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
           </div>
-          <h3 class="text-sm font-semibold mb-2">Pitkäikäinen ja pestävä</h3>
+          <h3 class="text-sm font-semibold mb-g0">Pitkäikäinen ja pestävä</h3>
           <p class="text-xs text-muted-foreground">Laadukas silikoni kestää päivittäistä käyttöä ja on helppo puhdistaa.</p>
         </div>
-        <div class="bg-white rounded-2xl shadow-sm border border-black/5 p-6 text-center hover:shadow-md transition-shadow">
-          <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+        <div class="bg-white rounded-2xl shadow-sm border border-black/5 p-g2 text-center hover:shadow-md transition-shadow">
+          <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-g1">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="hsl(160, 28%, 36%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h4l3 9 5-18 3 9h5"/></svg>
           </div>
-          <h3 class="text-sm font-semibold mb-2">Miellyttävä käyttää</h3>
+          <h3 class="text-sm font-semibold mb-g0">Miellyttävä käyttää</h3>
           <p class="text-xs text-muted-foreground">Joustava ja pehmeä silikoni tuntuu miellyttävältä päivittäisessä käytössä.</p>
         </div>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-center mb-12">Usein kysytty&auml;</h2>
-      <div class="space-y-4 text-left">
+    <section class="max-w-3xl mx-auto px-g1 sm:px-g2 lg:px-g3">
+      <h2 class="text-center mb-g4">Usein kysytty&auml;</h2>
+      <div class="space-y-g1 text-left">
         <details class="bg-white rounded-2xl shadow-sm border border-black/5 group overflow-hidden">
-          <summary class="px-6 py-5 font-semibold text-sm cursor-pointer list-none flex items-center justify-between gap-4 hover:bg-muted/30 transition-colors">Miten silikoniortoosi valmistetaan?<svg class="w-5 h-5 text-muted-foreground transition-transform group-open:rotate-180 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></summary>
-          <div class="px-6 pb-5"><p class="text-sm text-muted-foreground">Ortoosi valmistetaan vastaanotolla yksilöllisesti jalan ja varpaiden rakenteiden perusteella. Silikonimassan vahvuus valitaan käyttötarkoituksen mukaan.</p></div>
+          <summary class="px-g2 py-g2 font-semibold text-sm cursor-pointer list-none flex items-center justify-between gap-g1 hover:bg-muted/30 transition-colors">Miten silikoniortoosi valmistetaan?<svg class="w-5 h-5 text-muted-foreground transition-transform group-open:rotate-180 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-g2 pb-g2"><p class="text-sm text-muted-foreground">Ortoosi valmistetaan vastaanotolla yksilöllisesti jalan ja varpaiden rakenteiden perusteella. Silikonimassan vahvuus valitaan käyttötarkoituksen mukaan.</p></div>
         </details>
         <details class="bg-white rounded-2xl shadow-sm border border-black/5 group overflow-hidden">
-          <summary class="px-6 py-5 font-semibold text-sm cursor-pointer list-none flex items-center justify-between gap-4 hover:bg-muted/30 transition-colors">Kuinka kauan ortoosi kestää?<svg class="w-5 h-5 text-muted-foreground transition-transform group-open:rotate-180 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></summary>
-          <div class="px-6 pb-5"><p class="text-sm text-muted-foreground">Silikoniortoosi on pitkäikäinen ja kestää hyvin päivittäistä käyttöä. Se on joustava ja helppo pitää puhtaana.</p></div>
+          <summary class="px-g2 py-g2 font-semibold text-sm cursor-pointer list-none flex items-center justify-between gap-g1 hover:bg-muted/30 transition-colors">Kuinka kauan ortoosi kestää?<svg class="w-5 h-5 text-muted-foreground transition-transform group-open:rotate-180 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-g2 pb-g2"><p class="text-sm text-muted-foreground">Silikoniortoosi on pitkäikäinen ja kestää hyvin päivittäistä käyttöä. Se on joustava ja helppo pitää puhtaana.</p></div>
         </details>
         <details class="bg-white rounded-2xl shadow-sm border border-black/5 group overflow-hidden">
-          <summary class="px-6 py-5 font-semibold text-sm cursor-pointer list-none flex items-center justify-between gap-4 hover:bg-muted/30 transition-colors">Voinko pestä ortoosin?<svg class="w-5 h-5 text-muted-foreground transition-transform group-open:rotate-180 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></summary>
-          <div class="px-6 pb-5"><p class="text-sm text-muted-foreground">Kyllä, ortoosi on pestävä. Käytä mietoa saippuaa ja haaleaa vettä. Anna kuivua huoneenlämmössä.</p></div>
+          <summary class="px-g2 py-g2 font-semibold text-sm cursor-pointer list-none flex items-center justify-between gap-g1 hover:bg-muted/30 transition-colors">Voinko pestä ortoosin?<svg class="w-5 h-5 text-muted-foreground transition-transform group-open:rotate-180 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-g2 pb-g2"><p class="text-sm text-muted-foreground">Kyllä, ortoosi on pestävä. Käytä mietoa saippuaa ja haaleaa vettä. Anna kuivua huoneenlämmössä.</p></div>
         </details>
         <details class="bg-white rounded-2xl shadow-sm border border-black/5 group overflow-hidden">
-          <summary class="px-6 py-5 font-semibold text-sm cursor-pointer list-none flex items-center justify-between gap-4 hover:bg-muted/30 transition-colors">Mihin vaivoihin silikoniortoosi auttaa?<svg class="w-5 h-5 text-muted-foreground transition-transform group-open:rotate-180 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></summary>
-          <div class="px-6 pb-5"><p class="text-sm text-muted-foreground">Ortoosi auttaa varpaiden asentovirheisiin, kuten vaivasenluuhun, vasaravarpaisiin ja muihin varpaiden linjausongelmiin. Se keventää, korjaa ja suojaa.</p></div>
+          <summary class="px-g2 py-g2 font-semibold text-sm cursor-pointer list-none flex items-center justify-between gap-g1 hover:bg-muted/30 transition-colors">Mihin vaivoihin silikoniortoosi auttaa?<svg class="w-5 h-5 text-muted-foreground transition-transform group-open:rotate-180 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></summary>
+          <div class="px-g2 pb-g2"><p class="text-sm text-muted-foreground">Ortoosi auttaa varpaiden asentovirheisiin, kuten vaivasenluuhun, vasaravarpaisiin ja muihin varpaiden linjausongelmiin. Se keventää, korjaa ja suojaa.</p></div>
         </details>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-      <div class="rounded-3xl bg-gradient-to-br from-primary to-[hsl(160,30%,30%)] p-10 md:p-16 text-center text-white">
-        <h2 class="text-white mb-4">Valmiina varaamaan ajan?</h2>
-        <p class="text-white/80 max-w-lg mx-auto mb-8">Ota yhteyttä ja varaa aika - autan sinua mielelläni!</p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="../yhteystiedot.html" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary font-semibold rounded-full hover:bg-white/90 transition-all shadow-lg">Varaa aika</a>
-          <a href="tel:+358451032606" class="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all">
+    <section class="max-w-5xl mx-auto px-g1 sm:px-g2 lg:px-g3 w-full">
+      <div class="rounded-3xl bg-gradient-to-br from-primary to-[hsl(160,30%,30%)] p-g4 md:p-g5 text-center text-white">
+        <h2 class="text-white mb-g1">Valmiina varaamaan ajan?</h2>
+        <p class="text-white/80 max-w-lg mx-auto mb-g3">Ota yhteyttä ja varaa aika - autan sinua mielelläni!</p>
+        <div class="flex flex-col sm:flex-row gap-g1 justify-center">
+          <a href="../yhteystiedot.html" class="inline-flex items-center justify-center gap-g0 px-g3 py-g1 bg-white text-primary font-semibold rounded-full hover:bg-white/90 transition-all shadow-lg">Varaa aika</a>
+          <a href="tel:+358451032606" class="inline-flex items-center justify-center gap-g0 px-g3 py-g1 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             (+358) 45-103 2606
           </a>
@@ -188,53 +199,55 @@
 
   </main>
 
-  <footer class="bg-white border-t border-black/5 py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col items-center mb-8">
-        <div class="flex items-center gap-4">
-          <a href="https://www.facebook.com/profile.php?id=61573830269174" class="text-primary hover:text-accent transition-colors p-3" aria-label="Facebook">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.378 14.192 5 15.115 5H18V0h-3.808C10.596 0 9 2.017 9 4.667V8z"/></svg>
+  <footer class="bg-white border-t border-black/5 py-g4">
+    <div class="max-w-7xl mx-auto px-g1 sm:px-g2 lg:px-g3">
+      <div class="relative flex items-center w-full mb-g3">
+        <div class="flex-grow border-t border-primary"></div>
+        <span class="flex flex-row mx-g1 gap-g1 font-semibold">
+          <a href="https://www.facebook.com/profile.php?id=61573830269174" class="text-primary hover:text-accent transition-colors duration-200 p-g1 rounded-full bg-primary/10" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.378 14.192 5 15.115 5H18V0h-3.808C10.596 0 9 2.017 9 4.667V8z"/></svg>
           </a>
-          <a href="https://www.instagram.com/jalkaterapiapinja/" class="text-primary hover:text-accent transition-colors p-3" aria-label="Instagram">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          <a href="https://www.instagram.com/jalkaterapiapinja/" class="text-primary hover:text-accent transition-colors duration-200 p-g1 rounded-full bg-primary/10" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
           </a>
-        </div>
+        </span>
+        <div class="flex-grow border-t border-primary"></div>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-g3 text-center md:text-left">
         <div>
-          <h4 class="font-semibold text-sm text-foreground mb-3">Yritys</h4>
-          <ul class="space-y-2 text-sm text-muted-foreground">
+          <h4 class="font-semibold text-sm text-foreground mb-g1">Yritys</h4>
+          <ul class="space-y-g0 text-sm text-muted-foreground">
             <li>Jalkaterapia Pinja</li>
             <li>Y-tunnus: 3453859-7</li>
             <li><a href="https://www.google.com/maps/place/Varkaus" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">78300 Varkaus</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="font-semibold text-sm text-foreground mb-3">Varaa aika</h4>
-          <ul class="space-y-2 text-sm text-muted-foreground">
+          <h4 class="font-semibold text-sm text-foreground mb-g1">Varaa aika</h4>
+          <ul class="space-y-g0 text-sm text-muted-foreground">
             <li><a href="tel:+358451032606" class="hover:text-primary transition-colors">(+358) 45-103 2606</a></li>
             <li><a href="mailto:jalkaterapia.pinja@gmail.com" class="hover:text-primary transition-colors">jalkaterapia.pinja@gmail.com</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="font-semibold text-sm text-foreground mb-3">Aukiolo</h4>
-          <ul class="space-y-2 text-sm text-muted-foreground">
+          <h4 class="font-semibold text-sm text-foreground mb-g1">Aukiolo</h4>
+          <ul class="space-y-g0 text-sm text-muted-foreground">
             <li>Ma-Pe: 9:00 - 17:00</li>
             <li>La: Suljettu</li>
             <li>Su: Suljettu</li>
           </ul>
         </div>
         <div>
-          <h4 class="font-semibold text-sm text-foreground mb-3">Sivusto</h4>
-          <ul class="space-y-2 text-sm text-muted-foreground">
+          <h4 class="font-semibold text-sm text-foreground mb-g1">Sivusto</h4>
+          <ul class="space-y-g0 text-sm text-muted-foreground">
             <li><a href="../toimitusehdot.html" class="hover:text-primary transition-colors">Toimitusehdot</a></li>
             <li><a href="../maksutavat.html" class="hover:text-primary transition-colors">Maksutavat</a></li>
             <li><a href="../tietosuojaseloste.html" class="hover:text-primary transition-colors">Tietosuoja</a></li>
           </ul>
         </div>
       </div>
-      <div class="mt-10 pt-8 border-t border-black/5 flex flex-col md:flex-row items-center justify-between gap-4">
-        <div class="flex items-center gap-6">
+      <div class="mt-g4 pt-g3 border-t border-black/5 flex flex-col md:flex-row items-center justify-between gap-g1">
+        <div class="flex items-center gap-g2">
           <a href="https://www.epassi.fi/etusivu" class="opacity-60 hover:opacity-100 transition-opacity"><img src="../public/images/epassi.png" alt="ePassi" class="h-7 object-contain"></a>
           <a href="https://www.smartum.fi/" class="opacity-60 hover:opacity-100 transition-opacity"><img src="../public/images/smartum.png" alt="Smartum" class="h-7 object-contain"></a>
           <a href="https://www.tarjoomo.fi/" class="opacity-60 hover:opacity-100 transition-opacity"><img src="../public/images/tarjoomo.png" alt="Tarjoomo" class="h-7 object-contain"></a>
