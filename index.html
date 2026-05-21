@@ -46,13 +46,15 @@
 </head>
 <body class="antialiased min-h-screen bg-background text-foreground flex flex-col justify-between">
 
-  <nav id="navbar" class="py-g0 md:py-g1 w-full transition-all duration-300 bg-background relative z-50">
-    <div class="max-w-7xl mx-auto px-g1 sm:px-g2 lg:px-g3 flex items-center justify-between">
+  <nav id="navbar" class="h-14 md:h-16 py-g0 md:py-g1 w-full transition-all duration-300 bg-background sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-g1 sm:px-g2 lg:px-g3 flex items-center justify-between h-full">
       <a href="index.html" class="z-50">
         <img src="public/images/logo.png" alt="Jalkaterapia Pinja" width="56" height="56" class="w-9 h-9 md:w-14 md:h-14">
       </a>
-      <button id="menu-toggle" class="md:hidden flex justify-center items-center w-10 h-10 focus:outline-none z-50" aria-label="Avaa valikko" aria-expanded="false">
-        <img src="public/icons/menu.svg" width="28" height="28" alt="Menu">
+      <button id="menu-toggle" class="md:hidden flex flex-col justify-center items-center w-10 h-10 focus:outline-none z-50 text-foreground" aria-label="Avaa valikko" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
       </button>
       <div class="hidden md:flex items-center gap-g3">
         <a href="index.html" class="text-sm font-semibold text-foreground hover:text-primary transition-colors">Etusivu</a>
@@ -62,10 +64,8 @@
         <a href="yhteystiedot.html" class="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Ota yhteyttä</a>
         <a href="yhteystiedot.html" class="btn-primary text-sm !py-g0 !px-g2">Varaa aika</a>
       </div>
-      <div id="mobile-menu-overlay" class="fixed inset-0 min-h-screen z-40 flex flex-col items-center justify-center space-y-0 text-2xl font-medium transition-all duration-300 md:hidden opacity-0 pointer-events-none bg-white/95 backdrop-blur-xl">
-        <button id="menu-close" class="absolute top-g2 right-g1 flex justify-center items-center w-10 h-10 focus:outline-none" aria-label="Sulje valikko">
-          <img src="public/icons/x.svg" width="28" height="28" alt="Sulje">
-        </button>
+      <div id="mobile-menu-overlay" class="fixed inset-0 z-40 flex flex-col text-2xl font-medium transition-all duration-300 md:hidden opacity-0 pointer-events-none bg-background/95 backdrop-blur-xl overflow-y-auto">
+        <div class="flex-1 flex flex-col items-center justify-center">
         <div class="flex flex-col items-center space-y-g3 mt-g4">
           <a href="index.html" class="font-semibold text-foreground mobile-menu-link">Etusivu</a>
           <a href="palvelut.html" class="text-muted-foreground mobile-menu-link">Palvelut</a>
@@ -74,7 +74,8 @@
           <a href="yhteystiedot.html" class="text-muted-foreground mobile-menu-link">Ota yhteyttä</a>
           <a href="yhteystiedot.html" class="btn-primary mt-g1">Varaa aika</a>
         </div>
-        <div class="absolute bottom-g3 left-0 w-full flex flex-col items-center text-sm text-muted-foreground">
+      </div>
+        <div class="flex flex-col items-center pb-g3 text-sm text-muted-foreground">
           <div class="flex items-center gap-g1 mb-g1">
             <a href="https://www.facebook.com/profile.php?id=61573830269174" class="text-primary hover:text-accent transition-colors p-g0" aria-label="Facebook">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.378 14.192 5 15.115 5H18V0h-3.808C10.596 0 9 2.017 9 4.667V8z"/></svg>

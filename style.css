@@ -25,7 +25,6 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -34,10 +33,6 @@ html {
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
   }
-}
-
-body {
-  overflow-x: hidden;
 }
 
 body {
@@ -92,6 +87,12 @@ section {
   text-align: left;
 }
 
+#navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
 .nav-glass {
   background: hsla(40, 23%, 95%, 0.85);
   backdrop-filter: blur(16px) saturate(180%);
@@ -99,17 +100,7 @@ section {
   border-bottom: 1px solid hsla(0, 0%, 0%, 0.06);
 }
 
-#navbar.sticky {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  animation: slideDown 0.3s ease;
-}
 
-@keyframes slideDown {
-  from { transform: translateY(-100%); }
-  to { transform: translateY(0); }
-}
 
 .line-clamp-2 {
   display: -webkit-box;
@@ -261,6 +252,28 @@ a, button {
 .hero-service {
   min-height: calc(100vw / 2.618);
   margin-bottom: var(--g3);
+}
+
+/* Hamburger to X animation */
+#menu-toggle .hamburger-line {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: currentColor;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+#menu-toggle .hamburger-line:nth-child(2) {
+  margin: 5px 0;
+}
+#menu-toggle.open .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+#menu-toggle.open .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+#menu-toggle.open .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 @media (max-width: 768px) {

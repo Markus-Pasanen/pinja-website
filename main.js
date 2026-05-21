@@ -6,7 +6,6 @@
      ================================================================ */
   var menuToggle = document.getElementById('menu-toggle');
   var menuOverlay = document.getElementById('mobile-menu-overlay');
-  var menuClose = document.getElementById('menu-close');
   var menuLinks = document.querySelectorAll('.mobile-menu-link');
 
   function openMenu() {
@@ -16,10 +15,9 @@
       document.body.style.overflow = 'hidden';
     }
     if (menuToggle) {
+      menuToggle.classList.add('open');
       menuToggle.setAttribute('aria-expanded', 'true');
       menuToggle.setAttribute('aria-label', 'Sulje valikko');
-      var imgs = menuToggle.querySelectorAll('img');
-      if (imgs.length >= 1) { imgs[0].style.display = 'none'; }
     }
   }
 
@@ -30,34 +28,32 @@
       document.body.style.overflow = '';
     }
     if (menuToggle) {
+      menuToggle.classList.remove('open');
       menuToggle.setAttribute('aria-expanded', 'false');
       menuToggle.setAttribute('aria-label', 'Avaa valikko');
-      var imgs = menuToggle.querySelectorAll('img');
-      if (imgs.length >= 1) { imgs[0].style.display = 'block'; }
     }
   }
 
   function toggleMenu() {
-    var isOpen = menuToggle && menuToggle.getAttribute('aria-expanded') === 'true';
+    var isOpen = menuToggle && menuToggle.classList.contains('open');
     if (isOpen) { closeMenu(); } else { openMenu(); }
   }
 
   if (menuToggle) { menuToggle.addEventListener('click', toggleMenu); }
-  if (menuClose) { menuClose.addEventListener('click', closeMenu); }
   if (menuLinks) {
     menuLinks.forEach(function (link) { link.addEventListener('click', closeMenu); });
   }
 
   /* ================================================================
-     Sticky navbar with glass effect
+     Navbar glass effect on scroll
      ================================================================ */
   var navbar = document.getElementById('navbar');
   function handleScroll() {
     if (!navbar) return;
     if (window.scrollY > 20) {
-      navbar.classList.add('sticky', 'nav-glass');
+      navbar.classList.add('nav-glass');
     } else {
-      navbar.classList.remove('sticky', 'nav-glass');
+      navbar.classList.remove('nav-glass');
     }
   }
   window.addEventListener('scroll', handleScroll, { passive: true });

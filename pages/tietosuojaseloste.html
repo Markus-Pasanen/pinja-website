@@ -15,11 +15,13 @@
 </head>
 <body class="antialiased min-h-screen bg-background text-foreground flex flex-col justify-between">
 
-  <nav id="navbar" class="py-g0 md:py-g1 w-full transition-all duration-300 bg-background relative z-50">
-    <div class="max-w-7xl mx-auto px-g1 sm:px-g2 lg:px-g3 flex items-center justify-between">
+  <nav id="navbar" class="h-14 md:h-16 py-g0 md:py-g1 w-full transition-all duration-300 bg-background sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-g1 sm:px-g2 lg:px-g3 flex items-center justify-between h-full">
       <a href="../index.html" class="z-50"><img src="../public/images/logo.png" alt="Jalkaterapia Pinja" width="56" height="56" class="w-9 h-9 md:w-14 md:h-14"></a>
-      <button id="menu-toggle" class="md:hidden flex justify-center items-center w-10 h-10 focus:outline-none z-50" aria-label="Avaa valikko" aria-expanded="false">
-        <img src="../public/icons/menu.svg" width="28" height="28" alt="Menu">
+      <button id="menu-toggle" class="md:hidden flex flex-col justify-center items-center w-10 h-10 focus:outline-none z-50 text-foreground" aria-label="Avaa valikko" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
       </button>
       <div class="hidden md:flex items-center gap-g3">
         <a href="../index.html" class="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Etusivu</a>
@@ -29,8 +31,8 @@
         <a href="yhteystiedot.html" class="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Ota yhteyttÃ¤</a>
         <a href="yhteystiedot.html" class="btn-primary text-sm !py-g0 !px-g2">Varaa aika</a>
       </div>
-      <div id="mobile-menu-overlay" class="fixed inset-0 min-h-screen z-40 flex flex-col items-center justify-center space-y-0 text-2xl font-medium transition-all duration-300 md:hidden opacity-0 pointer-events-none bg-white/95 backdrop-blur-xl">
-        <button id="menu-close" class="absolute top-g2 right-g1 flex justify-center items-center w-10 h-10 focus:outline-none" aria-label="Sulje valikko"><img src="../public/icons/x.svg" width="28" height="28" alt="Sulje"></button>
+      <div id="mobile-menu-overlay" class="fixed inset-0 z-40 flex flex-col text-2xl font-medium transition-all duration-300 md:hidden opacity-0 pointer-events-none bg-background/95 backdrop-blur-xl overflow-y-auto">
+        <div class="flex-1 flex flex-col items-center justify-center">
         <div class="flex flex-col items-center space-y-g3 mt-g4">
           <a href="../index.html" class="text-muted-foreground mobile-menu-link">Etusivu</a>
           <a href="palvelut.html" class="text-muted-foreground mobile-menu-link">Palvelut</a>
@@ -39,7 +41,8 @@
           <a href="yhteystiedot.html" class="text-muted-foreground mobile-menu-link">Ota yhteyttÃ¤</a>
           <a href="yhteystiedot.html" class="btn-primary mt-g1">Varaa aika</a>
         </div>
-        <div class="absolute bottom-g3 left-0 w-full flex flex-col items-center text-sm text-muted-foreground">
+      </div>
+        <div class="flex flex-col items-center pb-g3 text-sm text-muted-foreground">
           <div class="flex items-center gap-g1 mb-g1">
             <a href="https://www.facebook.com/profile.php?id=61573830269174" class="text-primary hover:text-accent transition-colors p-g0" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.378 14.192 5 15.115 5H18V0h-3.808C10.596 0 9 2.017 9 4.667V8z"/></svg></a>
             <a href="https://www.instagram.com/jalkaterapiapinja/" class="text-primary hover:text-accent transition-colors p-g0" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>

@@ -69,10 +69,10 @@
   >
     <nav
       id="navbar"
-      class="py-g0 md:py-g1 w-full transition-all duration-300 bg-background relative z-50"
+      class="h-14 md:h-16 py-g0 md:py-g1 w-full transition-all duration-300 bg-background sticky top-0 z-50"
     >
       <div
-        class="max-w-7xl mx-auto px-g1 sm:px-g2 lg:px-g3 flex items-center justify-between"
+        class="max-w-7xl mx-auto px-g1 sm:px-g2 lg:px-g3 flex items-center justify-between h-full"
       >
         <a href="index.html" class="z-50"
           ><img
@@ -84,11 +84,13 @@
         /></a>
         <button
           id="menu-toggle"
-          class="md:hidden flex justify-center items-center w-10 h-10 focus:outline-none z-50"
+          class="md:hidden flex flex-col justify-center items-center w-10 h-10 focus:outline-none z-50 text-foreground"
           aria-label="Avaa valikko"
           aria-expanded="false"
         >
-          <img src="public/icons/menu.svg" width="28" height="28" alt="Menu" />
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
         </button>
         <div class="hidden md:flex items-center gap-g3">
           <a
@@ -122,15 +124,9 @@
         </div>
         <div
           id="mobile-menu-overlay"
-          class="fixed inset-0 min-h-screen z-40 flex flex-col items-center justify-center space-y-0 text-2xl font-medium transition-all duration-300 md:hidden opacity-0 pointer-events-none bg-white/95 backdrop-blur-xl"
+          class="fixed inset-0 z-40 flex flex-col text-2xl font-medium transition-all duration-300 md:hidden opacity-0 pointer-events-none bg-background/95 backdrop-blur-xl overflow-y-auto"
         >
-          <button
-            id="menu-close"
-            class="absolute top-g2 right-g1 flex justify-center items-center w-10 h-10 focus:outline-none"
-            aria-label="Sulje valikko"
-          >
-            <img src="public/icons/x.svg" width="28" height="28" alt="Sulje" />
-          </button>
+          <div class="flex-1 flex flex-col items-center justify-center">
           <div class="flex flex-col items-center space-y-g3 mt-g4">
             <a href="index.html" class="text-muted-foreground mobile-menu-link"
               >Etusivu</a
@@ -157,8 +153,9 @@
             >
             <a href="yhteystiedot.html" class="btn-primary mt-g1">Varaa aika</a>
           </div>
+        </div>
           <div
-            class="absolute bottom-g3 left-0 w-full flex flex-col items-center text-sm text-muted-foreground"
+            class="flex flex-col items-center pb-g3 text-sm text-muted-foreground"
           >
             <div class="flex items-center gap-g1 mb-g1">
               <a
