@@ -2,7 +2,7 @@
 <html lang="fi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
   <title>Jalkaterapeutti Pinja Pasanen - Jalkaterapia Varkaus</title>
   <meta name="description" content="Lämpimästi tervetuloa vastaanotolleni! Jalkaterapeutti Pinja Pasanen - erikoistunut jalkaterapiaan, hierontaan ja jalkojen hyvinvointiin Varkaudessa.">
   <meta name="keywords" content="Pinja Pasanen, jalkaterapia, jalkaterapeutti, jalkahoito, Varkaus, Savo, Pohjois-Savo, podofix">
@@ -92,17 +92,13 @@
   <main class="flex flex-col !max-w-none !px-0">
 
     <!-- Hero Section -->
-    <section id="hero" class="relative w-full min-h-[85vh] overflow-hidden bg-foreground flex items-center !mb-0">
+    <section id="hero" class="relative w-full min-h-[85vh] overflow-hidden bg-foreground flex md:items-center items-end !mb-0">
       <img src="public/images/blurry-background.jpg" alt="" class="absolute inset-0 w-full h-full object-cover blur-xl opacity-60" aria-hidden="true">
       <img src="public/images/hero_background.png" alt="" class="absolute top-0 right-0 w-full md:w-[55%] h-full object-cover" style="object-position: 0% 20%;" aria-hidden="true">
       <div class="absolute inset-0 z-[2] hidden md:block" style="background: linear-gradient(90deg, hsl(200, 15%, 14%) 0%, hsla(200, 15%, 14%, 0.7) 40%, transparent 70%);"></div>
       <div class="absolute inset-0 z-[2] md:hidden" style="background: linear-gradient(0deg, hsla(200, 15%, 14%, 0.98) 0%, hsla(200, 15%, 14%, 0.7) 50%, hsla(200, 15%, 14%, 0.2) 80%, transparent 100%);"></div>
       <div class="relative z-10 w-full max-w-7xl mx-auto px-g1 sm:px-g2 lg:px-g3 py-g5 md:py-g6">
         <div class="w-full md:w-1/2 text-left fade-in">
-          <div class="inline-flex items-center gap-g0 px-g1 py-g0 bg-white/10 backdrop-blur-sm rounded-full text-white/80 text-sm font-medium mb-g2">
-            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-            Vapaita aikoja
-          </div>
           <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight mb-g1 tracking-tight">
             Pinja Pasanen
           </h1>
@@ -126,11 +122,11 @@
       <div class="max-w-5xl mx-auto px-g1">
         <div class="bg-white rounded-2xl shadow-lg shadow-black/5 border border-black/5 p-g2 md:p-g3">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-g3">
-            <div class="text-center">
+            <div class="text-center hidden md:block">
               <div class="text-base font-bold text-primary">Jalkaterapeutti (AMK)</div>
               <div class="text-sm text-muted-foreground mt-g0">Kaakkois-Suomen ammattikorkeakoulu 2025</div>
             </div>
-            <div class="text-center">
+            <div class="text-center hidden md:block">
               <div class="text-base font-bold text-primary">Yli 14 hyvinvointipalvelua</div>
               <div class="text-sm text-muted-foreground mt-g0">jalkaterapiaa, hierontaa ja sokerointia</div>
             </div>
@@ -151,21 +147,21 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-g3">
           <a href="services/jalkahoito.html" class="group p-g3 rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center border border-black/5 hover:border-primary/20 hover:-translate-y-1">
             <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-g2 group-hover:bg-primary/15 transition-colors">
-              <img src="public/icons/footprints.svg" width="28" height="28" class="text-primary" alt="Jalkaterapia">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z"/><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z"/><path d="M16 17h4"/><path d="M4 13h4"/></svg>
             </div>
             <h3 class="mb-g0 text-lg">Jalkaterapia</h3>
             <p class="text-sm text-muted-foreground leading-relaxed">Ennaltaehkäisee ja hoitaa alaraajojen vaivoja, kiputiloja, asentovirheitä ja iho- ja kynsimuutoksia.</p>
           </a>
           <a href="services/kokohieronta-90.html" class="group p-g3 rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center border border-black/5 hover:border-primary/20 hover:-translate-y-1">
             <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-g2 group-hover:bg-primary/15 transition-colors">
-              <img src="public/icons/hand.svg" width="28" height="28" class="text-primary" alt="Hieronta">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
             </div>
             <h3 class="mb-g0 text-lg">Hieronta</h3>
             <p class="text-sm text-muted-foreground leading-relaxed">Rentouttaa kehoa ja mieltä. Lievittää lihaskireyksiä ja kiputiloja sekä edistää palautumista.</p>
           </a>
           <a href="services/kainaloiden-sokerointi.html" class="group p-g3 rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center border border-black/5 hover:border-primary/20 hover:-translate-y-1">
             <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-g2 group-hover:bg-primary/15 transition-colors">
-              <img src="public/icons/candy.svg" width="28" height="28" class="text-primary" alt="Sokerointi">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M10 7v10.9"/><path d="M14 6.1V17"/><path d="M16 7V3a1 1 0 0 1 1.707-.707 2.5 2.5 0 0 0 2.152.717 1 1 0 0 1 1.131 1.131 2.5 2.5 0 0 0 .717 2.152A1 1 0 0 1 21 8h-4"/><path d="M16.536 7.465a5 5 0 0 0-7.072 0l-2 2a5 5 0 0 0 0 7.07 5 5 0 0 0 7.072 0l2-2a5 5 0 0 0 0-7.07"/><path d="M8 17v4a1 1 0 0 1-1.707.707 2.5 2.5 0 0 0-2.152-.717 1 1 0 0 1-1.131-1.131 2.5 2.5 0 0 0-.717-2.152A1 1 0 0 1 3 16h4"/></svg>
             </div>
             <h3 class="mb-g0 text-lg">Sokerointi</h3>
             <p class="text-sm text-muted-foreground leading-relaxed">Hellävarainen ja tehokas karvanpoistomenetelmä, joka poistaa karvat tehokkaasti ja kuorii ihoa luonnollisesti.</p>
@@ -195,7 +191,7 @@
             <div class="space-y-g1">
               <div class="flex items-start gap-g1">
                 <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <img src="public/icons/clock.svg" width="18" height="18" alt="Kello">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
                 </div>
                 <div>
                   <p class="text-sm font-medium text-foreground">Voimassa 4 kuukautta</p>
@@ -204,7 +200,7 @@
               </div>
               <div class="flex items-start gap-g1">
                 <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <img src="public/icons/mail.svg" width="18" height="18" alt="Sähköposti">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
                 </div>
                 <div>
                   <p class="text-sm font-medium text-foreground">Tilaa sähköpostitse</p>
@@ -213,7 +209,7 @@
               </div>
               <div class="flex items-start gap-g1">
                 <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <img src="public/icons/phone.svg" width="18" height="18" alt="Puhelin">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
                 </div>
                 <div>
                   <p class="text-sm font-medium text-foreground">Soita</p>
@@ -222,7 +218,7 @@
               </div>
               <div class="flex items-start gap-g1">
                 <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <img src="public/icons/map-pin.svg" width="18" height="18" alt="Sijainti">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
                 </div>
                 <div>
                   <p class="text-sm font-medium text-foreground">Sovi tulostasi etukäteen</p>
@@ -232,11 +228,11 @@
             </div>
             <div class="mt-g3 flex flex-col sm:flex-row gap-g1">
               <a href="mailto:jalkaterapia.pinja@gmail.com?subject=Lahjakortin%20osto&body=Hei!%0A%0AHaluaisin%20ostaa%20lahjakortin.%0A%0A%E2%80%A2%20Lahjakortin%20summa%20tai%20palvelu%3A%20%0A%E2%80%A2%20Toivottu%20toimitustapa%20(s%C3%A4hk%C3%B6inen%20%2F%20nouto)%3A%20%0A%E2%80%A2%20Lahjan%20saajan%20nimi%20(halutessasi)%3A%20%0A%0AYst%C3%A4v%C3%A4llisin%20terveisin%2C%0A" class="btn-primary">
-                <img src="public/icons/mail.svg" width="18" height="18" alt="Sähköposti">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
                 Tilaa lahjakortti
               </a>
               <a href="tel:+358451032606" class="btn-secondary">
-                <img src="public/icons/phone.svg" width="18" height="18" alt="Puhelin">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
                 Soita
               </a>
             </div>
@@ -274,7 +270,7 @@
             Varaa aika
           </a>
           <a href="tel:+358451032606" class="inline-flex items-center justify-center gap-g0 px-g3 py-g1 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all">
-            <img src="public/icons/phone.svg" width="18" height="18" alt="Puhelin">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
             (+358) 45-103 2606
           </a>
         </div>
@@ -297,8 +293,8 @@
         </span>
         <div class="flex-grow border-t border-primary"></div>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-g3 text-center md:text-left">
-        <div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-g3 text-center">
+        <div class="md:text-left">
           <h4 class="font-semibold text-sm text-foreground mb-g1">Yritys</h4>
           <ul class="space-y-g0 text-sm text-muted-foreground">
             <li>Jalkaterapia Pinja</li>
@@ -313,7 +309,7 @@
             <li><a href="mailto:jalkaterapia.pinja@gmail.com" class="hover:text-primary transition-colors">jalkaterapia.pinja@gmail.com</a></li>
           </ul>
         </div>
-        <div>
+        <div class="md:text-right">
           <h4 class="font-semibold text-sm text-foreground mb-g1">Sivusto</h4>
           <ul class="space-y-g0 text-sm text-muted-foreground">
             <li><a href="toimitusehdot.html" class="hover:text-primary transition-colors">Toimitusehdot</a></li>

@@ -2,7 +2,7 @@
 <html lang="fi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
   <title>Kainaloiden sokerointi - Jalkaterapeutti Pinja Pasanen</title>
   <meta name="description" content="Sokerointi poistaa karvat hellävaraisesti, jättäen ihon sileäksi ja pehmeäksi viikoiksi. 19 € / 30 min.">
   <link rel="icon" href="../public/favicon.ico">
@@ -96,7 +96,8 @@
     <!-- Hero -->
     <section class="relative w-full min-h-[70vh] overflow-hidden bg-foreground flex items-center ">
       <img src="../public/images/pinja_2025-20.jpg" alt="Kainaloiden sokerointi" class="absolute inset-0 w-full h-full object-cover" style="object-position: 50% 35%;">
-      <div class="absolute inset-0 z-[2]" style="background: linear-gradient(90deg, hsla(200, 15%, 14%, 0.92) 0%, hsla(200, 15%, 14%, 0.6) 50%, hsla(200, 15%, 14%, 0.2) 100%);"></div>
+      <div class="absolute inset-0 z-[2] hidden md:block" style="background: linear-gradient(90deg, hsl(200, 15%, 14%) 0%, hsla(200, 15%, 14%, 0.7) 40%, transparent 70%);"></div>
+      <div class="absolute inset-0 z-[2] md:hidden" style="background: linear-gradient(0deg, hsla(200, 15%, 14%, 0.98) 0%, hsla(200, 15%, 14%, 0.7) 50%, hsla(200, 15%, 14%, 0.2) 80%, transparent 100%);"></div>
       <div class="relative z-10 w-full max-w-7xl mx-auto px-g1 sm:px-g2 lg:px-g3 py-g5 md:py-g6">
         <div class="w-full md:w-3/5 text-left">
           <div class="inline-flex items-center gap-g0 px-g1 py-g0 bg-white/10 backdrop-blur-sm rounded-full text-white/80 text-sm font-medium mb-g2">
@@ -215,8 +216,8 @@
         </span>
         <div class="flex-grow border-t border-primary"></div>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-g3 text-center md:text-left">
-        <div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-g3 text-center">
+        <div class="md:text-left">
           <h4 class="font-semibold text-sm text-foreground mb-g1">Yritys</h4>
           <ul class="space-y-g0 text-sm text-muted-foreground">
             <li>Jalkaterapia Pinja</li>
@@ -231,7 +232,7 @@
             <li><a href="mailto:jalkaterapia.pinja@gmail.com" class="hover:text-primary transition-colors">jalkaterapia.pinja@gmail.com</a></li>
           </ul>
         </div>
-        <div>
+        <div class="md:text-right">
           <h4 class="font-semibold text-sm text-foreground mb-g1">Sivusto</h4>
           <ul class="space-y-g0 text-sm text-muted-foreground">
             <li><a href="../toimitusehdot.html" class="hover:text-primary transition-colors">Toimitusehdot</a></li>
