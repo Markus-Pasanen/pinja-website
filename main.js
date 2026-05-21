@@ -86,46 +86,6 @@
   initAnimations();
 
   /* ================================================================
-     Generic Modal
-     ================================================================ */
-  function openModal(modalId) {
-    var modal = document.getElementById(modalId);
-    if (!modal) return;
-    modal.classList.remove('hidden');
-    modal.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-    document.addEventListener('keydown', handleEscape);
-  }
-
-  function closeModal(modalId) {
-    var modal = document.getElementById(modalId);
-    if (!modal) return;
-    modal.classList.add('hidden');
-    modal.style.display = '';
-    document.body.style.overflow = '';
-    document.removeEventListener('keydown', handleEscape);
-  }
-
-  function handleEscape(e) {
-    if (e.key === 'Escape') {
-      var openModals = document.querySelectorAll('.modal:not(.hidden)');
-      if (openModals.length > 0) {
-        closeModal(openModals[openModals.length - 1].id);
-      }
-    }
-  }
-
-  window.openModal = openModal;
-  window.closeModal = closeModal;
-
-  document.addEventListener('click', function (e) {
-    if (e.target.classList.contains('modal-backdrop')) {
-      var modal = e.target.closest('.modal');
-      if (modal) { closeModal(modal.id); }
-    }
-  });
-
-  /* ================================================================
      Current year for copyright
      ================================================================ */
   var yearEls = document.querySelectorAll('.js-current-year');
