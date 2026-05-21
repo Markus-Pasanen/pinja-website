@@ -254,6 +254,27 @@ a, button {
   color: hsl(var(--primary));
 }
 
+.hero-home {
+  min-height: calc(100vw / 1.618);
+}
+
+.hero-service {
+  min-height: calc(100vw / 2.618);
+  margin-bottom: var(--g3);
+}
+
 @media (max-width: 768px) {
   section { margin-bottom: var(--g4); }
+
+  .hero-home {
+    min-height: 75vh;
+  }
+
+  .hero-home h1 {
+    margin-bottom: var(--g0) !important;
+  }
+
+  .hero-home .hero-subtitle {
+    margin-bottom: var(--g2) !important;
+  }
 }
