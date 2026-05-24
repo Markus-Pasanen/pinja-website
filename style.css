@@ -246,11 +246,11 @@ a, button {
 }
 
 .hero-home {
-  min-height: calc(100vw / 1.618);
+  min-height: 75vh !important;
 }
 
 .hero-service {
-  min-height: calc(100vw / 2.618);
+  min-height: 75vh !important;
   margin-bottom: var(--g3);
 }
 
