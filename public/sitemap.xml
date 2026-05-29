@@ -1,4 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<sitemap><loc>https://jalkaterapiapinja.fi/sitemap-0.xml</loc></sitemap>
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>https://jalkaterapiapinja.fi</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+<url><loc>https://jalkaterapiapinja.fi/esittely</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://jalkaterapiapinja.fi/palvelut</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://jalkaterapiapinja.fi/hinnasto</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://jalkaterapiapinja.fi/yhteystiedot</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://jalkaterapiapinja.fi/maksutavat</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+<url><loc>https://jalkaterapiapinja.fi/toimitusehdot</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+<url><loc>https://jalkaterapiapinja.fi/tietosuojaseloste</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+<url><loc>https://jalkaterapiapinja.fi/palvelut/jalkahoito</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://jalkaterapiapinja.fi/palvelut/jalkaterapia</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://jalkaterapiapinja.fi/palvelut/kokohieronta-90</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://jalkaterapiapinja.fi/palvelut/kokohieronta-120</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://jalkaterapiapinja.fi/palvelut/puolihieronta</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://jalkaterapiapinja.fi/palvelut/lympha-press</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://jalkaterapiapinja.fi/palvelut/saarien-sokerointi</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://jalkaterapiapinja.fi/palvelut/kainaloiden-sokerointi</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://jalkaterapiapinja.fi/palvelut/kynsien-lyhennys</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://jalkaterapiapinja.fi/palvelut/podofix-kynnenoikaisu</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://jalkaterapiapinja.fi/palvelut/silikoniortoosi</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://jalkaterapiapinja.fi/palvelut/syylan-hoito</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://jalkaterapiapinja.fi/palvelut/lahjakortti</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://jalkaterapiapinja.fi/palvelut/palapohjalliset</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+</urlset>
