@@ -31,6 +31,9 @@ pinja-website/
 ├── tietosuojaseloste.html  # Privacy policy
 ├── main.js                 # JavaScript logic
 ├── style.css               # Custom styles
+├── dev/
+│   ├── server.js            # Local dev server (Node, zero deps)
+│   └── out.txt              # Dev server log
 ├── public/
 │   ├── favicon.ico
 │   ├── robots.txt
@@ -39,32 +42,31 @@ pinja-website/
 └── README.md
 ```
 
-## How to Run
+## Local Development
 
-Since this is a fully static website with no build steps or server-side dependencies, you can:
+Since this is a fully static website with no build steps, any HTTP server works:
 
-- **Open directly**: Open `index.html` in any modern browser.
-- **Live Server**: Use VS Code's Live Server extension for auto-reload during development.
-- **Python HTTP Server**:
-  ```bash
-  python -m http.server 8000
-  ```
-  Then open [http://localhost:8000](http://localhost:8000).
+```bash
+# Node dev server (zero dependencies)
+node dev/server.js
+# → http://localhost:3000
+
+# Python
+python -m http.server 8000
+# → http://localhost:8000
+```
+
+Requires no npm install, no build step.
 
 ## Hosting
 
-This site can be hosted on any static hosting service:
-
-- **Netlify** - Drag-and-drop deploy
-- **Vercel** - Zero-config static deployment
-- **GitHub Pages** - Free static hosting
-- **Any web server** (Nginx, Apache, etc.)
+**Production:** Hosted on GitHub Pages. The live site is at [jalkaterapiapinja.fi](https://jalkaterapiapinja.fi).
 
 SEO files (`robots.txt`, `sitemap.xml`) are located in the `public/` directory and should be served at the root of your domain. The sitemap includes all 22 site pages with clean URLs and priority rankings. Each page has `<link rel="canonical">`, Open Graph metadata, and Twitter Card tags for social sharing. The homepage includes JSON-LD structured data (`LocalBusiness` schema) with address, phone, email, social links, and service area.
 
 ## License
 
-This project is proprietary and confidential. All rights reserved.
+No open source license is granted. All rights reserved by Jalkaterapia Pinja. The source is publicly available for GitHub Pages hosting, but you may not copy, modify, or redistribute this code without permission.
 
 ---
 
