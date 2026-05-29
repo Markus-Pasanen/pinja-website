@@ -11,7 +11,7 @@ This is a modern, responsive, fully static website built for Jalkaterapia Pinja,
 ## Tech Stack
 
 - **HTML5** - Semantic markup
-- **TailwindCSS** - Utility-first CSS framework (loaded via CDN)
+- **CSS3 (vanilla)** - All styling in `style.css`, no framework
 - **Vanilla JavaScript** - Interactive components and functionality
 - **Web3Forms** - Contact form backend with hCaptcha spam protection
 - **Open Graph / Twitter Cards** - Social media sharing metadata

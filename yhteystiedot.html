@@ -38,50 +38,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              background: "hsl(40, 23%, 95%)",
-              foreground: "hsl(200, 15%, 14%)",
-              card: {
-                DEFAULT: "hsl(0, 0%, 100%)",
-                foreground: "hsl(200, 15%, 14%)",
-              },
-              primary: {
-                DEFAULT: "hsl(160, 28%, 36%)",
-                foreground: "hsl(0, 0%, 100%)",
-              },
-              secondary: {
-                DEFAULT: "hsl(210, 20%, 96%)",
-                foreground: "hsl(200, 15%, 20%)",
-              },
-              muted: {
-                DEFAULT: "hsl(210, 15%, 92%)",
-                foreground: "hsl(200, 8%, 42%)",
-              },
-              accent: {
-                DEFAULT: "hsl(175, 55%, 32%)",
-                foreground: "hsl(0, 0%, 100%)",
-              },
-            },
-            spacing: {
-              g0: "0.5rem",
-              g1: "0.809rem",
-              g2: "1.309rem",
-              g3: "2.118rem",
-              g4: "3.427rem",
-              g5: "5.545rem",
-              g6: "8.972rem",
-              g7: "14.517rem",
-              g8: "23.488rem",
-            },
-          },
-        },
-      };
-    </script>
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body
@@ -144,7 +101,7 @@
         </div>
         <div
           id="mobile-menu-overlay"
-          class="fixed inset-0 z-40 flex flex-col text-2xl font-medium transition-all duration-300 md:hidden opacity-0 pointer-events-none bg-background/95 backdrop-blur-xl overflow-y-auto"
+          class="fixed inset-0 z-50 flex flex-col text-2xl font-medium transition-all duration-300 md:hidden opacity-0 pointer-events-none bg-background/95 backdrop-blur-xl overflow-y-auto"
         >
           <div class="flex-1 flex flex-col items-center justify-center">
           <div class="flex flex-col items-center space-y-g3 mt-g4">
