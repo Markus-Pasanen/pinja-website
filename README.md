@@ -13,6 +13,9 @@ This is a modern, responsive, fully static website built for Jalkaterapia Pinja,
 - **HTML5** - Semantic markup
 - **TailwindCSS** - Utility-first CSS framework (loaded via CDN)
 - **Vanilla JavaScript** - Interactive components and functionality
+- **Web3Forms** - Contact form backend with hCaptcha spam protection
+- **Open Graph / Twitter Cards** - Social media sharing metadata
+- **JSON-LD Schema** - LocalBusiness structured data for SEO
 
 ## Project Structure
 
@@ -28,12 +31,10 @@ pinja-website/
 ├── tietosuojaseloste.html  # Privacy policy
 ├── main.js                 # JavaScript logic
 ├── style.css               # Custom styles
-├── tailwind.config.js      # TailwindCSS configuration
 ├── public/
 │   ├── favicon.ico
 │   ├── robots.txt
 │   ├── sitemap.xml
-│   ├── sitemap-0.xml
 │   └── images/             # All image assets
 └── README.md
 ```
@@ -59,7 +60,7 @@ This site can be hosted on any static hosting service:
 - **GitHub Pages** - Free static hosting
 - **Any web server** (Nginx, Apache, etc.)
 
-SEO files (`robots.txt`, `sitemap.xml`, `sitemap-0.xml`) are located in the `public/` directory and should be served at the root of your domain.
+SEO files (`robots.txt`, `sitemap.xml`) are located in the `public/` directory and should be served at the root of your domain. The sitemap includes all 22 site pages with clean URLs and priority rankings. Each page has `<link rel="canonical">`, Open Graph metadata, and Twitter Card tags for social sharing. The homepage includes JSON-LD structured data (`LocalBusiness` schema) with address, phone, email, social links, and service area.
 
 ## License
 
