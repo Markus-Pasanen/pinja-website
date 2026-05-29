@@ -25,9 +25,9 @@ When creating a new page, match the convention of sibling pages in the same dire
 
 Production hosting uses URL rewriting. When adding a new page, add it to `public/sitemap-0.xml` **without** the `.html` extension (e.g. `/palvelut`, not `/palvelut.html`).
 
-## W3Forms placeholder
+## Web3Forms
 
-`yhteystiedot.html` line 388 has `value="YOUR_ACCESS_KEY"`. The contact form will silently fail until this is replaced with a real W3Forms access key.
+Contact form on `yhteystiedot.html` uses Web3Forms (`https://api.web3forms.com/submit`). Access key is `fe78afd8-006f-451d-af4d-3a26400d7bcf`. If form stops working, generate a new key at https://web3forms.com and update the `value` in the hidden `access_key` input.
 
 ## Language
 

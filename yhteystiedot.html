@@ -401,18 +401,18 @@
             <h3 class="mb-0">Lähetä viestiä</h3>
           </div>
           <form
-            action="https://api.w3forms.com/submit"
+            action="https://api.web3forms.com/submit"
             method="POST"
             class="space-y-g1"
           >
-            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY" />
+            <input type="hidden" name="access_key" value="fe78afd8-006f-451d-af4d-3a26400d7bcf" />
             <div>
               <label for="nimi" class="text-sm font-medium text-foreground"
                 >Nimi</label
               >
               <input
                 type="text"
-                name="nimi"
+                name="name"
                 id="nimi"
                 required
                 class="w-full rounded-xl bg-secondary border border-black/5 p-g1 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
@@ -420,14 +420,14 @@
             </div>
             <div>
               <label
-                for="s_hk_posti"
+                for="sahkoposti"
                 class="text-sm font-medium text-foreground"
                 >Sähköposti</label
               >
               <input
                 type="email"
-                name="s_hk_posti"
-                id="s_hk_posti"
+                name="email"
+                id="sahkoposti"
                 required
                 class="w-full rounded-xl bg-secondary border border-black/5 p-g1 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
               />
@@ -438,9 +438,8 @@
               >
               <input
                 type="tel"
-                name="puhelin"
+                name="phone"
                 id="puhelin"
-                required
                 class="w-full rounded-xl bg-secondary border border-black/5 p-g1 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
               />
             </div>
@@ -449,16 +448,14 @@
                 >Viesti</label
               >
               <textarea
-                name="viesti"
+                name="message"
                 id="viesti"
                 rows="4"
                 required
                 class="w-full rounded-xl bg-secondary border border-black/5 p-g1 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all resize-y"
               ></textarea>
             </div>
-            <input type="hidden" name="_gotcha" style="display: none" />
-            <div data-w3f-captcha data-endpoint="https://api.w3forms.com"></div>
-            <script src="/w3f-captcha.js" defer></script>
+            <div class="h-captcha" data-captcha="true"></div>
             <button type="submit" class="btn-primary w-full text-center">
               Lähetä
             </button>
@@ -658,5 +655,6 @@
     </footer>
 
     <script src="main.js"></script>
-  </body>
+  <script src="https://web3forms.com/client/script.js" async defer></script>
+</body>
 </html>
