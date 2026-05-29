@@ -1,219 +1,86 @@
-# 🦶 Jalkaterapia Pinja Website
-
-[![Next.js](https://img.shields.io/badge/Next.js-14.2.28-000000?style=flat-square&logo=next.js&logoColor=white)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.1-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![Docker](https://img.shields.io/badge/Docker-Enabled-2496ED?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/)
+# Jalkaterapia Pinja Website
 
 > Official website for Jalkaterapia Pinja - Professional foot therapy services in Varkaus, Finland.
 
-## 📋 Table of Contents
-
-- [Overview](#-overview)
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started)
-- [Development](#-development)
-- [Deployment](#-deployment)
-- [Documentation](#-documentation)
-- [Contributing](#-contributing)
-- [License](#-license)
-
-## 🎯 Overview
-
-This is a modern, responsive website built for Jalkaterapia Pinja, showcasing professional foot therapy services. The website provides comprehensive information about services, enables easy contact and appointment booking, and maintains a professional online presence.
-
 **Live Website:** [jalkaterapiapinja.fi](https://jalkaterapiapinja.fi)
 
-## ✨ Features
+## Overview
 
-- 🎨 **Modern Design** - Clean, professional, and mobile-first responsive design
-- ⚡ **Performance Optimized** - Built with Next.js 14 App Router for optimal performance
-- 🔧 **Component-Based Architecture** - Modular, reusable components following best practices
-- 🎯 **TypeScript** - Full type safety and enhanced developer experience
-- 📱 **Mobile-First** - Responsive design that works perfectly on all devices
-- 🌐 **SEO Optimized** - Automatic sitemap generation and meta tag optimization
-- 🐳 **Docker Ready** - Containerized for easy deployment and scaling
-- ♿ **Accessible** - WCAG compliant with proper semantic HTML and ARIA labels
+This is a modern, responsive, fully static website built for Jalkaterapia Pinja, showcasing professional foot therapy services. The website provides comprehensive information about services, enables easy contact and appointment booking, and maintains a professional online presence.
 
-## 🛠 Tech Stack
+## Tech Stack
 
-### Frontend
-- **[Next.js 14](https://nextjs.org/)** - React framework with App Router
-- **[TypeScript](https://www.typescriptlang.org/)** - Type-safe JavaScript
-- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
-- **[Lucide React](https://lucide.dev/)** - Beautiful & customizable SVG icons
+- **HTML5** - Semantic markup
+- **CSS3 (vanilla)** - All styling in `style.css`, no framework
+- **Vanilla JavaScript** - Interactive components and functionality
+- **Web3Forms** - Contact form backend with hCaptcha spam protection
+- **Open Graph / Twitter Cards** - Social media sharing metadata
+- **JSON-LD Schema** - LocalBusiness structured data for SEO
 
-### Development Tools
-- **[ESLint](https://eslint.org/)** - Code linting and quality enforcement
-- **[PostCSS](https://postcss.org/)** - CSS processing and optimization
-- **[next-sitemap](https://github.com/iamvishnusankar/next-sitemap)** - Automatic sitemap generation
-
-### Deployment
-- **[Docker](https://www.docker.com/)** - Containerization
-- **[Docker Compose](https://docs.docker.com/compose/)** - Multi-container orchestration
-
-## 📁 Project Structure
+## Project Structure
 
 ```
 pinja-website/
-├── 📁 src/
-│   ├── 📁 app/                    # Next.js 14 App Router pages
-│   │   ├── 📄 layout.tsx          # Root layout component
-│   │   ├── 📄 page.tsx            # Homepage
-│   │   ├── 📁 palvelut/           # Services page
-│   │   ├── 📁 esittely/           # About page
-│   │   ├── 📁 yhteystiedot/       # Contact page
-│   │   ├── 📁 maksutavat/         # Payment methods page
-│   │   └── 📁 toimitusehdot/      # Terms of service page
-│   ├── 📁 components/             # Reusable React components
-│   │   ├── 📁 layout/             # Layout components (Navbar, Footer)
-│   │   ├── 📁 sections/           # Page section components
-│   │   ├── 📁 shared/             # Shared utility components
-│   │   ├── 📁 ui/                 # UI-specific components
-│   │   └── 📄 index.ts            # Component exports
-│   ├── 📁 constants/              # Application constants and data
-│   │   ├── 📄 data.ts             # Static data (services, news, etc.)
-│   │   └── 📄 index.ts            # Constants exports
-│   ├── 📁 types/                  # TypeScript type definitions
-│   │   └── 📄 index.ts            # Type exports
-│   └── 📁 lib/                    # Utility functions and helpers
-│       └── 📄 utils.ts            # Common utility functions
-├── 📁 public/                     # Static assets
-│   ├── 📁 images/                 # Image assets
-│   ├── 📄 favicon.ico             # Site favicon
-│   ├── 📄 robots.txt              # Search engine directives
-│   └── 📄 sitemap.xml             # Generated sitemap
-├── 📁 docs/                       # Project documentation
-├── 📁 deploy/                     # Deployment configuration
-├── 📄 package.json                # Dependencies and scripts
-├── 📄 tailwind.config.ts          # Tailwind CSS configuration
-├── 📄 tsconfig.json               # TypeScript configuration
-├── 📄 next.config.mjs             # Next.js configuration
-└── 📄 docker-compose.yml          # Docker Compose configuration
+├── index.html              # Homepage
+├── palvelut.html           # Services
+├── esittely.html           # About
+├── yhteystiedot.html       # Contact
+├── hinnasto.html           # Pricing
+├── maksutavat.html         # Payment methods
+├── toimitusehdot.html      # Terms of service
+├── tietosuojaseloste.html  # Privacy policy
+├── main.js                 # JavaScript logic
+├── style.css               # Custom styles
+├── dev/
+│   ├── server.js            # Local dev server (Node, zero deps)
+│   └── out.txt              # Dev server log
+├── public/
+│   ├── favicon.ico
+│   ├── robots.txt
+│   ├── sitemap.xml
+│   └── images/             # All image assets
+└── README.md
 ```
 
-## 🚀 Getting Started
+## Local Development
 
-### Prerequisites
-
-- **Node.js** (18.17 or later)
-- **npm** or **yarn**
-- **Docker** (optional, for containerized development)
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/pinja-website.git
-   cd pinja-website
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Start the development server**
-   ```bash
-   npm run dev
-   ```
-
-4. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
-
-## 💻 Development
-
-### Available Scripts
+Since this is a fully static website with no build steps, any HTTP server works:
 
 ```bash
-# Development
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run start        # Start production server
+# Node dev server (zero dependencies)
+node dev/server.js
+# → http://localhost:3000
 
-# Code Quality
-npm run lint         # Run ESLint
-npm run type-check   # Run TypeScript type checking
-
-# Deployment
-npm run deploy       # Deploy using Docker Compose
+# Python
+python -m http.server 8000
+# → http://localhost:8000
 ```
 
-### Development Guidelines
+Requires no npm install, no build step.
 
-- **Components**: Use TypeScript interfaces for all component props
-- **Styling**: Utilize Tailwind CSS utility classes
-- **State Management**: Use React hooks for local state
-- **Code Style**: Follow ESLint configuration and Prettier formatting
-- **Commits**: Use conventional commit messages
+## Hosting
 
-### Environment Variables
+**Production:** Hosted on GitHub Pages. The live site is at [jalkaterapiapinja.fi](https://jalkaterapiapinja.fi).
 
-Create a `.env.local` file for local development:
+SEO files (`robots.txt`, `sitemap.xml`) are located in the `public/` directory and should be served at the root of your domain. The sitemap includes all 22 site pages with clean URLs and priority rankings. Each page has `<link rel="canonical">`, Open Graph metadata, and Twitter Card tags for social sharing. The homepage includes JSON-LD structured data (`LocalBusiness` schema) with address, phone, email, social links, and service area.
 
-```env
-# Add any environment variables here
-NEXT_PUBLIC_SITE_URL=http://localhost:3000
-```
+## License
 
-## 🚢 Deployment
-
-### Docker Deployment (Recommended)
-
-```bash
-# Build and deploy
-npm run deploy
-
-# Or manually with Docker Compose
-docker-compose -f deploy/docker-compose.yml up -d --build
-```
-
-### Manual Deployment
-
-```bash
-# Build the application
-npm run build
-
-# Start the production server
-npm start
-```
-
-## 📚 Documentation
-
-Comprehensive documentation is available in the `docs/` directory:
-
-- **[Project Overview](docs/overview.md)** - Project goals, features, and architecture
-- **[Component Guide](docs/components.md)** - Component documentation and usage
-- **[Deployment Guide](docs/deployment.md)** - Deployment instructions and best practices
-
-### Code Standards
-
-- Follow the existing code style and conventions
-- Write meaningful commit messages
-- Add tests for new features
-- Update documentation as needed
-- Ensure all checks pass before submitting
-
-## 📄 License
-
-This project is proprietary and confidential. All rights reserved.
+No open source license is granted. All rights reserved by Jalkaterapia Pinja. The source is publicly available for GitHub Pages hosting, but you may not copy, modify, or redistribute this code without permission.
 
 ---
 
-## 🙋‍♀️ Support
+## Support
 
 For questions or support regarding this website:
 
 - **Business Inquiries**: [jalkaterapia.pinja@gmail.com](mailto:jalkaterapia.pinja@gmail.com)
-- **Technical Issues**: Please open an issue in this repository
 
 ---
 
 <div align="center">
 
-**Built with ❤️ for Jalkaterapia Pinja**
+**Built for Jalkaterapia Pinja**
 
 [Website](https://jalkaterapiapinja.fi) • [Instagram](https://www.instagram.com/jalkaterapiapinja/) • [Facebook](https://www.facebook.com/profile.php?id=61573830269174)
 
