@@ -17,8 +17,16 @@ const MIME = {
 
 http
   .createServer((req, res) => {
-    let filePath = req.url === "/" ? "/index.html" : req.url;
+    const url = req.url.split("?")[0];
+    let filePath = url === "/" ? "/index.html" : url;
     filePath = path.join(__dirname, "..", filePath);
+
+    if (!path.extname(filePath)) {
+      if (fs.existsSync(filePath + ".html")) {
+        filePath += ".html";
+      }
+    }
+
     const ext = path.extname(filePath);
 
     fs.readFile(filePath, (err, data) => {
