@@ -31,14 +31,21 @@ pinja-website/
 ├── tietosuojaseloste.html  # Privacy policy
 ├── main.js                 # JavaScript logic
 ├── style.css               # Custom styles
+├── scripts/
+│   └── fetch-facebook-posts.mjs  # Builds post JSON from the RSS feed
+├── .github/
+│   └── workflows/
+│       └── facebook-feed.yml     # Daily Facebook feed update
 ├── dev/
 │   ├── server.js            # Local dev server (Node, zero deps)
 │   └── out.txt              # Dev server log
 ├── public/
+│   ├── facebook-posts.json  # Latest Facebook posts (generated)
 │   ├── favicon.ico
 │   ├── robots.txt
 │   ├── sitemap.xml
-│   └── images/             # All image assets
+│   └── images/              # All image assets
+│       └── facebook/        # Downloaded Facebook post images
 └── README.md
 ```
 
@@ -57,6 +64,39 @@ python -m http.server 8000
 ```
 
 Requires no npm install, no build step.
+
+## Facebook feed (Ajankohtaista)
+
+The homepage cards are read from `public/facebook-posts.json` by `main.js`. A scheduled GitHub Action (`.github/workflows/facebook-feed.yml`) fetches this RSS feed once a day:
+
+```
+https://rss.app/feeds/ccdznoabxNawUrUP.xml
+```
+
+It parses the three newest posts, downloads their images into `public/images/facebook/`, and commits the updated JSON. No Facebook API, access token, or repository secret is used.
+
+### Changing the feed
+
+The RSS URL is configured in:
+
+- `.github/workflows/facebook-feed.yml` (`FACEBOOK_RSS_URL` environment variable)
+- `scripts/fetch-facebook-posts.mjs` (fallback default)
+
+If you regenerate the feed in rss.app, update both places.
+
+### Updating manually
+
+Run **Actions → Update Facebook feed → Run workflow** in GitHub, or locally:
+
+```bash
+FACEBOOK_RSS_URL="https://rss.app/feeds/ccdznoabxNawUrUP.xml" node scripts/fetch-facebook-posts.mjs
+```
+
+If the feed is unavailable, the script exits with an error and leaves the existing JSON untouched. The site keeps showing the last good snapshot. If the JSON is missing or empty, the homepage falls back to a "follow on Facebook" card.
+
+> Note: GitHub pauses scheduled workflows after 60 days without repository activity. Running the workflow manually re-enables it.
+
+> If you already created an `FB_PAGE_TOKEN` secret for the earlier Graph API version, you can delete it — it is no longer used.
 
 ## Hosting
 
