@@ -140,21 +140,27 @@
     };
   }
 
-  function createFacebookIcon(size) {
+  function createArrowIcon() {
     var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-    svg.setAttribute('width', size);
-    svg.setAttribute('height', size);
+    svg.setAttribute('width', '16');
+    svg.setAttribute('height', '16');
     svg.setAttribute('viewBox', '0 0 24 24');
-    svg.setAttribute('fill', 'currentColor');
+    svg.setAttribute('fill', 'none');
+    svg.setAttribute('stroke', 'currentColor');
+    svg.setAttribute('stroke-width', '2');
+    svg.setAttribute('stroke-linecap', 'round');
+    svg.setAttribute('stroke-linejoin', 'round');
     svg.setAttribute('aria-hidden', 'true');
 
-    var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-    path.setAttribute(
-      'd',
-      'M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.378 14.192 5 15.115 5H18V0h-3.808C10.596 0 9 2.017 9 4.667V8z'
-    );
-    svg.appendChild(path);
+    var line = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    line.setAttribute('d', 'M5 12h14');
+    svg.appendChild(line);
+
+    var chevron = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    chevron.setAttribute('d', 'm12 5 7 7-7 7');
+    svg.appendChild(chevron);
+
     return svg;
   }
 
@@ -226,6 +232,7 @@
       toggle.type = 'button';
       toggle.className = 'fb-feed-card-toggle';
       toggle.textContent = 'Lue lisää';
+      toggle.appendChild(createArrowIcon());
       toggle.setAttribute('aria-haspopup', 'dialog');
       toggle.setAttribute('aria-controls', 'facebook-post-dialog');
 
@@ -240,14 +247,6 @@
     if (toggle) {
       footer.appendChild(toggle);
     }
-
-    var link = document.createElement('a');
-    link.className = 'fb-feed-card-link';
-    link.href = permalink;
-    link.rel = 'noopener noreferrer';
-    link.appendChild(document.createTextNode('Avaa Facebookissa'));
-    link.appendChild(createFacebookIcon(14));
-    footer.appendChild(link);
 
     body.appendChild(footer);
     card.appendChild(body);
@@ -276,7 +275,6 @@
 
     var parts = splitPostText(post.message);
     var image = safeImage(post.image);
-    var permalink = safeLink(post.permalink, FACEBOOK_PAGE_URL);
 
     content.innerHTML = '';
 
@@ -315,18 +313,6 @@
       body.appendChild(text);
     }
 
-    var footer = document.createElement('div');
-    footer.className = 'fb-post-dialog-footer';
-
-    var link = document.createElement('a');
-    link.className = 'fb-post-dialog-link';
-    link.href = permalink;
-    link.rel = 'noopener noreferrer';
-    link.appendChild(document.createTextNode('Avaa Facebookissa'));
-    link.appendChild(createFacebookIcon(14));
-    footer.appendChild(link);
-
-    body.appendChild(footer);
     content.appendChild(body);
 
     lastDialogTrigger = trigger;

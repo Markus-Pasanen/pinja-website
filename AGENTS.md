@@ -65,6 +65,13 @@ scripts/             Facebook feed generator
   `gap-g2`, `mb-g3`, etc. over arbitrary values.
 - Match the design of the page you are editing. Do not introduce a second stylesheet or
   redesign pages unless the task explicitly asks for it.
+- The homepage uses `.home-page`; all other pages use `.site-page`. Both share the editorial
+  layer at the end of `style.css`: Fraunces for display headings, Inter for body text, and
+  shared `.home-nav`, `.home-footer`, `.home-btn`, and `.home-*` components.
+- The footer keeps the original site layout (`.site-footer`) with the updated typography and
+  colors. The mobile menu keeps the original centered layout and uses Fraunces for its links.
+- Keep new interior-page styles inside the `.site-page` layer; do not change the shared
+  header/footer markup without updating every page.
 
 ## Shared JavaScript (`main.js`)
 
