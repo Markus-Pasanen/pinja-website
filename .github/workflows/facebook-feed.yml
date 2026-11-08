@@ -36,7 +36,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/facebook-posts.json public/images/facebook
+          git add public/data/facebook-posts.json public/images/facebook
 
           if git diff --staged --quiet; then
             echo "No Facebook feed changes to commit."

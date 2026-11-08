@@ -20,6 +20,8 @@
   --text-h3: 1.719rem; /* 27.5px = h2 / φ */
   --text-h2: 2.781rem; /* 44.5px = h1 / φ */
   --text-h1: 4.5rem; /* 72px — original hero size */
+  /* Vertical rhythm */
+  --section-space: clamp(3.5rem, 6vw, 5rem);
   --g0: 0.5rem;
   --g1: 0.809rem;
   --g2: 1.309rem;
@@ -465,6 +467,10 @@ input:focus, textarea:focus, select:focus {
   scroll-margin-top: 6rem;
 }
 
+#lymfahoito {
+  scroll-margin-top: 6rem;
+}
+
 #facebook-posts {
   align-items: stretch;
   grid-auto-rows: 1fr;
@@ -762,7 +768,7 @@ a, button {
 .fade-in {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
 }
 .fade-in.visible {
   opacity: 1;
@@ -797,6 +803,17 @@ a, button {
 .fade-in-scale.visible {
   opacity: 1;
   transform: scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in,
+  .fade-in-right,
+  .fade-in-left,
+  .fade-in-scale {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 .glass-card {
@@ -1034,7 +1051,7 @@ section {
 }
 
 .home-section {
-  padding-block: clamp(4.5rem, 9vw, 8rem);
+  padding-block: var(--section-space);
 }
 
 .home-section--cream {
@@ -1042,7 +1059,7 @@ section {
 }
 
 .home-section--services {
-  padding-top: clamp(4rem, 7vw, 6rem);
+  padding-top: calc(var(--section-space) + 1.5rem);
 }
 
 .home-visually-hidden {
@@ -1059,7 +1076,7 @@ section {
 
 .home-section__head {
   max-width: 48rem;
-  margin: 0 auto clamp(2.5rem, 5vw, 4rem);
+  margin: 0 auto clamp(2rem, 3.5vw, 3rem);
   text-align: center;
 }
 
@@ -1073,7 +1090,7 @@ section {
 }
 
 .home-section__foot {
-  margin-top: clamp(2rem, 4vw, 3rem);
+  margin-top: clamp(1.5rem, 2.5vw, 2.25rem);
   text-align: center;
 }
 
@@ -1090,7 +1107,7 @@ section {
   font-family: var(--home-sans);
   font-size: 1rem;
   font-weight: 600;
-  color: hsl(var(--foreground));
+  color: hsl(var(--primary));
 }
 
 .home-link-arrow svg {
@@ -1103,6 +1120,26 @@ section {
 }
 
 .home-link-arrow:hover svg {
+  transform: translateX(3px);
+}
+
+/* Palvelut card links — match the homepage arrow animation */
+.card-link {
+  color: hsl(var(--primary));
+}
+
+.card-link:hover {
+  color: hsl(var(--primary));
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.card-link .card-link__arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.card-link:hover .card-link__arrow {
   transform: translateX(3px);
 }
 
@@ -1227,8 +1264,8 @@ section {
 
 .home-brand__meta {
   margin-top: 0.18rem;
-  font-size: var(--text-xs);
-  letter-spacing: 0.12em;
+  font-size: 0.5rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: hsl(var(--muted-foreground));
   white-space: nowrap;
@@ -1354,6 +1391,8 @@ section {
 }
 
 .home-hero__media img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1427,6 +1466,10 @@ section {
   transform: translateY(-50%);
 }
 
+.home-trust .text-primary {
+  color: hsl(var(--primary));
+}
+
 @media (max-width: 767px) {
   .home-trust {
     position: static;
@@ -1444,8 +1487,8 @@ section {
 }
 
 .home-service-card {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   min-width: 0;
   padding: 0;
   overflow: hidden;
@@ -1457,11 +1500,11 @@ section {
 }
 
 .home-service-card:hover {
-  transform: translateY(-3px);
   box-shadow: 0 18px 40px -26px rgba(22, 48, 42, 0.45);
 }
 
 .home-service-card__media {
+  aspect-ratio: 16 / 9;
   min-height: 0;
   overflow: hidden;
   background-color: hsl(var(--secondary));
@@ -1483,12 +1526,14 @@ section {
   min-height: 0;
   flex-direction: column;
   align-items: flex-start;
-  padding: clamp(1.1rem, 2.2vw, 1.5rem);
+  padding: clamp(0.9rem, 1.6vw, 1.2rem);
 }
 
 .home-service-card h3 {
   margin-top: 0;
-  margin-bottom: 0.65rem;
+  margin-bottom: 0.45rem;
+  font-size: clamp(1.2rem, 1.7vw, 1.45rem);
+  line-height: 1.25;
   transition: color 0.2s ease;
 }
 
@@ -1499,12 +1544,15 @@ section {
 }
 
 .home-service-card p {
-  margin-bottom: 1rem;
-  font-size: var(--text-base);
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .home-service-card .home-link-arrow {
   margin-top: auto;
+  padding-top: 0.9rem;
+  font-size: 0.95rem;
 }
 
 @media (min-width: 768px) {
@@ -1524,21 +1572,93 @@ section {
   border: 1px solid hsla(0deg, 0%, 0%, 0.06);
   border-radius: var(--radius);
   box-shadow: 0 12px 30px -24px rgba(22, 48, 42, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.home-split:hover {
+  box-shadow: 0 18px 40px -26px rgba(22, 48, 42, 0.45);
+}
+
+.home-split--in-grid {
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+
+.home-split--in-grid .home-split__media {
+  aspect-ratio: 16 / 9;
+  background-image: url('public/images/services/lahjakortti.jpg?v=2');
+  background-position: center;
+  background-size: cover;
+}
+
+.home-split--in-grid .home-split__media::before {
+  content: '';
+  display: block;
+  padding-bottom: 56.25%;
+}
+
+@media (min-width: 768px) {
+  .home-split--in-grid .home-split__media::before {
+    display: none;
+  }
+}
+
+.home-split--in-grid .home-split__copy {
+  padding-block: clamp(1rem, 2vw, 2rem);
+}
+
+@media (min-width: 768px) {
+  .home-split--in-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .home-split--in-grid .home-split__media {
+    aspect-ratio: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-split--in-grid {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-split--in-grid .home-split__media {
+    min-height: 200px;
+    min-height: clamp(190px, 52vw, 260px);
+  }
+
+  .home-split--in-grid .home-split__media img {
+    position: static;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }
 
 .home-split__media {
+  position: relative;
   aspect-ratio: 4 / 3;
   overflow: hidden;
   border-radius: 0;
 }
 
 .home-split__media img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 .home-split__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: clamp(1.5rem, 4vw, 3rem);
 }
 
@@ -1575,6 +1695,54 @@ section {
   background-color: hsl(var(--primary));
 }
 
+/* Service inclusion chips */
+.service-includes {
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.service-includes__label {
+  margin-bottom: 0.85rem;
+  font-family: var(--home-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-align: center;
+  text-transform: uppercase;
+  color: hsl(200, 10%, 38%);
+}
+
+.service-includes ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.service-includes li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid hsla(var(--primary), 0.18);
+  border-radius: 9999px;
+  background-color: hsla(var(--primary), 0.06);
+  font-family: var(--home-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: hsl(var(--foreground));
+}
+
+.service-includes li::before {
+  content: '';
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background-color: hsl(var(--primary));
+}
+
 .home-split__actions {
   display: flex;
   flex-wrap: wrap;
@@ -1582,13 +1750,60 @@ section {
   gap: 1rem 1.5rem;
 }
 
+@media (max-width: 1199px) {
+  .home-split--in-grid .home-split__copy h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .home-split--in-grid .home-split__copy > p {
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .home-split--in-grid .home-check-list {
+    margin-bottom: 1rem;
+  }
+
+  .home-split--in-grid .home-check-list li {
+    margin-bottom: 0.35rem;
+    padding-left: 1.1rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .home-split--in-grid .home-check-list li::before {
+    width: 0.35rem;
+    height: 0.35rem;
+  }
+}
+
 @media (min-width: 900px) {
   .home-split {
     grid-template-columns: 1.05fr 0.95fr;
   }
 
+  .home-split--in-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .home-split--in-grid .home-split__copy {
+    padding-inline: clamp(0.9rem, 1.6vw, 1.2rem);
+  }
+
   .home-split__media {
     aspect-ratio: auto;
+    min-width: 0;
+  }
+}
+
+@supports (grid-template-columns: subgrid) {
+  @media (min-width: 900px) {
+    .home-split--in-grid {
+      grid-template-columns: subgrid;
+      gap: 0 clamp(2rem, 4vw, 3rem);
+    }
   }
 }
 
@@ -1612,7 +1827,7 @@ section {
   border-radius: var(--radius);
   box-shadow: 0 12px 30px -24px rgba(22, 48, 42, 0.35);
   animation: none;
-  transition: box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .home-page .fb-feed-card:hover {
@@ -1685,13 +1900,21 @@ section {
   font-family: var(--home-sans);
   font-size: var(--text-base);
   font-weight: 600;
-  color: hsl(var(--foreground));
+  color: hsl(var(--primary));
+}
+
+.home-page .fb-feed-card-toggle svg {
+  transition: transform 0.2s ease;
 }
 
 .home-page .fb-feed-card-toggle:hover {
-  color: hsl(var(--foreground));
+  color: hsl(var(--primary));
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+.home-page .fb-feed-card-toggle:hover svg {
+  transform: translateX(3px);
 }
 
 .home-page .fb-feed-fallback {
@@ -1720,22 +1943,9 @@ section {
 .home-page .home-cta {
   position: relative;
   overflow: hidden;
-  padding-block: clamp(5rem, 10vw, 9rem);
+  padding-block: var(--section-space);
   background-color: hsl(var(--primary));
   text-align: center;
-}
-
-.home-cta::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: min(70vw, 760px);
-  aspect-ratio: 1;
-  border: 1px solid hsla(0deg, 0%, 100%, 0.16);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
 }
 
 .home-cta .home-container {
@@ -1877,6 +2087,17 @@ section {
   color: #fff;
 }
 
+.site-footer a[aria-label="Facebook"],
+.site-footer a[aria-label="Instagram"] {
+  color: hsl(var(--primary));
+}
+
+.site-footer a[aria-label="Facebook"]:hover,
+.site-footer a[aria-label="Instagram"]:hover {
+  color: #fff;
+  background-color: hsl(var(--primary));
+}
+
 .home-footer__payments {
   display: flex;
   flex-wrap: wrap;
@@ -1988,15 +2209,6 @@ section {
 
 .site-page .text-muted-foreground {
   color: hsl(200, 10%, 38%);
-}
-
-/* Interior pages are static; reveal animations are homepage-only. */
-.site-page .fade-in,
-.site-page .fade-in-right,
-.site-page .fade-in-left,
-.site-page .fade-in-scale {
-  opacity: 1;
-  transform: none;
 }
 
 .site-page .hero-service {

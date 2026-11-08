@@ -31,11 +31,17 @@ http
 
     fs.readFile(filePath, (err, data) => {
       if (err) {
-        res.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
+        res.writeHead(404, {
+          "Content-Type": "text/plain; charset=utf-8",
+          "Cache-Control": "no-store, no-cache, must-revalidate",
+        });
         res.end("404 Not Found");
         return;
       }
-      res.writeHead(200, { "Content-Type": MIME[ext] || "application/octet-stream" });
+      res.writeHead(200, {
+        "Content-Type": MIME[ext] || "application/octet-stream",
+        "Cache-Control": "no-store, no-cache, must-revalidate",
+      });
       res.end(data);
     });
   })

@@ -8,7 +8,7 @@ const RSS_URL =
   'https://rss.app/feeds/ccdznoabxNawUrUP.xml';
 const MAX_POSTS = 3;
 
-const OUTPUT_FILE = path.join('public', 'facebook-posts.json');
+const OUTPUT_FILE = path.join('public', 'data', 'facebook-posts.json');
 const IMAGE_DIR = path.join('public', 'images', 'facebook');
 
 main().catch((error) => {
@@ -112,6 +112,7 @@ async function main() {
     return;
   }
 
+  await mkdir(path.dirname(OUTPUT_FILE), { recursive: true });
   await writeFile(OUTPUT_FILE, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
   console.log(`Wrote ${feedPosts.length} Facebook posts to ${OUTPUT_FILE}.`);
 }

@@ -90,7 +90,7 @@
 
   /* ================================================================
      Facebook feed
-     Posts are written to public/facebook-posts.json by the scheduled
+     Posts are written to public/data/facebook-posts.json by the scheduled
      GitHub Action. The page only fetches that static JSON.
      ================================================================ */
   var FACEBOOK_PAGE_URL = 'https://www.facebook.com/profile.php?id=61573830269174';
@@ -170,7 +170,7 @@
     var parts = splitPostText(post.message);
 
     var card = document.createElement('article');
-    card.className = 'fb-feed-card';
+    card.className = 'fb-feed-card fade-in';
     card.style.animationDelay = index * 60 + 'ms';
 
     if (image) {
@@ -379,7 +379,7 @@
 
     if (!feed || !window.fetch) return;
 
-    fetch('public/facebook-posts.json', { cache: 'no-cache' })
+    fetch('public/data/facebook-posts.json', { cache: 'no-cache' })
       .then(function (response) {
         if (!response.ok) throw new Error('HTTP ' + response.status);
         return response.json();
@@ -410,6 +410,28 @@
         feed.appendChild(fragment);
         feed.hidden = false;
         if (fallback) fallback.hidden = true;
+
+        var cardsToReveal = feed.querySelectorAll('.fb-feed-card.fade-in');
+        if ('IntersectionObserver' in window) {
+          var revealObserver = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('visible');
+                  revealObserver.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+          );
+          cardsToReveal.forEach(function (card) {
+            revealObserver.observe(card);
+          });
+        } else {
+          cardsToReveal.forEach(function (card) {
+            card.classList.add('visible');
+          });
+        }
 
         setupCardPreviews(feed);
         equalizeCardHeights(feed);

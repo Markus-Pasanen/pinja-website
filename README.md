@@ -40,12 +40,18 @@ pinja-website/
 │   ├── server.js            # Local dev server (Node, zero deps)
 │   └── out.txt              # Dev server log
 ├── public/
-│   ├── facebook-posts.json  # Latest Facebook posts (generated)
-│   ├── favicon.ico
+│   ├── data/
+│   │   └── facebook-posts.json  # Latest Facebook posts (generated)
+│   ├── favicons/            # Favicons, app icons, site.webmanifest
+│   ├── icons/               # UI SVG icons
+│   ├── images/
+│   │   ├── brand/           # Logo and social share image
+│   │   ├── facebook/        # Downloaded Facebook post images
+│   │   ├── payments/        # Payment provider logos
+│   │   ├── people/          # Portrait photography
+│   │   └── services/        # Service photography
 │   ├── robots.txt
-│   ├── sitemap.xml
-│   └── images/              # All image assets
-│       └── facebook/        # Downloaded Facebook post images
+│   └── sitemap.xml
 └── README.md
 ```
 
@@ -67,7 +73,7 @@ Requires no npm install, no build step.
 
 ## Facebook feed (Ajankohtaista)
 
-The homepage cards are read from `public/facebook-posts.json` by `main.js`. A scheduled GitHub Action (`.github/workflows/facebook-feed.yml`) fetches this RSS feed once a day:
+The homepage cards are read from `public/data/facebook-posts.json` by `main.js`. A scheduled GitHub Action (`.github/workflows/facebook-feed.yml`) fetches this RSS feed once a day:
 
 ```
 https://rss.app/feeds/ccdznoabxNawUrUP.xml

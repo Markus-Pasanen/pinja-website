@@ -10,17 +10,17 @@
     <link rel="canonical" href="https://jalkaterapiapinja.fi/yhteystiedot" />
     <meta
       name="description"
-      content="Varaa aika kätevimmin Vellossa tai ota yhteyttä ja kysy lisätietoja palveluistani."
+      content="Varaa aika verkossa tai ota yhteyttä ja kysy lisätietoja palveluistani."
     />
     <!-- Open Graph -->
     <meta property="og:title" content="Ota Yhteyttä – Jalkaterapeutti Pinja Pasanen" />
-    <meta property="og:description" content="Varaa aika kätevimmin Vellossa tai ota yhteyttä ja kysy lisätietoja palveluistani." />
+    <meta property="og:description" content="Varaa aika verkossa tai ota yhteyttä ja kysy lisätietoja palveluistani." />
     <meta property="og:url" content="https://jalkaterapiapinja.fi/yhteystiedot" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Jalkaterapia Pinja" />
     <meta property="og:locale" content="fi_FI" />
-    <meta property="og:image" content="https://jalkaterapiapinja.fi/public/images/social-media.jpg" />
-    <meta property="og:image:secure_url" content="https://jalkaterapiapinja.fi/public/images/social-media.jpg" />
+    <meta property="og:image" content="https://jalkaterapiapinja.fi/public/images/brand/social-media.jpg" />
+    <meta property="og:image:secure_url" content="https://jalkaterapiapinja.fi/public/images/brand/social-media.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="2400" />
     <meta property="og:image:height" content="1350" />
@@ -28,14 +28,14 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Ota Yhteyttä – Jalkaterapeutti Pinja Pasanen" />
-    <meta name="twitter:description" content="Varaa aika kätevimmin Vellossa tai ota yhteyttä ja kysy lisätietoja palveluistani." />
-    <meta name="twitter:image" content="https://jalkaterapiapinja.fi/public/images/social-media.jpg" />
+    <meta name="twitter:description" content="Varaa aika verkossa tai ota yhteyttä ja kysy lisätietoja palveluistani." />
+    <meta name="twitter:image" content="https://jalkaterapiapinja.fi/public/images/brand/social-media.jpg" />
     <meta name="twitter:image:alt" content="Jalkaterapia Pinja – ammattitaitoista jalkaterapiaa Varkaudessa" />
-    <link rel="apple-touch-icon" sizes="180x180" href="public/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16x16.png">
-    <link rel="manifest" href="public/site.webmanifest">
-    <link rel="icon" href="public/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="public/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/favicons/favicon-16x16.png">
+    <link rel="manifest" href="public/favicons/site.webmanifest">
+    <link rel="icon" href="public/favicons/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -52,7 +52,7 @@
       <div class="home-container home-nav__inner">
         <a href="index.html" class="home-brand">
           <img
-            src="public/images/logo.png"
+            src="public/images/brand/logo.png"
             alt=""
             width="40"
             height="40"
@@ -60,7 +60,7 @@
           />
           <span class="home-brand__text">
             <span class="home-brand__name">Jalkaterapia Pinja</span>
-            <span class="home-brand__meta">Jalkaterapeutti · Varkaus</span>
+            <span class="home-brand__meta">Jalkaterapeutti Varkaudessa</span>
           </span>
         </a>
 
@@ -184,33 +184,23 @@
       <section class="text-center !mb-g3 pt-g3 md:pt-g4">
         <h1 class="fade-in">Ota Yhteyttä</h1>
         <p class="text-lg text-muted-foreground max-w-xl mx-auto fade-in">
-          Ajanvaraus onnistuu kätevimmin Vellossa. Voit myös soittaa tai
+          Ajanvaraus onnistuu verkossa. Voit myös soittaa tai
           lähettää viestin lomakkeella.
         </p>
       </section>
 
 
+      <h2 class="home-visually-hidden">Yhteydenotto</h2>
+
       <section class="fade-in mb-g3">
-        <div
-          class="rounded-2xl bg-primary p-g3 md:p-g4 text-white shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-g2"
-        >
-          <div>
-            <h2 class="text-white mb-g0">Varaa aika Vellossa</h2>
-            <p class="text-white/80 max-w-xl">
-              Valitse sinulle sopiva hoito ja aika kätevästi verkosta. Voit myös
-              soittaa numeroon
-              <a href="tel:+358451032606" class="underline hover:text-white"
-                >045 103 2606</a
-              >.
-            </p>
-          </div>
+        <div class="flex flex-col sm:flex-row flex-wrap gap-g1 justify-center">
           <a
             href="https://vello.fi/jalkaterapia-pinja-"
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex items-center justify-center gap-g0 px-g3 py-g1 bg-white text-primary font-semibold rounded-full hover:bg-white/90 transition-all shadow-lg whitespace-nowrap"
+            class="btn-primary whitespace-nowrap"
           >
-            Siirry Velloon
+            Varaa aika verkosta
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
@@ -226,6 +216,49 @@
               <path d="M5 12h14" />
               <path d="m12 5 7 7-7 7" />
             </svg>
+          </a>
+          <a
+            href="tel:+358451032606"
+            class="btn-secondary whitespace-nowrap"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"
+              />
+            </svg>
+            Soita 045 103 2606
+          </a>
+          <a
+            href="mailto:jalkaterapia.pinja@gmail.com"
+            class="btn-secondary whitespace-nowrap"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+            </svg>
+            Lähetä sähköpostia
           </a>
         </div>
       </section>
@@ -255,42 +288,6 @@
             <h3 class="mb-0">Yhteystiedot</h3>
           </div>
           <div class="space-y-g1">
-            <a
-              href="https://vello.fi/jalkaterapia-pinja-"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex items-center gap-g1 p-g1 rounded-xl bg-primary/10 border border-primary/20 hover:bg-primary/20 transition-colors group"
-            >
-              <div
-                class="w-10 h-10 rounded-xl bg-primary text-white flex items-center justify-center group-hover:bg-primary/90 transition-colors"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M8 2v4" />
-                  <path d="M16 2v4" />
-                  <rect width="18" height="18" x="3" y="4" rx="2" />
-                  <path d="M3 10h18" />
-                </svg>
-              </div>
-              <div>
-                <p class="text-sm font-medium text-foreground">
-                  Varaa aika Vellossa
-                </p>
-                <p class="text-sm text-muted-foreground">
-                  Valitse hoito ja ajankohta verkossa
-                </p>
-              </div>
-            </a>
             <a
               href="tel:+358451032606"
               class="flex items-center gap-g1 p-g1 rounded-xl bg-secondary hover:bg-primary/10 transition-colors group"
@@ -351,7 +348,7 @@
               </div>
             </a>
             <a
-              href="https://www.google.com/maps/place/Varkaus"
+              href="https://www.google.com/maps/search/?api=1&amp;query=Savontie%2042%2C%2078300%20Varkaus"
               target="_blank"
               rel="noopener noreferrer"
               class="flex items-center gap-g1 p-g1 rounded-xl bg-secondary hover:bg-primary/10 transition-colors group"
@@ -379,7 +376,7 @@
               </div>
               <div>
                 <p class="text-sm font-medium text-foreground">Sijainti</p>
-                <p class="text-sm text-muted-foreground">78300 Varkaus</p>
+                <p class="text-sm text-muted-foreground">Savontie 42, 78300 Varkaus</p>
               </div>
             </a>
             <div class="flex items-start gap-g1 p-g1 rounded-xl bg-secondary">
@@ -544,6 +541,7 @@
 
     <footer class="bg-white border-t border-black/5 py-g4 site-footer">
       <div class="max-w-7xl mx-auto px-g1 sm:px-g2 lg:px-g3">
+        <p class="text-center text-sm text-muted-foreground mb-g2">Seuraa minua somessa!</p>
         <div class="relative flex items-center w-full mb-g3">
           <div class="flex-grow border-t border-primary"></div>
           <span class="flex flex-row mx-g1 gap-g1 font-semibold">
@@ -606,7 +604,7 @@
               Varaa aika
             </p>
             <ul class="space-y-g0 text-sm text-muted-foreground">
-              <li><a href="https://vello.fi/jalkaterapia-pinja-" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">Varaa aika Vellossa</a></li>
+              <li><a href="https://vello.fi/jalkaterapia-pinja-" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">Varaa aika verkosta</a></li>
               <li>
                 <a
                   href="tel:+358451032606"
@@ -658,23 +656,23 @@
               href="https://www.epassi.fi/etusivu"
               class="hover:scale-110 transition-transform"
               ><img
-                src="public/images/epassi.png"
+                src="public/images/payments/epassi.png"
                 alt="ePassi"
                 class="h-7 object-contain"
             /></a>
             <a
-              href="https://www.smartum.fi/"
+              href="https://www.edenred.fi/"
               class="hover:scale-110 transition-transform"
               ><img
-                src="public/images/smartum.png"
-                alt="Smartum"
+                src="public/images/payments/edenred.svg"
+                alt="Edenred"
                 class="h-7 object-contain"
             /></a>
             <a
               href="https://www.tarjoomo.fi/"
               class="hover:scale-110 transition-transform"
               ><img
-                src="public/images/tarjoomo.png"
+                src="public/images/payments/tarjoomo.png"
                 alt="Tarjoomo"
                 class="h-7 object-contain"
             /></a>
@@ -682,7 +680,7 @@
               href="https://www.sjjl.fi/"
               class="hover:scale-110 transition-transform"
               ><img
-                src="public/images/sjjl.png"
+                src="public/images/payments/sjjl.png"
                 alt="SJJL"
                 class="h-7 object-contain"
             /></a>
