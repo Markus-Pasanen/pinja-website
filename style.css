@@ -480,6 +480,14 @@ input:focus, textarea:focus, select:focus {
   color: hsl(var(--foreground));
 }
 
+.fb-feed-card-title a {
+  color: inherit;
+}
+
+.fb-feed-card-title a:hover {
+  color: hsl(var(--primary));
+}
+
 .fb-feed-card-text-wrap {
   position: relative;
   margin-bottom: var(--g1);

@@ -104,6 +104,10 @@ FACEBOOK_RSS_URL="https://rss.app/feeds/ccdznoabxNawUrUP.xml" node scripts/fetch
   changes.
 - The script uses Node 20 `fetch`, downloads post images, and leaves the existing JSON
   untouched if the feed fails. No secrets or API tokens are used.
+- Keep each post's `permalink` exactly as RSS provides it (including `m.facebook.com`).
+  Rewriting the host can break Facebook app deep links.
+- The card image, title, and "Avaa Facebookissa" link all point to the original post and open
+  in the same tab so they also work in embedded or popup-blocking browsers.
 - If the JSON is missing or empty, the homepage shows a "follow on Facebook" fallback card.
 
 ## Contact form
@@ -111,6 +115,16 @@ FACEBOOK_RSS_URL="https://rss.app/feeds/ccdznoabxNawUrUP.xml" node scripts/fetch
 `yhteystiedot.html` posts to **SimplyForms** via an inline submit handler and redirects to
 `/kiitos` on success. Fields: `name`, `email`, `phone`, `message`. Keep `kiitos.html` in the
 repository root. The Web3Forms/hCaptcha notes in `README.md` are stale.
+
+## Booking
+
+- The primary booking channel is **Vello**: <https://vello.fi/jalkaterapia-pinja->.
+- Every "Varaa aika" CTA must point to the Vello URL (opened in a new tab with
+  `rel="noopener noreferrer"`).
+- Phone `045 103 2606` remains a valid secondary booking/contact method and should stay
+  alongside the Vello link in CTAs and the footer.
+- The contact form in `yhteystiedot.html` is for questions and messages, not the main booking
+  path.
 
 ## Content and SEO conventions
 

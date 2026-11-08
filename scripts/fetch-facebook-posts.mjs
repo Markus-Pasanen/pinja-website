@@ -130,7 +130,10 @@ function parseRss(xml) {
     items.push({
       guid: getTextTag(itemXml, 'guid'),
       text: htmlToText(description) || htmlToText(getRawTag(itemXml, 'title')),
-      link: normaliseLink(getTextTag(itemXml, 'link')),
+      // Keep the link exactly as RSS provides it. The feed uses
+      // m.facebook.com post URLs, which open correctly in the Facebook app;
+      // rewriting them to www.facebook.com can land on the app home feed.
+      link: getTextTag(itemXml, 'link'),
       creator: getTextTag(itemXml, 'dc:creator'),
       pubDate: getTextTag(itemXml, 'pubDate'),
       imageUrls: [

@@ -171,7 +171,6 @@
       var media = document.createElement('a');
       media.className = 'fb-feed-card-media';
       media.href = permalink;
-      media.target = '_blank';
       media.rel = 'noopener noreferrer';
       media.tabIndex = -1;
       media.setAttribute('aria-hidden', 'true');
@@ -202,7 +201,11 @@
     if (parts.title) {
       var title = document.createElement('h3');
       title.className = 'fb-feed-card-title';
-      title.textContent = parts.title;
+      var titleLink = document.createElement('a');
+      titleLink.href = permalink;
+      titleLink.rel = 'noopener noreferrer';
+      titleLink.textContent = parts.title;
+      title.appendChild(titleLink);
       body.appendChild(title);
     }
 
@@ -241,7 +244,6 @@
     var link = document.createElement('a');
     link.className = 'fb-feed-card-link';
     link.href = permalink;
-    link.target = '_blank';
     link.rel = 'noopener noreferrer';
     link.appendChild(document.createTextNode('Avaa Facebookissa'));
     link.appendChild(createFacebookIcon(14));
@@ -319,7 +321,6 @@
     var link = document.createElement('a');
     link.className = 'fb-post-dialog-link';
     link.href = permalink;
-    link.target = '_blank';
     link.rel = 'noopener noreferrer';
     link.appendChild(document.createTextNode('Avaa Facebookissa'));
     link.appendChild(createFacebookIcon(14));
