@@ -73,7 +73,7 @@ The homepage cards are read from `public/facebook-posts.json` by `main.js`. A sc
 https://rss.app/feeds/ccdznoabxNawUrUP.xml
 ```
 
-It parses the three newest posts, downloads their images into `public/images/facebook/`, and commits the updated JSON. No Facebook API, access token, or repository secret is used.
+It parses the three newest posts, downloads their images into `public/images/facebook/`, and commits the updated JSON. No Facebook API, access token, or repository secret is used. The homepage renders the three posts in a responsive grid with equal-height cards.
 
 ### Changing the feed
 

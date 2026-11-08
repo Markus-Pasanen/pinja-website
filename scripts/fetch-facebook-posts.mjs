@@ -31,7 +31,7 @@ async function main() {
   const feed = parseRss(xml);
 
   const items = feed.items
-    .filter((item) => item.text || item.imageUrl)
+    .filter((item) => item.text || item.imageUrls.length > 0)
     .sort(
       (a, b) => (Date.parse(b.pubDate) || 0) - (Date.parse(a.pubDate) || 0)
     )
@@ -62,8 +62,12 @@ async function main() {
 
     let image = null;
 
-    if (item.imageUrl) {
-      image = await downloadImage(item.imageUrl, id);
+    for (const imageUrl of item.imageUrls) {
+      image = await downloadImage(imageUrl, id);
+
+      if (image) {
+        break;
+      }
     }
 
     if (
@@ -129,9 +133,10 @@ function parseRss(xml) {
       link: normaliseLink(getTextTag(itemXml, 'link')),
       creator: getTextTag(itemXml, 'dc:creator'),
       pubDate: getTextTag(itemXml, 'pubDate'),
-      imageUrl:
-        getAttribute(itemXml, 'media:content', 'url') ||
+      imageUrls: [
+        getAttribute(itemXml, 'media:content', 'url'),
         getImageFromHtml(description),
+      ].filter((url, index, urls) => url && urls.indexOf(url) === index),
     });
   }
 
@@ -236,6 +241,14 @@ async function downloadImage(url, postId) {
     }
 
     const contentType = (response.headers.get('content-type') || '').split(';')[0];
+
+    if (!contentType.startsWith('image/')) {
+      console.warn(
+        `Image download failed for ${postId}: unexpected content type ${contentType || 'unknown'}`
+      );
+      return null;
+    }
+
     const extension =
       {
         'image/png': 'png',
@@ -244,11 +257,14 @@ async function downloadImage(url, postId) {
         'image/avif': 'avif',
       }[contentType] || 'jpg';
     const filename = `${fileId}.${extension}`;
+    const buffer = Buffer.from(await response.arrayBuffer());
 
-    await writeFile(
-      path.join(IMAGE_DIR, filename),
-      Buffer.from(await response.arrayBuffer())
-    );
+    if (buffer.length === 0) {
+      console.warn(`Image download failed for ${postId}: empty file`);
+      return null;
+    }
+
+    await writeFile(path.join(IMAGE_DIR, filename), buffer);
 
     return `public/images/facebook/${filename}`;
   } catch (error) {

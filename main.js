@@ -94,6 +94,7 @@
      GitHub Action. The page only fetches that static JSON.
      ================================================================ */
   var FACEBOOK_PAGE_URL = 'https://www.facebook.com/profile.php?id=61573830269174';
+  var lastDialogTrigger = null;
 
   function safeLink(value, fallback) {
     return typeof value === 'string' && /^https?:\/\//i.test(value)
@@ -107,23 +108,36 @@
       : null;
   }
 
-  function formatFacebookDate(value) {
+  function formatPostDate(value) {
     if (!value) return '';
     var date = new Date(value);
     if (isNaN(date.getTime())) return '';
 
-    var days = Math.floor((Date.now() - date.getTime()) / 86400000);
-    if (days < 0) days = 0;
-
     try {
-      var formatter = new Intl.RelativeTimeFormat('fi-FI', { numeric: 'auto' });
-      if (days < 7) return formatter.format(-days, 'day');
-      if (days < 30) return formatter.format(-Math.floor(days / 7), 'week');
-      if (days < 365) return formatter.format(-Math.floor(days / 30), 'month');
-      return formatter.format(-Math.floor(days / 365), 'year');
+      return new Intl.DateTimeFormat('fi-FI', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+      }).format(date);
     } catch (error) {
       return date.toLocaleDateString('fi-FI');
     }
+  }
+
+  function splitPostText(value) {
+    var lines = String(value || '')
+      .replace(/\r\n?/g, '\n')
+      .split('\n');
+    var title = '';
+
+    while (lines.length && !title) {
+      title = lines.shift().trim();
+    }
+
+    return {
+      title: title,
+      body: lines.join('\n').trim(),
+    };
   }
 
   function createFacebookIcon(size) {
@@ -144,13 +158,14 @@
     return svg;
   }
 
-  function createFacebookCard(post, pageName, pageUrl, index) {
+  function createFacebookCard(post, pageUrl, index) {
     var permalink = safeLink(post.permalink, pageUrl);
     var image = safeImage(post.image);
+    var parts = splitPostText(post.message);
 
     var card = document.createElement('article');
     card.className = 'fb-feed-card';
-    card.style.animationDelay = index * 80 + 'ms';
+    card.style.animationDelay = index * 60 + 'ms';
 
     if (image) {
       var media = document.createElement('a');
@@ -176,43 +191,51 @@
     var body = document.createElement('div');
     body.className = 'fb-feed-card-body';
 
-    var header = document.createElement('div');
-    header.className = 'fb-feed-card-header';
-
-    var avatar = document.createElement('img');
-    avatar.className = 'fb-feed-card-avatar';
-    avatar.src = 'public/images/logo.png';
-    avatar.alt = '';
-    avatar.width = 40;
-    avatar.height = 40;
-    avatar.loading = 'lazy';
-
-    var meta = document.createElement('div');
-    meta.className = 'fb-feed-card-meta';
-
-    var name = document.createElement('p');
-    name.className = 'fb-feed-card-name';
-    name.textContent = pageName;
-    meta.appendChild(name);
-
     if (post.createdTime) {
       var date = document.createElement('time');
       date.className = 'fb-feed-card-date';
       date.dateTime = post.createdTime;
-      date.textContent = formatFacebookDate(post.createdTime);
-      meta.appendChild(date);
+      date.textContent = formatPostDate(post.createdTime);
+      body.appendChild(date);
     }
 
-    header.appendChild(avatar);
-    header.appendChild(meta);
+    if (parts.title) {
+      var title = document.createElement('h3');
+      title.className = 'fb-feed-card-title';
+      title.textContent = parts.title;
+      body.appendChild(title);
+    }
 
-    body.appendChild(header);
+    var toggle = null;
 
-    if (post.message) {
-      var text = document.createElement('p');
+    if (parts.body) {
+      var textWrap = document.createElement('div');
+      textWrap.className = 'fb-feed-card-text-wrap';
+
+      var text = document.createElement('div');
       text.className = 'fb-feed-card-text';
-      text.textContent = post.message;
-      body.appendChild(text);
+      text.textContent = parts.body;
+
+      textWrap.appendChild(text);
+      body.appendChild(textWrap);
+
+      toggle = document.createElement('button');
+      toggle.type = 'button';
+      toggle.className = 'fb-feed-card-toggle';
+      toggle.textContent = 'Lue lisää';
+      toggle.setAttribute('aria-haspopup', 'dialog');
+      toggle.setAttribute('aria-controls', 'facebook-post-dialog');
+
+      toggle.addEventListener('click', function () {
+        openPostDialog(post, toggle);
+      });
+    }
+
+    var footer = document.createElement('div');
+    footer.className = 'fb-feed-card-footer';
+
+    if (toggle) {
+      footer.appendChild(toggle);
     }
 
     var link = document.createElement('a');
@@ -220,12 +243,147 @@
     link.href = permalink;
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
-    link.appendChild(document.createTextNode('Lue Facebookissa'));
+    link.appendChild(document.createTextNode('Avaa Facebookissa'));
     link.appendChild(createFacebookIcon(14));
-    body.appendChild(link);
+    footer.appendChild(link);
 
+    body.appendChild(footer);
     card.appendChild(body);
     return card;
+  }
+
+  function setupCardPreviews(feed) {
+    feed.querySelectorAll('.fb-feed-card').forEach(function (card) {
+      var text = card.querySelector('.fb-feed-card-text');
+      var toggle = card.querySelector('.fb-feed-card-toggle');
+
+      if (!text || !toggle) return;
+
+      var overflowing = text.scrollHeight > text.clientHeight + 1;
+
+      card.classList.toggle('is-collapsible', overflowing);
+      toggle.hidden = !overflowing;
+    });
+  }
+
+  function openPostDialog(post, trigger) {
+    var dialog = document.getElementById('facebook-post-dialog');
+    var content = document.getElementById('facebook-post-dialog-content');
+
+    if (!dialog || !content || dialog.open) return;
+
+    var parts = splitPostText(post.message);
+    var image = safeImage(post.image);
+    var permalink = safeLink(post.permalink, FACEBOOK_PAGE_URL);
+
+    content.innerHTML = '';
+
+    if (image) {
+      var dialogImage = document.createElement('img');
+      dialogImage.className = 'fb-post-dialog-image';
+      dialogImage.src = image;
+      dialogImage.alt = '';
+      dialogImage.addEventListener('error', function () {
+        dialogImage.hidden = true;
+      });
+      content.appendChild(dialogImage);
+    }
+
+    var body = document.createElement('div');
+    body.className = 'fb-post-dialog-body';
+
+    if (post.createdTime) {
+      var date = document.createElement('time');
+      date.className = 'fb-feed-card-date';
+      date.dateTime = post.createdTime;
+      date.textContent = formatPostDate(post.createdTime);
+      body.appendChild(date);
+    }
+
+    var title = document.createElement('h3');
+    title.id = 'facebook-post-dialog-title';
+    title.className = 'fb-post-dialog-title';
+    title.textContent = parts.title || 'Facebook-julkaisu';
+    body.appendChild(title);
+
+    if (parts.body) {
+      var text = document.createElement('div');
+      text.className = 'fb-post-dialog-text';
+      text.textContent = parts.body;
+      body.appendChild(text);
+    }
+
+    var footer = document.createElement('div');
+    footer.className = 'fb-post-dialog-footer';
+
+    var link = document.createElement('a');
+    link.className = 'fb-post-dialog-link';
+    link.href = permalink;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.appendChild(document.createTextNode('Avaa Facebookissa'));
+    link.appendChild(createFacebookIcon(14));
+    footer.appendChild(link);
+
+    body.appendChild(footer);
+    content.appendChild(body);
+
+    lastDialogTrigger = trigger;
+    document.body.classList.add('fb-dialog-open');
+
+    if (typeof dialog.showModal === 'function') {
+      dialog.showModal();
+    } else {
+      dialog.setAttribute('open', '');
+    }
+  }
+
+  function initPostDialog() {
+    var dialog = document.getElementById('facebook-post-dialog');
+    var close = document.getElementById('facebook-post-dialog-close');
+
+    if (!dialog || !close) return;
+
+    function closeDialog() {
+      if (typeof dialog.close === 'function') {
+        dialog.close();
+      } else {
+        dialog.removeAttribute('open');
+      }
+    }
+
+    close.addEventListener('click', closeDialog);
+    dialog.addEventListener('click', function (event) {
+      if (event.target === dialog) closeDialog();
+    });
+    dialog.addEventListener('close', function () {
+      document.body.classList.remove('fb-dialog-open');
+
+      if (lastDialogTrigger) {
+        lastDialogTrigger.focus();
+        lastDialogTrigger = null;
+      }
+    });
+  }
+
+  function equalizeCardHeights(feed) {
+    var cards = feed.querySelectorAll('.fb-feed-card');
+
+    if (!cards.length) return;
+
+    cards.forEach(function (card) {
+      card.style.minHeight = '';
+    });
+
+    var maxHeight = 0;
+
+    cards.forEach(function (card) {
+      maxHeight = Math.max(maxHeight, card.getBoundingClientRect().height);
+    });
+
+    cards.forEach(function (card) {
+      card.style.minHeight = maxHeight + 'px';
+    });
   }
 
   function initFacebookFeed() {
@@ -243,30 +401,54 @@
         var posts = data && Array.isArray(data.posts) ? data.posts : [];
         if (!posts.length) return;
 
+        posts = posts
+          .slice()
+          .sort(function (a, b) {
+            return (
+              (Date.parse(b.createdTime) || 0) -
+              (Date.parse(a.createdTime) || 0)
+            );
+          })
+          .slice(0, 3);
+
         var page = data.page || {};
-        var pageName =
-          typeof page.name === 'string' && page.name
-            ? page.name
-            : 'Jalkaterapia Pinja';
         var pageUrl = safeLink(page.url, FACEBOOK_PAGE_URL);
         var fragment = document.createDocumentFragment();
 
-        posts.slice(0, 3).forEach(function (post, index) {
-          fragment.appendChild(
-            createFacebookCard(post, pageName, pageUrl, index)
-          );
+        posts.forEach(function (post, index) {
+          fragment.appendChild(createFacebookCard(post, pageUrl, index));
         });
 
         feed.innerHTML = '';
         feed.appendChild(fragment);
         feed.hidden = false;
         if (fallback) fallback.hidden = true;
+
+        setupCardPreviews(feed);
+        equalizeCardHeights(feed);
+
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(function () {
+            setupCardPreviews(feed);
+            equalizeCardHeights(feed);
+          });
+        }
+
+        var resizeTimer = null;
+        window.addEventListener('resize', function () {
+          window.clearTimeout(resizeTimer);
+          resizeTimer = window.setTimeout(function () {
+            setupCardPreviews(feed);
+            equalizeCardHeights(feed);
+          }, 150);
+        });
       })
       .catch(function () {
         // Keep the fallback card visible if the feed cannot be loaded.
       });
   }
 
+  initPostDialog();
   initFacebookFeed();
 
 })();
